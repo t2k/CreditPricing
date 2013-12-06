@@ -1,0 +1,3009 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CreditPricingModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="CreditPricingModelStoreContainer">
+          <EntitySet Name="ABSEvalCurve" EntityType="CreditPricingModel.Store.ABSEvalCurve" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BondCashFlows" EntityType="CreditPricingModel.Store.BondCashFlows" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BondPXSummaries" EntityType="CreditPricingModel.Store.BondPXSummaries" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="cdsListSummaries" EntityType="CreditPricingModel.Store.cdsListSummaries" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="fx_arb" EntityType="CreditPricingModel.Store.fx_arb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Holiday" EntityType="CreditPricingModel.Store.Holiday" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Holidays" EntityType="CreditPricingModel.Store.Holidays" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="locCcyDef" EntityType="CreditPricingModel.Store.locCcyDef" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MAP_CC_MXPort" EntityType="CreditPricingModel.Store.MAP_CC_MXPort" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MarketProvider" EntityType="CreditPricingModel.Store.MarketProvider" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mpCDSCurve" EntityType="CreditPricingModel.Store.mpCDSCurve" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MUREXTKRMAP" EntityType="CreditPricingModel.Store.MUREXTKRMAP" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mxCDS" EntityType="CreditPricingModel.Store.mxCDS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mxCDSCalcs" EntityType="CreditPricingModel.Store.mxCDSCalcs" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mxCDSCashFlowDisplays" EntityType="CreditPricingModel.Store.mxCDSCashFlowDisplays" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mxCDSCloseOuts" EntityType="CreditPricingModel.Store.mxCDSCloseOuts" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mxCDSDisplays" EntityType="CreditPricingModel.Store.mxCDSDisplays" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OPICSCashFlows" EntityType="CreditPricingModel.Store.OPICSCashFlows" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OPICSLIVEDEAL" EntityType="CreditPricingModel.Store.OPICSLIVEDEAL" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Portfolio" EntityType="CreditPricingModel.Store.Portfolio" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PortfolioList" EntityType="CreditPricingModel.Store.PortfolioList" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PortfolioLists" EntityType="CreditPricingModel.Store.PortfolioLists" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PortfolioSimulation" EntityType="CreditPricingModel.Store.PortfolioSimulation" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PortfolioSimulationBins" EntityType="CreditPricingModel.Store.PortfolioSimulationBins" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PortfolioSimulationResult" EntityType="CreditPricingModel.Store.PortfolioSimulationResult" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PortfolioTrades" EntityType="CreditPricingModel.Store.PortfolioTrades" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RATECODE" EntityType="CreditPricingModel.Store.RATECODE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RATEHIST" EntityType="CreditPricingModel.Store.RATEHIST" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RATETimeStamp" EntityType="CreditPricingModel.Store.RATETimeStamp" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="REDENTITY" EntityType="CreditPricingModel.Store.REDENTITY" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SectorMaster" EntityType="CreditPricingModel.Store.SectorMaster" store:Type="Tables" store:Schema="dbo" store:Name="SectorMaster">
+            <DefiningQuery>SELECT 
+      [SectorMaster].[Ticker] AS [Ticker], 
+      [SectorMaster].[IndustrySubDesignations] AS [IndustrySubDesignations]
+      FROM [dbo].[SectorMaster] AS [SectorMaster]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Security Master" EntityType="CreditPricingModel.Store.Security Master" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SecurityCPV" EntityType="CreditPricingModel.Store.SecurityCPV" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SecurityMTMSpread" EntityType="CreditPricingModel.Store.SecurityMTMSpread" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TradeGroup" EntityType="CreditPricingModel.Store.TradeGroup" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TradeGroupTrades" EntityType="CreditPricingModel.Store.TradeGroupTrades" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TrancheLets" EntityType="CreditPricingModel.Store.TrancheLets" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TranchePrice2" EntityType="CreditPricingModel.Store.TranchePrice2" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TranchePrices" EntityType="CreditPricingModel.Store.TranchePrices" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TrancheTrade" EntityType="CreditPricingModel.Store.TrancheTrade" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TTList" EntityType="CreditPricingModel.Store.TTList" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TTPriceHist" EntityType="CreditPricingModel.Store.TTPriceHist" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TTRevalInput" EntityType="CreditPricingModel.Store.TTRevalInput" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ycHeader" EntityType="CreditPricingModel.Store.ycHeader" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ycItemHistory" EntityType="CreditPricingModel.Store.ycItemHistory" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_locCcyDef_ycHeader" Association="CreditPricingModel.Store.FK_locCcyDef_ycHeader">
+            <End Role="ycHeader" EntitySet="ycHeader" />
+            <End Role="locCcyDef" EntitySet="locCcyDef" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NegBasisTrades_NegBasisID" Association="CreditPricingModel.Store.FK_NegBasisTrades_NegBasisID">
+            <End Role="TradeGroup" EntitySet="TradeGroup" />
+            <End Role="TradeGroupTrades" EntitySet="TradeGroupTrades" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PortfolioLists_Portfolio" Association="CreditPricingModel.Store.FK_PortfolioLists_Portfolio">
+            <End Role="Portfolio" EntitySet="Portfolio" />
+            <End Role="PortfolioLists" EntitySet="PortfolioLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PortfolioLists_PortfolioList" Association="CreditPricingModel.Store.FK_PortfolioLists_PortfolioList">
+            <End Role="PortfolioList" EntitySet="PortfolioList" />
+            <End Role="PortfolioLists" EntitySet="PortfolioLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PortfolioSimulation_Portfolio" Association="CreditPricingModel.Store.FK_PortfolioSimulation_Portfolio">
+            <End Role="Portfolio" EntitySet="Portfolio" />
+            <End Role="PortfolioSimulation" EntitySet="PortfolioSimulation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PortfolioSimulationBins_PortfolioSimulation" Association="CreditPricingModel.Store.FK_PortfolioSimulationBins_PortfolioSimulation">
+            <End Role="PortfolioSimulation" EntitySet="PortfolioSimulation" />
+            <End Role="PortfolioSimulationBins" EntitySet="PortfolioSimulationBins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PortfolioSimulationResult_PortfolioSimulation" Association="CreditPricingModel.Store.FK_PortfolioSimulationResult_PortfolioSimulation">
+            <End Role="PortfolioSimulation" EntitySet="PortfolioSimulation" />
+            <End Role="PortfolioSimulationResult" EntitySet="PortfolioSimulationResult" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RATEHIST_RATECODE" Association="CreditPricingModel.Store.FK_RATEHIST_RATECODE">
+            <End Role="RATECODE" EntitySet="RATECODE" />
+            <End Role="RATEHIST" EntitySet="RATEHIST" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TrancheTrade_Portfolio" Association="CreditPricingModel.Store.FK_TrancheTrade_Portfolio">
+            <End Role="Portfolio" EntitySet="Portfolio" />
+            <End Role="TrancheTrade" EntitySet="TrancheTrade" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TTPriceHist_PortfolioSimulation" Association="CreditPricingModel.Store.FK_TTPriceHist_PortfolioSimulation">
+            <End Role="PortfolioSimulation" EntitySet="PortfolioSimulation" />
+            <End Role="TTPriceHist" EntitySet="TTPriceHist" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TTRevalInput_TrancheTrade" Association="CreditPricingModel.Store.FK_TTRevalInput_TrancheTrade">
+            <End Role="TrancheTrade" EntitySet="TrancheTrade" />
+            <End Role="TTRevalInput" EntitySet="TTRevalInput" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TTRevalInput_TTList" Association="CreditPricingModel.Store.FK_TTRevalInput_TTList">
+            <End Role="TTList" EntitySet="TTList" />
+            <End Role="TTRevalInput" EntitySet="TTRevalInput" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ycItemHistory_RATECODE" Association="CreditPricingModel.Store.FK_ycItemHistory_RATECODE">
+            <End Role="RATECODE" EntitySet="RATECODE" />
+            <End Role="ycItemHistory" EntitySet="ycItemHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ycItemHistory_ycHeader" Association="CreditPricingModel.Store.FK_ycItemHistory_ycHeader">
+            <End Role="ycHeader" EntitySet="ycHeader" />
+            <End Role="ycItemHistory" EntitySet="ycItemHistory" />
+          </AssociationSet>
+          <AssociationSet Name="PortfolioTrades_FK00" Association="CreditPricingModel.Store.PortfolioTrades_FK00">
+            <End Role="Portfolio" EntitySet="Portfolio" />
+            <End Role="PortfolioTrades" EntitySet="PortfolioTrades" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ABSEvalCurve">
+          <Key>
+            <PropertyRef Name="ABSEvalCurve" />
+            <PropertyRef Name="EvalDate" />
+          </Key>
+          <Property Name="ABSEvalCurve" Type="nvarchar" Nullable="false" MaxLength="25" />
+          <Property Name="EvalDate" Type="datetime" Nullable="false" />
+          <Property Name="1" Type="int" />
+          <Property Name="3" Type="int" />
+          <Property Name="5" Type="int" />
+          <Property Name="7" Type="int" />
+          <Property Name="10" Type="int" />
+        </EntityType>
+        <EntityType Name="BondCashFlows">
+          <Key>
+            <PropertyRef Name="CFStart" />
+          </Key>
+          <Property Name="CFStart" Type="datetime" Nullable="false" />
+          <Property Name="CFEnd" Type="datetime" Nullable="false" />
+          <Property Name="CCY" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Index" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Basis" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Principal" Type="float" Nullable="false" />
+          <Property Name="Factor" Type="float" Nullable="false" />
+          <Property Name="CPR" Type="float" Nullable="false" />
+          <Property Name="Amortization" Type="float" Nullable="false" />
+          <Property Name="IndexRate" Type="float" Nullable="false" />
+          <Property Name="ResetMargin" Type="float" Nullable="false" />
+          <Property Name="DM" Type="float" Nullable="false" />
+          <Property Name="PVFlow" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BondPXSummaries">
+          <Key>
+            <PropertyRef Name="DEALID" />
+          </Key>
+          <Property Name="DEALID" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CUSIP" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="PriceInfo" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="OrigSettle" Type="datetime" Nullable="false" />
+          <Property Name="Security" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Maturity" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Coupon" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="OrigPrice" Type="float" Nullable="false" />
+          <Property Name="DirtyPrice" Type="float" Nullable="false" />
+          <Property Name="AccruedInt" Type="float" Nullable="false" />
+          <Property Name="CleanPrice" Type="float" Nullable="false" />
+          <Property Name="CreditBPV" Type="float" Nullable="false" />
+          <Property Name="AmountOutstanding" Type="float" Nullable="false" />
+          <Property Name="AmountMTM" Type="float" Nullable="false" />
+          <Property Name="MTMSpread" Type="float" Nullable="false" />
+          <Property Name="WALA" Type="float" Nullable="false" />
+          <Property Name="CPV" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="hSpeed" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Factor" Type="float" Nullable="false" />
+          <Property Name="WAL" Type="float" Nullable="false" />
+          <Property Name="FRNSpread" Type="float" Nullable="false" />
+          <Property Name="AssetClass" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="LegalFinal" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="hpTotalReturn" Type="float" Nullable="false" />
+          <Property Name="AssetSubClass" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="cdsListSummaries">
+          <Key>
+            <PropertyRef Name="ListName" />
+          </Key>
+          <Property Name="ListName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ListCount" Type="int" Nullable="false" />
+          <Property Name="TotalUpfront" Type="float" Nullable="false" />
+          <Property Name="TotalCarry" Type="float" Nullable="false" />
+          <Property Name="TotalMTM" Type="float" Nullable="false" />
+          <Property Name="TotalPL" Type="float" Nullable="false" />
+          <Property Name="TotalReturn" Type="float" Nullable="false" />
+          <Property Name="TotalCrBPV" Type="float" Nullable="false" />
+          <Property Name="WASLong" Type="float" Nullable="false" />
+          <Property Name="WASShort" Type="float" Nullable="false" />
+          <Property Name="WASMtMLong" Type="float" Nullable="false" />
+          <Property Name="WASMtMShort" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="fx_arb">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="nvarchar" MaxLength="36" />
+          <Property Name="symbol" Type="nvarchar" MaxLength="12" />
+          <Property Name="description" Type="nvarchar" MaxLength="140" />
+          <Property Name="holidayList" Type="nvarchar" MaxLength="50" />
+          <Property Name="fxswaps" Type="nvarchar" MaxLength="20" />
+          <Property Name="curve1" Type="nvarchar" MaxLength="20" />
+          <Property Name="curve2" Type="nvarchar" MaxLength="20" />
+          <Property Name="curve3" Type="nvarchar" MaxLength="20" />
+          <Property Name="curve4" Type="nvarchar" MaxLength="20" />
+          <Property Name="basis1" Type="int" />
+          <Property Name="basis2" Type="int" />
+          <Property Name="arbCCY" Type="nvarchar" MaxLength="3" />
+        </EntityType>
+        <EntityType Name="Holiday">
+          <Key>
+            <PropertyRef Name="NSCODE" />
+            <PropertyRef Name="NonSettleDate" />
+          </Key>
+          <Property Name="NSCODE" Type="nvarchar" Nullable="false" MaxLength="2" />
+          <Property Name="NonSettleDate" Type="datetime" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="Holidays">
+          <Key>
+            <PropertyRef Name="Holiday" />
+            <PropertyRef Name="country_iso" />
+          </Key>
+          <Property Name="City" Type="nvarchar" MaxLength="32" />
+          <Property Name="Holiday" Type="datetime" Nullable="false" />
+          <Property Name="country_iso" Type="nvarchar" Nullable="false" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="locCcyDef">
+          <Key>
+            <PropertyRef Name="CCY" />
+          </Key>
+          <Property Name="CCY" Type="nvarchar" Nullable="false" MaxLength="6" />
+          <Property Name="DefaultYCurve" Type="nvarchar" MaxLength="20" />
+          <Property Name="LIBORCalendar" Type="nvarchar" MaxLength="3" />
+          <Property Name="Basis" Type="smallint" />
+          <Property Name="DaysSpot" Type="smallint" />
+          <Property Name="futPVBP" Type="real" />
+          <Property Name="LIVESTATUS" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MAP_CC_MXPort">
+          <Key>
+            <PropertyRef Name="COSTCENTER" />
+            <PropertyRef Name="Branch" />
+            <PropertyRef Name="Status" />
+          </Key>
+          <Property Name="COSTCENTER" Type="nvarchar" Nullable="false" MaxLength="4" />
+          <Property Name="Branch" Type="nvarchar" Nullable="false" MaxLength="4" />
+          <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="CCName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MXPortfolio" Type="nvarchar" MaxLength="50" />
+          <Property Name="Maturity" Type="nvarchar" MaxLength="2" />
+          <Property Name="ModelPort_AddOn" Type="float" />
+        </EntityType>
+        <EntityType Name="MarketProvider">
+          <Key>
+            <PropertyRef Name="ProviderName" />
+          </Key>
+          <Property Name="ProviderName" Type="nvarchar" Nullable="false" MaxLength="8" />
+          <Property Name="FirmName" Type="nvarchar" MaxLength="20" />
+          <Property Name="Center" Type="nvarchar" MaxLength="3" />
+          <Property Name="Interface" Type="nvarchar" MaxLength="12" />
+        </EntityType>
+        <EntityType Name="mpCDSCurve">
+          <Key>
+            <PropertyRef Name="EvalDate" />
+            <PropertyRef Name="TICKER" />
+            <PropertyRef Name="Tier" />
+            <PropertyRef Name="CCY" />
+            <PropertyRef Name="DocClause" />
+          </Key>
+          <Property Name="EvalDate" Type="datetime" Nullable="false" />
+          <Property Name="TICKER" Type="nvarchar" Nullable="false" MaxLength="25" />
+          <Property Name="ShortName" Type="nvarchar" MaxLength="100" />
+          <Property Name="RedCode" Type="nvarchar" MaxLength="6" />
+          <Property Name="Tier" Type="nvarchar" Nullable="false" MaxLength="12" />
+          <Property Name="CCY" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="DocClause" Type="nvarchar" Nullable="false" MaxLength="3" />
+          <Property Name="Depth" Type="int" />
+          <Property Name="Sector" Type="nvarchar" MaxLength="30" />
+          <Property Name="Region" Type="nvarchar" MaxLength="50" />
+          <Property Name="Country" Type="nvarchar" MaxLength="50" />
+          <Property Name="AvRating" Type="nvarchar" MaxLength="6" />
+          <Property Name="_6m" Type="float" />
+          <Property Name="_1Y" Type="float" />
+          <Property Name="_2Y" Type="float" />
+          <Property Name="_3Y" Type="float" />
+          <Property Name="_4Y" Type="float" />
+          <Property Name="_5Y" Type="float" />
+          <Property Name="_7Y" Type="float" />
+          <Property Name="_10Y" Type="float" />
+          <Property Name="_15Y" Type="float" />
+          <Property Name="_20Y" Type="float" />
+          <Property Name="_30Y" Type="float" />
+          <Property Name="Recovery" Type="float" />
+        </EntityType>
+        <EntityType Name="MUREXTKRMAP">
+          <Key>
+            <PropertyRef Name="INSTRUMENT" />
+          </Key>
+          <Property Name="INSTRUMENT" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="TKR" Type="nvarchar" Nullable="false" MaxLength="25" />
+          <Property Name="CCY" Type="nvarchar" MaxLength="3" />
+          <Property Name="TIER" Type="nvarchar" MaxLength="12" />
+        </EntityType>
+        <EntityType Name="mxCDS">
+          <Key>
+            <PropertyRef Name="SAVEDATE" />
+            <PropertyRef Name="NB" />
+          </Key>
+          <Property Name="SAVEDATE" Type="datetime" Nullable="false" />
+          <Property Name="NB" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="NBEXT" Type="int" />
+          <Property Name="PL_INSCUR" Type="nvarchar" MaxLength="3" />
+          <Property Name="FAMILY" Type="nvarchar" MaxLength="15" />
+          <Property Name="GROUP" Type="nvarchar" MaxLength="12" />
+          <Property Name="TP_STATUS" Type="nvarchar" MaxLength="12" />
+          <Property Name="COUNTERPART" Type="nvarchar" MaxLength="20" />
+          <Property Name="PORTFOLIO" Type="nvarchar" MaxLength="20" />
+          <Property Name="BRW_NOM1" Type="float" />
+          <Property Name="TRNDATE" Type="datetime" />
+          <Property Name="MATURITY" Type="datetime" />
+          <Property Name="EXPIRY" Type="datetime" />
+          <Property Name="VALID" Type="nvarchar" MaxLength="12" />
+          <Property Name="IE" Type="nvarchar" MaxLength="5" />
+          <Property Name="INSTRUMENT" Type="nvarchar" MaxLength="20" />
+          <Property Name="MARKET INDEX" Type="nvarchar" MaxLength="20" />
+          <Property Name="RATE_MARG0" Type="float" />
+          <Property Name="B/S" Type="nvarchar" MaxLength="12" />
+          <Property Name="TRADER" Type="nvarchar" MaxLength="12" />
+          <Property Name="MOP_LAST" Type="int" />
+          <Property Name="OPT_MOPLST" Type="nvarchar" MaxLength="50" />
+          <Property Name="PayRecvLeg" Type="nvarchar" MaxLength="12" />
+          <Property Name="STL_FLW" Type="float" />
+          <Property Name="BRW_SDTE" Type="datetime" />
+          <Property Name="OPT_FLWFST" Type="datetime" />
+        </EntityType>
+        <EntityType Name="mxCDSCalcs">
+          <Key>
+            <PropertyRef Name="NB" />
+          </Key>
+          <Property Name="NB" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Ticker" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Ccy" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Tier" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="RefEnt" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Sector" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Settle" Type="datetime" Nullable="false" />
+          <Property Name="Maturity" Type="datetime" Nullable="false" />
+          <Property Name="Notional" Type="float" Nullable="false" />
+          <Property Name="DealSpread" Type="float" Nullable="false" />
+          <Property Name="MtMSpread" Type="float" Nullable="false" />
+          <Property Name="SpreadChg" Type="float" Nullable="false" />
+          <Property Name="CrBPV" Type="float" Nullable="false" />
+          <Property Name="UpFront" Type="float" Nullable="false" />
+          <Property Name="Carry" Type="float" Nullable="false" />
+          <Property Name="PVFlows" Type="float" Nullable="false" />
+          <Property Name="TotalPL" Type="float" Nullable="false" />
+          <Property Name="HPDays" Type="float" Nullable="false" />
+          <Property Name="Portfolio" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Instrument" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="EvalDate" Type="datetime" Nullable="false" />
+          <Property Name="TotalReturn" Type="float" Nullable="false" />
+          <Property Name="CounterParty" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="mxCDSCashFlowDisplays">
+          <Key>
+            <PropertyRef Name="CFStart" />
+          </Key>
+          <Property Name="CFStart" Type="datetime" Nullable="false" />
+          <Property Name="CFEnd" Type="datetime" Nullable="false" />
+          <Property Name="Days" Type="int" Nullable="false" />
+          <Property Name="CCY" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Notional" Type="float" Nullable="false" />
+          <Property Name="CDSSpread" Type="float" Nullable="false" />
+          <Property Name="MTMSpread" Type="float" Nullable="false" />
+          <Property Name="Change" Type="float" Nullable="false" />
+          <Property Name="CDSPrem" Type="float" Nullable="false" />
+          <Property Name="Discount" Type="float" Nullable="false" />
+          <Property Name="SurvivalProb" Type="float" Nullable="false" />
+          <Property Name="RiskyFlow" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="mxCDSCloseOuts">
+          <Key>
+            <PropertyRef Name="TradeID" />
+          </Key>
+          <Property Name="TradeID" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Instrument" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Markit" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CounterParty" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="OrigTradeDate" Type="datetime" Nullable="false" />
+          <Property Name="OrigSettleDate" Type="datetime" Nullable="false" />
+          <Property Name="MaturityDate" Type="datetime" Nullable="false" />
+          <Property Name="ValuationDate" Type="datetime" Nullable="false" />
+          <Property Name="Notional" Type="float" Nullable="false" />
+          <Property Name="CDSSpread" Type="float" Nullable="false" />
+          <Property Name="mxPortfolio" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ValuationSpread" Type="float" Nullable="false" />
+          <Property Name="UpFront" Type="float" Nullable="false" />
+          <Property Name="HPCarry" Type="float" Nullable="false" />
+          <Property Name="MarketValue" Type="float" Nullable="false" />
+          <Property Name="HP_PL" Type="float" Nullable="false" />
+          <Property Name="CreditBPV" Type="float" Nullable="false" />
+          <Property Name="Recovery" Type="float" Nullable="false" />
+          <Property Name="CloseoutAI" Type="float" Nullable="false" />
+          <Property Name="CloseOutMV" Type="float" Nullable="false" />
+          <Property Name="TotalReturn" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="mxCDSDisplays">
+          <Key>
+            <PropertyRef Name="TradeID" />
+          </Key>
+          <Property Name="TradeID" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Instrument" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Markit" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CounterParty" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="SettleDate" Type="datetime" Nullable="false" />
+          <Property Name="MaturityDate" Type="datetime" Nullable="false" />
+          <Property Name="Notional" Type="float" Nullable="false" />
+          <Property Name="CDSSpread" Type="float" Nullable="false" />
+          <Property Name="mxPortfolio" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CDSMTMSpread" Type="float" Nullable="false" />
+          <Property Name="Upfront" Type="float" Nullable="false" />
+          <Property Name="HPCarry" Type="float" Nullable="false" />
+          <Property Name="MarketValue" Type="float" Nullable="false" />
+          <Property Name="HP_PL" Type="float" Nullable="false" />
+          <Property Name="CreditBPV" Type="float" Nullable="false" />
+          <Property Name="Recovery" Type="float" Nullable="false" />
+          <Property Name="AISettlement" Type="float" Nullable="false" />
+          <Property Name="CloseOutMV" Type="float" Nullable="false" />
+          <Property Name="TotalReturn" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OPICSCashFlows">
+          <Key>
+            <PropertyRef Name="DEALID" />
+            <PropertyRef Name="SCHDSEQ" />
+          </Key>
+          <Property Name="DEALID" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="SCHDSEQ" Type="nvarchar" Nullable="false" MaxLength="4" />
+          <Property Name="PRODTYPE" Type="nvarchar" MaxLength="2" />
+          <Property Name="SCHDTYPE" Type="nvarchar" MaxLength="1" />
+          <Property Name="PRODUCT" Type="nvarchar" MaxLength="60" />
+          <Property Name="CCY" Type="nvarchar" MaxLength="3" />
+          <Property Name="PRINAMT" Type="float" />
+          <Property Name="PPAYAMT" Type="float" />
+          <Property Name="INTRATE_8" Type="float" />
+          <Property Name="SPREAD_8" Type="float" />
+          <Property Name="INTSTRTDTE" Type="datetime" />
+          <Property Name="INTENDDTE" Type="datetime" />
+          <Property Name="IPAYDATE" Type="datetime" />
+          <Property Name="AL" Type="nvarchar" MaxLength="1" />
+          <Property Name="RATECODE" Type="nvarchar" MaxLength="7" />
+          <Property Name="BASIS" Type="nvarchar" MaxLength="6" />
+        </EntityType>
+        <EntityType Name="OPICSLIVEDEAL">
+          <Key>
+            <PropertyRef Name="DEALID" />
+          </Key>
+          <Property Name="DEALID" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="SECURITY" Type="nvarchar" MaxLength="40" />
+          <Property Name="CCY" Type="nvarchar" MaxLength="3" />
+          <Property Name="VDATE" Type="datetime" />
+          <Property Name="MDATE" Type="datetime" />
+          <Property Name="CURFACE" Type="float" />
+          <Property Name="FACE" Type="float" />
+          <Property Name="SPREAD" Type="float" />
+          <Property Name="ASWPSPRD" Type="float" />
+          <Property Name="DEALTEXT" Type="nvarchar" MaxLength="70" />
+          <Property Name="CUSIP" Type="nvarchar" MaxLength="50" />
+          <Property Name="PRICE" Type="float" />
+          <Property Name="DDATE" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Portfolio">
+          <Key>
+            <PropertyRef Name="Portfolio" />
+          </Key>
+          <Property Name="Portfolio" Type="nvarchar" Nullable="false" MaxLength="25" />
+          <Property Name="PortfolioDescription" Type="nvarchar" MaxLength="255" />
+          <Property Name="PortfolioType" Type="nvarchar" MaxLength="12" />
+          <Property Name="PortfolioClass" Type="nvarchar" MaxLength="4" />
+          <Property Name="PortfolioMgrStatus" Type="nvarchar" MaxLength="8" />
+          <Property Name="EffectiveDate" Type="datetime" />
+          <Property Name="ScheduledTermination" Type="datetime" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="3" />
+          <Property Name="Daycount" Type="nvarchar" MaxLength="8" />
+          <Property Name="Roll" Type="nvarchar" MaxLength="12" />
+          <Property Name="Calendar" Type="nvarchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="PortfolioList">
+          <Key>
+            <PropertyRef Name="PortfolioList" />
+          </Key>
+          <Property Name="PortfolioList" Type="nvarchar" Nullable="false" MaxLength="25" />
+          <Property Name="Batchable" Type="bit" />
+          <Property Name="BatchDate" Type="datetime" />
+          <Property Name="IsDefault" Type="bit" />
+        </EntityType>
+        <EntityType Name="PortfolioLists">
+          <Key>
+            <PropertyRef Name="PortfolioList" />
+            <PropertyRef Name="Portfolio" />
+          </Key>
+          <Property Name="PortfolioList" Type="nvarchar" Nullable="false" MaxLength="25" />
+          <Property Name="Portfolio" Type="nvarchar" Nullable="false" MaxLength="25" />
+          <Property Name="PortfolioCorrelation" Type="float" />
+          <Property Name="PortfolioNumDraws" Type="int" />
+        </EntityType>
+        <EntityType Name="PortfolioSimulation">
+          <Key>
+            <PropertyRef Name="SimID" />
+          </Key>
+          <Property Name="SimID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Portfolio" Type="nvarchar" MaxLength="25" />
+          <Property Name="RevalDate" Type="datetime" />
+          <Property Name="SimulationDate" Type="datetime" />
+          <Property Name="Correlation" Type="float" />
+          <Property Name="Draws" Type="int" />
+          <Property Name="SimType" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="PortfolioSimulationBins">
+          <Key>
+            <PropertyRef Name="SimID" />
+            <PropertyRef Name="BinType" />
+            <PropertyRef Name="BinOrdinal" />
+          </Key>
+          <Property Name="SimID" Type="int" Nullable="false" />
+          <Property Name="BinType" Type="nvarchar" Nullable="false" MaxLength="1" />
+          <Property Name="BinOrdinal" Type="int" Nullable="false" />
+          <Property Name="BinX" Type="nvarchar" MaxLength="10" />
+          <Property Name="BinY" Type="float" />
+        </EntityType>
+        <EntityType Name="PortfolioSimulationResult">
+          <Key>
+            <PropertyRef Name="SimID" />
+            <PropertyRef Name="SimDate" />
+          </Key>
+          <Property Name="SimID" Type="int" Nullable="false" />
+          <Property Name="SimDate" Type="datetime" Nullable="false" />
+          <Property Name="Correlation" Type="float" />
+          <Property Name="ExpectedLoss" Type="float" />
+          <Property Name="StdDev" Type="float" />
+          <Property Name="TrancheAttach" Type="float" />
+          <Property Name="TranchZScore" Type="float" />
+          <Property Name="WAS" Type="float" />
+          <Property Name="PctWeight" Type="float" />
+          <Property Name="RECount" Type="int" />
+          <Property Name="MaxLoss" Type="float" />
+          <Property Name="WARR" Type="float" />
+          <Property Name="WARRMin" Type="float" />
+          <Property Name="WARRMax" Type="float" />
+          <Property Name="TrancheWidth" Type="float" />
+          <Property Name="SimDuration" Type="nvarchar" MaxLength="50" />
+          <Property Name="Draws" Type="int" />
+        </EntityType>
+        <EntityType Name="PortfolioTrades">
+          <Key>
+            <PropertyRef Name="Portfolio" />
+            <PropertyRef Name="NB" />
+          </Key>
+          <Property Name="Portfolio" Type="nvarchar" Nullable="false" MaxLength="25" />
+          <Property Name="NB" Type="int" Nullable="false" />
+          <Property Name="TICKER" Type="nvarchar" MaxLength="25" />
+          <Property Name="CCY" Type="nvarchar" MaxLength="3" />
+          <Property Name="SnrSub" Type="nvarchar" MaxLength="6" />
+          <Property Name="CounterParty" Type="nvarchar" MaxLength="50" />
+          <Property Name="NotionalAmount" Type="float" />
+          <Property Name="TradeDate" Type="datetime" />
+          <Property Name="MaturityDate" Type="datetime" />
+          <Property Name="ExpireDate" Type="datetime" />
+          <Property Name="DealRate" Type="float" />
+          <Property Name="PayRecv" Type="nvarchar" MaxLength="4" />
+          <Property Name="Trader" Type="nvarchar" MaxLength="15" />
+          <Property Name="TradeStatus" Type="nvarchar" MaxLength="50" />
+          <Property Name="MTMRate" Type="float" />
+          <Property Name="CreditCurveID" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpfrontPayment" Type="float" />
+          <Property Name="Recovery" Type="float" />
+          <Property Name="IsFixedRR" Type="bit" />
+        </EntityType>
+        <EntityType Name="RATECODE">
+          <Key>
+            <PropertyRef Name="RATECODE" />
+          </Key>
+          <Property Name="RATECODE" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CCY" Type="nvarchar" Nullable="false" MaxLength="8" />
+          <Property Name="CCYCALENDAR" Type="nvarchar" MaxLength="3" />
+          <Property Name="Basis" Type="nvarchar" MaxLength="8" />
+          <Property Name="Period" Type="nvarchar" MaxLength="4" />
+          <Property Name="nDay2Start" Type="smallint" />
+          <Property Name="nCompoundPA" Type="int" />
+          <Property Name="RateType" Type="smallint" />
+          <Property Name="CF_Period_Type" Type="nvarchar" Nullable="false" MaxLength="1" />
+          <Property Name="CF_StartDate" Type="datetime" />
+          <Property Name="CF_EndDate" Type="datetime" />
+          <Property Name="CF_SensiEndDate" Type="datetime" />
+          <Property Name="RIC" Type="nvarchar" MaxLength="50" />
+          <Property Name="BBTKR" Type="nvarchar" MaxLength="30" />
+          <Property Name="Description" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="RATEHIST">
+          <Key>
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="RATECODE" />
+          </Key>
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="RATECODE" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="bid" Type="float" />
+          <Property Name="ask" Type="float" />
+          <Property Name="cls" Type="float" />
+        </EntityType>
+        <EntityType Name="RATETimeStamp">
+          <Key>
+            <PropertyRef Name="SaveDate" />
+            <PropertyRef Name="TimeStamp" />
+          </Key>
+          <Property Name="SaveDate" Type="datetime" Nullable="false" />
+          <Property Name="TimeStamp" Type="datetime" Nullable="false" />
+          <Property Name="TimeStampUTC" Type="datetimeoffset" />
+        </EntityType>
+        <EntityType Name="REDENTITY">
+          <Key>
+            <PropertyRef Name="TICKER" />
+          </Key>
+          <Property Name="TICKER" Type="nvarchar" Nullable="false" MaxLength="25" />
+          <Property Name="EntityName" Type="nvarchar" MaxLength="150" />
+          <Property Name="ShortName" Type="nvarchar" MaxLength="150" />
+          <Property Name="REDCODE" Type="nvarchar" MaxLength="10" />
+          <Property Name="CUSIP" Type="nvarchar" MaxLength="50" />
+          <Property Name="TYPE" Type="nvarchar" MaxLength="10" />
+          <Property Name="Jurisdiction" Type="nvarchar" MaxLength="50" />
+          <Property Name="MarkitSector" Type="nvarchar" MaxLength="50" />
+          <Property Name="PTICKER" Type="nvarchar" MaxLength="25" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'CREDITNET.dbo.SectorMaster' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SectorMaster">
+          <Key>
+            <PropertyRef Name="Ticker" />
+          </Key>
+          <Property Name="Ticker" Type="nvarchar" Nullable="false" MaxLength="25" />
+          <Property Name="IndustrySubDesignations" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Security Master">
+          <Key>
+            <PropertyRef Name="CUSIP" />
+          </Key>
+          <Property Name="CUSIP" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Security" Type="nvarchar" Nullable="false" MaxLength="40" />
+          <Property Name="ISSUER" Type="nvarchar" MaxLength="30" />
+          <Property Name="INTEXDealName" Type="nvarchar" MaxLength="20" />
+          <Property Name="Underwriter-Agent" Type="nvarchar" MaxLength="8" />
+          <Property Name="Listing" Type="nvarchar" MaxLength="10" />
+          <Property Name="TrusteeCode" Type="nvarchar" MaxLength="12" />
+          <Property Name="CMCode" Type="nvarchar" MaxLength="12" />
+          <Property Name="CDOCollTotal" Type="float" />
+          <Property Name="ReinvPeriod" Type="nvarchar" MaxLength="12" />
+          <Property Name="NonCall" Type="nvarchar" MaxLength="12" />
+          <Property Name="Settlement" Type="datetime" />
+          <Property Name="FinalMaturity" Type="datetime" />
+          <Property Name="WAL" Type="nvarchar" MaxLength="12" />
+          <Property Name="Wrap" Type="nvarchar" MaxLength="12" />
+          <Property Name="DiscountMargin" Type="float" />
+          <Property Name="IndexRate" Type="nvarchar" MaxLength="15" />
+          <Property Name="StructureNotes" Type="ntext" />
+          <Property Name="SecurityRatings" Type="nvarchar" MaxLength="30" />
+          <Property Name="SecurityRatingsMoody" Type="nvarchar" MaxLength="10" />
+          <Property Name="SecurityRatingsSP" Type="nvarchar" MaxLength="10" />
+          <Property Name="SecurityRatingsFitch" Type="nvarchar" MaxLength="10" />
+          <Property Name="SecurityHolding" Type="nvarchar" MaxLength="50" />
+          <Property Name="SecurityNotes" Type="nvarchar" MaxLength="50" />
+          <Property Name="SecurityAmortStatus" Type="bit" />
+          <Property Name="SecurityClass" Type="nvarchar" MaxLength="20" />
+          <Property Name="CDOType" Type="nvarchar" MaxLength="20" />
+          <Property Name="SecurityCollateral" Type="nvarchar" MaxLength="16" />
+          <Property Name="SecurityParentStructure" Type="nvarchar" MaxLength="50" />
+          <Property Name="SecurityQuality" Type="nvarchar" MaxLength="4" />
+          <Property Name="SecurityStatus" Type="nvarchar" MaxLength="4" />
+          <Property Name="IntexCoverage" Type="bit" />
+          <Property Name="IntexPermission" Type="bit" />
+          <Property Name="IntexDate" Type="datetime" />
+          <Property Name="IntexBETRating" Type="nvarchar" MaxLength="6" />
+          <Property Name="DataLoc" Type="nvarchar" MaxLength="50" />
+          <Property Name="MIProvider" Type="nvarchar" MaxLength="50" />
+          <Property Name="Servicer" Type="nvarchar" MaxLength="50" />
+          <Property Name="PREPAY_RATE" Type="int" />
+          <Property Name="PREPAY_UNITS" Type="nvarchar" MaxLength="50" />
+          <Property Name="TICKER" Type="nvarchar" MaxLength="30" />
+          <Property Name="BBGMTK" Type="nvarchar" MaxLength="8" />
+          <Property Name="Dealname" Type="nvarchar" MaxLength="50" />
+          <Property Name="ABSEvalCurveKey" Type="nvarchar" MaxLength="25" />
+          <Property Name="RiskyBond" Type="bit" />
+        </EntityType>
+        <EntityType Name="SecurityCPV">
+          <Key>
+            <PropertyRef Name="CUSIP" />
+          </Key>
+          <Property Name="CUSIP" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CPV" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="SecurityMTMSpread">
+          <Key>
+            <PropertyRef Name="SaveDate" />
+            <PropertyRef Name="CUSIP" />
+          </Key>
+          <Property Name="SaveDate" Type="datetime" Nullable="false" />
+          <Property Name="CUSIP" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="MTMSPREAD" Type="float" />
+        </EntityType>
+        <EntityType Name="TradeGroup">
+          <Key>
+            <PropertyRef Name="TradeGroupID" />
+          </Key>
+          <Property Name="TradeGroupID" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="Classificaton" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="TradeGroupTrades">
+          <Key>
+            <PropertyRef Name="TradeGroupID" />
+            <PropertyRef Name="TradeID" />
+          </Key>
+          <Property Name="TradeGroupID" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="TradeID" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="TradeType" Type="nvarchar" MaxLength="4" />
+          <Property Name="SecurityName" Type="nvarchar" MaxLength="50" />
+          <Property Name="AMOUNT" Type="float" />
+          <Property Name="SPREAD" Type="float" />
+          <Property Name="MATURITY" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TrancheLets">
+          <Key>
+            <PropertyRef Name="ForwardDate" />
+          </Key>
+          <Property Name="ForwardDate" Type="datetime" Nullable="false" />
+          <Property Name="DiscountFactor" Type="float" Nullable="false" />
+          <Property Name="CumulativeLoss" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TranchePrice2">
+          <Key>
+            <PropertyRef Name="SimID" />
+          </Key>
+          <Property Name="SimID" Type="int" Nullable="false" />
+          <Property Name="TTNo" Type="int" Nullable="false" />
+          <Property Name="Portfolio" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Notional" Type="float" Nullable="false" />
+          <Property Name="Attach" Type="float" Nullable="false" />
+          <Property Name="Width" Type="float" Nullable="false" />
+          <Property Name="Fee" Type="float" Nullable="false" />
+          <Property Name="TranchePremium" Type="float" Nullable="false" />
+          <Property Name="PVLoss" Type="float" Nullable="false" />
+          <Property Name="PV01" Type="float" Nullable="false" />
+          <Property Name="ParPremium" Type="float" Nullable="false" />
+          <Property Name="Maturity" Type="datetime" Nullable="false" />
+          <Property Name="CCY" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="PortWAS" Type="float" Nullable="false" />
+          <Property Name="SimDraws" Type="int" Nullable="false" />
+          <Property Name="Correlation" Type="float" Nullable="false" />
+          <Property Name="SimElapsed" Type="time" Nullable="false" />
+          <Property Name="ModelPrice" Type="float" Nullable="false" />
+          <Property Name="ZeroYTM" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TranchePrices">
+          <Key>
+            <PropertyRef Name="SimID" />
+          </Key>
+          <Property Name="SimID" Type="int" Nullable="false" />
+          <Property Name="TTNo" Type="int" Nullable="false" />
+          <Property Name="Portfolio" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Notional" Type="float" Nullable="false" />
+          <Property Name="Attach" Type="float" Nullable="false" />
+          <Property Name="Width" Type="float" Nullable="false" />
+          <Property Name="Fee" Type="float" Nullable="false" />
+          <Property Name="TranchePremium" Type="float" Nullable="false" />
+          <Property Name="PVLoss" Type="float" Nullable="false" />
+          <Property Name="PV01" Type="float" Nullable="false" />
+          <Property Name="ParPremium" Type="float" Nullable="false" />
+          <Property Name="Maturity" Type="datetime" Nullable="false" />
+          <Property Name="CCY" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="PortWAS" Type="float" Nullable="false" />
+          <Property Name="SimDraws" Type="int" Nullable="false" />
+          <Property Name="Correlation" Type="float" Nullable="false" />
+          <Property Name="SimElapsed" Type="float" Nullable="false" />
+          <Property Name="DefaultTKR" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TrancheTrade">
+          <Key>
+            <PropertyRef Name="TTNo" />
+          </Key>
+          <Property Name="TTNo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Portfolio" Type="nvarchar" MaxLength="25" />
+          <Property Name="TrancheName" Type="nvarchar" MaxLength="20" />
+          <Property Name="Notional" Type="float" />
+          <Property Name="TradeDate" Type="datetime" />
+          <Property Name="SettlementDate" Type="datetime" />
+          <Property Name="Maturity" Type="datetime" />
+          <Property Name="Attachment" Type="float" />
+          <Property Name="Width" Type="float" />
+          <Property Name="Premium" Type="float" />
+          <Property Name="PremBasis" Type="nvarchar" MaxLength="6" />
+          <Property Name="PremPmtPA" Type="int" />
+          <Property Name="Ratings" Type="nvarchar" MaxLength="12" />
+          <Property Name="Fee" Type="float" />
+          <Property Name="CCY" Type="nvarchar" MaxLength="3" />
+          <Property Name="IsFunded" Type="bit" />
+          <Property Name="SecurityID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Orig_Notional" Type="float" />
+          <Property Name="Orig_Attach" Type="float" />
+          <Property Name="Orig_Width" Type="float" />
+        </EntityType>
+        <EntityType Name="TTList">
+          <Key>
+            <PropertyRef Name="TTList" />
+          </Key>
+          <Property Name="TTList" Type="nvarchar" Nullable="false" MaxLength="25" />
+          <Property Name="IsDefault" Type="bit" />
+        </EntityType>
+        <EntityType Name="TTPriceHist">
+          <Key>
+            <PropertyRef Name="SimID" />
+          </Key>
+          <Property Name="SimID" Type="int" Nullable="false" />
+          <Property Name="TTNo" Type="int" />
+          <Property Name="Portfolio" Type="nvarchar" MaxLength="25" />
+          <Property Name="Notional" Type="float" />
+          <Property Name="Attach" Type="float" />
+          <Property Name="Width" Type="float" />
+          <Property Name="UpfrontFee" Type="float" />
+          <Property Name="Premium" Type="float" />
+          <Property Name="ParPremium" Type="float" />
+          <Property Name="Maturity" Type="datetime" />
+          <Property Name="CCY" Type="nvarchar" MaxLength="3" />
+          <Property Name="pWAS" Type="float" />
+          <Property Name="pCredits" Type="int" />
+          <Property Name="pCorrelation" Type="float" />
+          <Property Name="TranchePrice" Type="float" />
+          <Property Name="SimElapsed" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="TTRevalInput">
+          <Key>
+            <PropertyRef Name="TTList" />
+            <PropertyRef Name="TTNo" />
+            <PropertyRef Name="RevalDate" />
+          </Key>
+          <Property Name="TTList" Type="nvarchar" Nullable="false" MaxLength="25" />
+          <Property Name="TTNo" Type="int" Nullable="false" />
+          <Property Name="RevalDate" Type="datetime" Nullable="false" />
+          <Property Name="Correlation" Type="float" />
+          <Property Name="Draws" Type="int" />
+        </EntityType>
+        <EntityType Name="ycHeader">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CCY" Type="nvarchar" Nullable="false" MaxLength="6" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="Spread" Type="int" />
+          <Property Name="BorrowStructure" Type="nvarchar" MaxLength="50" />
+          <Property Name="HolidayCenter" Type="nvarchar" MaxLength="25" />
+          <Property Name="curveType" Type="nvarchar" MaxLength="2" />
+          <Property Name="spotDays" Type="int" />
+        </EntityType>
+        <EntityType Name="ycItemHistory">
+          <Key>
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="CurveName" />
+            <PropertyRef Name="RATECODE" />
+          </Key>
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="CurveName" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="RATECODE" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="BPShift" Type="float" />
+          <Property Name="SORTORDER" Type="int" />
+        </EntityType>
+        <Association Name="FK_locCcyDef_ycHeader">
+          <End Role="ycHeader" Type="CreditPricingModel.Store.ycHeader" Multiplicity="0..1" />
+          <End Role="locCcyDef" Type="CreditPricingModel.Store.locCcyDef" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ycHeader">
+              <PropertyRef Name="Name" />
+            </Principal>
+            <Dependent Role="locCcyDef">
+              <PropertyRef Name="DefaultYCurve" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NegBasisTrades_NegBasisID">
+          <End Role="TradeGroup" Type="CreditPricingModel.Store.TradeGroup" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TradeGroupTrades" Type="CreditPricingModel.Store.TradeGroupTrades" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TradeGroup">
+              <PropertyRef Name="TradeGroupID" />
+            </Principal>
+            <Dependent Role="TradeGroupTrades">
+              <PropertyRef Name="TradeGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PortfolioLists_Portfolio">
+          <End Role="Portfolio" Type="CreditPricingModel.Store.Portfolio" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PortfolioLists" Type="CreditPricingModel.Store.PortfolioLists" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Portfolio">
+              <PropertyRef Name="Portfolio" />
+            </Principal>
+            <Dependent Role="PortfolioLists">
+              <PropertyRef Name="Portfolio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PortfolioLists_PortfolioList">
+          <End Role="PortfolioList" Type="CreditPricingModel.Store.PortfolioList" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PortfolioLists" Type="CreditPricingModel.Store.PortfolioLists" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PortfolioList">
+              <PropertyRef Name="PortfolioList" />
+            </Principal>
+            <Dependent Role="PortfolioLists">
+              <PropertyRef Name="PortfolioList" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PortfolioSimulation_Portfolio">
+          <End Role="Portfolio" Type="CreditPricingModel.Store.Portfolio" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PortfolioSimulation" Type="CreditPricingModel.Store.PortfolioSimulation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Portfolio">
+              <PropertyRef Name="Portfolio" />
+            </Principal>
+            <Dependent Role="PortfolioSimulation">
+              <PropertyRef Name="Portfolio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PortfolioSimulationBins_PortfolioSimulation">
+          <End Role="PortfolioSimulation" Type="CreditPricingModel.Store.PortfolioSimulation" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PortfolioSimulationBins" Type="CreditPricingModel.Store.PortfolioSimulationBins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PortfolioSimulation">
+              <PropertyRef Name="SimID" />
+            </Principal>
+            <Dependent Role="PortfolioSimulationBins">
+              <PropertyRef Name="SimID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PortfolioSimulationResult_PortfolioSimulation">
+          <End Role="PortfolioSimulation" Type="CreditPricingModel.Store.PortfolioSimulation" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PortfolioSimulationResult" Type="CreditPricingModel.Store.PortfolioSimulationResult" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PortfolioSimulation">
+              <PropertyRef Name="SimID" />
+            </Principal>
+            <Dependent Role="PortfolioSimulationResult">
+              <PropertyRef Name="SimID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RATEHIST_RATECODE">
+          <End Role="RATECODE" Type="CreditPricingModel.Store.RATECODE" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="RATEHIST" Type="CreditPricingModel.Store.RATEHIST" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RATECODE">
+              <PropertyRef Name="RATECODE" />
+            </Principal>
+            <Dependent Role="RATEHIST">
+              <PropertyRef Name="RATECODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TrancheTrade_Portfolio">
+          <End Role="Portfolio" Type="CreditPricingModel.Store.Portfolio" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TrancheTrade" Type="CreditPricingModel.Store.TrancheTrade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Portfolio">
+              <PropertyRef Name="Portfolio" />
+            </Principal>
+            <Dependent Role="TrancheTrade">
+              <PropertyRef Name="Portfolio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TTPriceHist_PortfolioSimulation">
+          <End Role="PortfolioSimulation" Type="CreditPricingModel.Store.PortfolioSimulation" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TTPriceHist" Type="CreditPricingModel.Store.TTPriceHist" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PortfolioSimulation">
+              <PropertyRef Name="SimID" />
+            </Principal>
+            <Dependent Role="TTPriceHist">
+              <PropertyRef Name="SimID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TTRevalInput_TrancheTrade">
+          <End Role="TrancheTrade" Type="CreditPricingModel.Store.TrancheTrade" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TTRevalInput" Type="CreditPricingModel.Store.TTRevalInput" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TrancheTrade">
+              <PropertyRef Name="TTNo" />
+            </Principal>
+            <Dependent Role="TTRevalInput">
+              <PropertyRef Name="TTNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TTRevalInput_TTList">
+          <End Role="TTList" Type="CreditPricingModel.Store.TTList" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TTRevalInput" Type="CreditPricingModel.Store.TTRevalInput" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TTList">
+              <PropertyRef Name="TTList" />
+            </Principal>
+            <Dependent Role="TTRevalInput">
+              <PropertyRef Name="TTList" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ycItemHistory_RATECODE">
+          <End Role="RATECODE" Type="CreditPricingModel.Store.RATECODE" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ycItemHistory" Type="CreditPricingModel.Store.ycItemHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RATECODE">
+              <PropertyRef Name="RATECODE" />
+            </Principal>
+            <Dependent Role="ycItemHistory">
+              <PropertyRef Name="RATECODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ycItemHistory_ycHeader">
+          <End Role="ycHeader" Type="CreditPricingModel.Store.ycHeader" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ycItemHistory" Type="CreditPricingModel.Store.ycItemHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ycHeader">
+              <PropertyRef Name="Name" />
+            </Principal>
+            <Dependent Role="ycItemHistory">
+              <PropertyRef Name="CurveName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PortfolioTrades_FK00">
+          <End Role="Portfolio" Type="CreditPricingModel.Store.Portfolio" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PortfolioTrades" Type="CreditPricingModel.Store.PortfolioTrades" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Portfolio">
+              <PropertyRef Name="Portfolio" />
+            </Principal>
+            <Dependent Role="PortfolioTrades">
+              <PropertyRef Name="Portfolio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CreditPricingModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="CreditPricingEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ABSEvalCurves" EntityType="CreditPricingModel.ABSEvalCurve" />
+          <EntitySet Name="Holidays" EntityType="CreditPricingModel.Holiday" />
+          <EntitySet Name="locCcyDefs" EntityType="CreditPricingModel.locCcyDef" />
+          <EntitySet Name="MarketProviders" EntityType="CreditPricingModel.MarketProvider" />
+          <EntitySet Name="mpCDSCurves" EntityType="CreditPricingModel.mpCDSCurve" />
+          <EntitySet Name="MUREXTKRMAPs" EntityType="CreditPricingModel.MUREXTKRMAP" />
+          <EntitySet Name="mxCDS" EntityType="CreditPricingModel.mxCDS" />
+          <EntitySet Name="OPICSCashFlows" EntityType="CreditPricingModel.OPICSCashFlow" />
+          <EntitySet Name="OPICSLIVEDEALs" EntityType="CreditPricingModel.OPICSLIVEDEAL" />
+          <EntitySet Name="Portfolios" EntityType="CreditPricingModel.Portfolio" />
+          <EntitySet Name="CrUniverses" EntityType="CreditPricingModel.CrUniverse" />
+          <EntitySet Name="CrUniverseLists" EntityType="CreditPricingModel.CrUniverseList" />
+          <EntitySet Name="PortfolioSimulations" EntityType="CreditPricingModel.PortfolioSimulation" />
+          <EntitySet Name="PortfolioSimulationBins" EntityType="CreditPricingModel.PortfolioSimulationBin" />
+          <EntitySet Name="PortfolioSimulationResults" EntityType="CreditPricingModel.PortfolioSimulationResult" />
+          <EntitySet Name="PortfolioTrades" EntityType="CreditPricingModel.PortfolioTrade" />
+          <EntitySet Name="RATECODEs" EntityType="CreditPricingModel.RATECODE" />
+          <EntitySet Name="RATEHISTs" EntityType="CreditPricingModel.RATEHIST" />
+          <EntitySet Name="RATETimeStamps" EntityType="CreditPricingModel.RATETimeStamp" />
+          <EntitySet Name="REDENTITies" EntityType="CreditPricingModel.REDENTITY" />
+          <EntitySet Name="Security_Masters" EntityType="CreditPricingModel.Security_Master" />
+          <EntitySet Name="SecurityCPVs" EntityType="CreditPricingModel.SecurityCPV" />
+          <EntitySet Name="TradeGroups" EntityType="CreditPricingModel.TradeGroup" />
+          <EntitySet Name="TradeGroupTrades" EntityType="CreditPricingModel.TradeGroupTrade" />
+          <EntitySet Name="TrancheTrades" EntityType="CreditPricingModel.TrancheTrade" />
+          <EntitySet Name="TTLists" EntityType="CreditPricingModel.TTList" />
+          <EntitySet Name="TTRevalInputs" EntityType="CreditPricingModel.TTRevalInput" />
+          <EntitySet Name="ycHeaders" EntityType="CreditPricingModel.ycHeader" />
+          <EntitySet Name="ycItemHistories" EntityType="CreditPricingModel.ycItemHistory" />
+          <AssociationSet Name="FK_locCcyDef_ycHeader" Association="CreditPricingModel.FK_locCcyDef_ycHeader">
+            <End Role="ycHeader" EntitySet="ycHeaders" />
+            <End Role="locCcyDef" EntitySet="locCcyDefs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PortfolioLists_Portfolio" Association="CreditPricingModel.FK_PortfolioLists_Portfolio">
+            <End Role="Portfolio" EntitySet="Portfolios" />
+            <End Role="PortfolioLists" EntitySet="CrUniverseLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PortfolioSimulation_Portfolio" Association="CreditPricingModel.FK_PortfolioSimulation_Portfolio">
+            <End Role="Portfolio" EntitySet="Portfolios" />
+            <End Role="PortfolioSimulation" EntitySet="PortfolioSimulations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TrancheTrade_Portfolio" Association="CreditPricingModel.FK_TrancheTrade_Portfolio">
+            <End Role="Portfolio" EntitySet="Portfolios" />
+            <End Role="TrancheTrade" EntitySet="TrancheTrades" />
+          </AssociationSet>
+          <AssociationSet Name="PortfolioTrades_FK00" Association="CreditPricingModel.PortfolioTrades_FK00">
+            <End Role="Portfolio" EntitySet="Portfolios" />
+            <End Role="PortfolioTrades" EntitySet="PortfolioTrades" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PortfolioLists_PortfolioList" Association="CreditPricingModel.FK_PortfolioLists_PortfolioList">
+            <End Role="PortfolioList" EntitySet="CrUniverses" />
+            <End Role="PortfolioLists" EntitySet="CrUniverseLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PortfolioSimulationBins_PortfolioSimulation" Association="CreditPricingModel.FK_PortfolioSimulationBins_PortfolioSimulation">
+            <End Role="PortfolioSimulation" EntitySet="PortfolioSimulations" />
+            <End Role="PortfolioSimulationBins" EntitySet="PortfolioSimulationBins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PortfolioSimulationResult_PortfolioSimulation" Association="CreditPricingModel.FK_PortfolioSimulationResult_PortfolioSimulation">
+            <End Role="PortfolioSimulation" EntitySet="PortfolioSimulations" />
+            <End Role="PortfolioSimulationResult" EntitySet="PortfolioSimulationResults" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RATEHIST_RATECODE_tk" Association="CreditPricingModel.FK_RATEHIST_RATECODE">
+            <End Role="RATECODE" EntitySet="RATECODEs" />
+            <End Role="RATEHIST" EntitySet="RATEHISTs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ycItemHistory_RATECODE" Association="CreditPricingModel.FK_ycItemHistory_RATECODE">
+            <End Role="RATECODE" EntitySet="RATECODEs" />
+            <End Role="ycItemHistory" EntitySet="ycItemHistories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NegBasisTrades_NegBasisID" Association="CreditPricingModel.FK_NegBasisTrades_NegBasisID">
+            <End Role="TradeGroup" EntitySet="TradeGroups" />
+            <End Role="TradeGroupTrades" EntitySet="TradeGroupTrades" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TTRevalInput_TrancheTrade" Association="CreditPricingModel.FK_TTRevalInput_TrancheTrade">
+            <End Role="TrancheTrade" EntitySet="TrancheTrades" />
+            <End Role="TTRevalInput" EntitySet="TTRevalInputs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TTRevalInput_TTList" Association="CreditPricingModel.FK_TTRevalInput_TTList">
+            <End Role="TTList" EntitySet="TTLists" />
+            <End Role="TTRevalInput" EntitySet="TTRevalInputs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ycItemHistory_ycHeader" Association="CreditPricingModel.FK_ycItemHistory_ycHeader">
+            <End Role="ycHeader" EntitySet="ycHeaders" />
+            <End Role="ycItemHistory" EntitySet="ycItemHistories" />
+          </AssociationSet>
+          <EntitySet Name="TTPriceHists" EntityType="CreditPricingModel.TTPriceHist" />
+          <AssociationSet Name="FK_TTPriceHist_PortfolioSimulation" Association="CreditPricingModel.FK_TTPriceHist_PortfolioSimulation">
+            <End Role="PortfolioSimulation" EntitySet="PortfolioSimulations" />
+            <End Role="TTPriceHist" EntitySet="TTPriceHists" />
+          </AssociationSet>
+          <EntitySet Name="BondCashFlows" EntityType="CreditPricingModel.BondCashFlow" />
+          <EntitySet Name="BondPXSummaries" EntityType="CreditPricingModel.BondPXSummary" />
+          <EntitySet Name="cdsListSummaries" EntityType="CreditPricingModel.cdsListSummary" />
+          <EntitySet Name="mxCDSCalcs" EntityType="CreditPricingModel.mxCDSCalc" />
+          <EntitySet Name="mxCDSCashFlowDisplays" EntityType="CreditPricingModel.mxCDSCashFlowDisplay" />
+          <EntitySet Name="mxCDSCloseOuts" EntityType="CreditPricingModel.mxCDSCloseOut" />
+          <EntitySet Name="mxCDSDisplays" EntityType="CreditPricingModel.mxCDSDisplay" />
+          <EntitySet Name="TrancheLets" EntityType="CreditPricingModel.TrancheLet" />
+          <EntitySet Name="TranchePrice2" EntityType="CreditPricingModel.TranchePrice2" />
+          <EntitySet Name="TranchePrices" EntityType="CreditPricingModel.TranchePrice" />
+          <EntitySet Name="HolidayHDBs" EntityType="CreditPricingModel.HolidayHDB" />
+          <EntitySet Name="fx_arbs" EntityType="CreditPricingModel.fx_arb" />
+          <EntitySet Name="SecurityMTMSpreads" EntityType="CreditPricingModel.SecurityMTMSpread" />
+          <EntitySet Name="MAP_CC_MXPort" EntityType="CreditPricingModel.MAP_CC_MXPort" />
+          <EntitySet Name="SectorMasters" EntityType="CreditPricingModel.SectorMaster" />
+        </EntityContainer>
+        <EntityType Name="ABSEvalCurve">
+          <Key>
+            <PropertyRef Name="ABSEvalCurveName" />
+            <PropertyRef Name="EvalDate" />
+          </Key>
+          <Property Name="ABSEvalCurveName" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="EvalDate" Type="DateTime" Nullable="false" />
+          <Property Name="C1" Type="Int32" />
+          <Property Name="C3" Type="Int32" />
+          <Property Name="C5" Type="Int32" />
+          <Property Name="C7" Type="Int32" />
+          <Property Name="C10" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Holiday">
+          <Key>
+            <PropertyRef Name="NSCODE" />
+            <PropertyRef Name="NonSettleDate" />
+          </Key>
+          <Property Name="NSCODE" Type="String" Nullable="false" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="NonSettleDate" Type="DateTime" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="locCcyDef">
+          <Key>
+            <PropertyRef Name="CCY" />
+          </Key>
+          <Property Name="CCY" Type="String" Nullable="false" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="DefaultYCurve" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LIBORCalendar" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="Basis" Type="Int16" />
+          <Property Name="DaysSpot" Type="Int16" />
+          <Property Name="futPVBP" Type="Single" />
+          <Property Name="LIVESTATUS" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="ycHeader" Relationship="CreditPricingModel.FK_locCcyDef_ycHeader" FromRole="locCcyDef" ToRole="ycHeader" />
+        </EntityType>
+        <EntityType Name="MarketProvider">
+          <Key>
+            <PropertyRef Name="ProviderName" />
+          </Key>
+          <Property Name="ProviderName" Type="String" Nullable="false" MaxLength="8" Unicode="true" FixedLength="false" />
+          <Property Name="FirmName" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Center" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="Interface" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="mpCDSCurve">
+          <Key>
+            <PropertyRef Name="EvalDate" />
+            <PropertyRef Name="TICKER" />
+            <PropertyRef Name="Tier" />
+            <PropertyRef Name="CCY" />
+            <PropertyRef Name="DocClause" />
+          </Key>
+          <Property Name="EvalDate" Type="DateTime" Nullable="false" />
+          <Property Name="TICKER" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="ShortName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="RedCode" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="Tier" Type="String" Nullable="false" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="CCY" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="DocClause" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="Depth" Type="Int32" />
+          <Property Name="Sector" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="Region" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Country" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AvRating" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="C_6m" Type="Double" />
+          <Property Name="C_1Y" Type="Double" />
+          <Property Name="C_2Y" Type="Double" />
+          <Property Name="C_3Y" Type="Double" />
+          <Property Name="C_4Y" Type="Double" />
+          <Property Name="C_5Y" Type="Double" />
+          <Property Name="C_7Y" Type="Double" />
+          <Property Name="C_10Y" Type="Double" />
+          <Property Name="C_15Y" Type="Double" />
+          <Property Name="C_20Y" Type="Double" />
+          <Property Name="C_30Y" Type="Double" />
+          <Property Name="Recovery" Type="Double" />
+        </EntityType>
+        <EntityType Name="MUREXTKRMAP">
+          <Key>
+            <PropertyRef Name="INSTRUMENT" />
+          </Key>
+          <Property Name="INSTRUMENT" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="TKR" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="CCY" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="TIER" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="mxCDS">
+          <Key>
+            <PropertyRef Name="SAVEDATE" />
+            <PropertyRef Name="NB" />
+          </Key>
+          <Property Name="SAVEDATE" Type="DateTime" Nullable="false" />
+          <Property Name="NB" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="NBEXT" Type="Int32" />
+          <Property Name="PL_INSCUR" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="FAMILY" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="GROUP" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="TP_STATUS" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="COUNTERPART" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="PORTFOLIO" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="BRW_NOM1" Type="Double" />
+          <Property Name="TRNDATE" Type="DateTime" />
+          <Property Name="MATURITY" Type="DateTime" />
+          <Property Name="EXPIRY" Type="DateTime" />
+          <Property Name="VALID" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="IE" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="INSTRUMENT" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="MARKET_INDEX" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="RATE_MARG0" Type="Double" />
+          <Property Name="B_S" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="TRADER" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="MOP_LAST" Type="Int32" />
+          <Property Name="OPT_MOPLST" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PayRecvLeg" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="STL_FLW" Type="Double" />
+          <Property Name="BRW_SDTE" Type="DateTime" />
+          <Property Name="OPT_FLWFST" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="OPICSCashFlow">
+          <Key>
+            <PropertyRef Name="DEALID" />
+            <PropertyRef Name="SCHDSEQ" />
+          </Key>
+          <Property Name="DEALID" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="SCHDSEQ" Type="String" Nullable="false" MaxLength="4" Unicode="true" FixedLength="false" />
+          <Property Name="PRODTYPE" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="SCHDTYPE" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="PRODUCT" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="CCY" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="PRINAMT" Type="Double" />
+          <Property Name="PPAYAMT" Type="Double" />
+          <Property Name="INTRATE_8" Type="Double" />
+          <Property Name="SPREAD_8" Type="Double" />
+          <Property Name="INTSTRTDTE" Type="DateTime" />
+          <Property Name="INTENDDTE" Type="DateTime" />
+          <Property Name="IPAYDATE" Type="DateTime" />
+          <Property Name="AL" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="RATECODE" Type="String" MaxLength="7" Unicode="true" FixedLength="false" />
+          <Property Name="BASIS" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="OPICSLIVEDEAL">
+          <Key>
+            <PropertyRef Name="DEALID" />
+          </Key>
+          <Property Name="DEALID" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="SECURITY" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+          <Property Name="CCY" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="VDATE" Type="DateTime" />
+          <Property Name="MDATE" Type="DateTime" />
+          <Property Name="CURFACE" Type="Double" />
+          <Property Name="FACE" Type="Double" />
+          <Property Name="SPREAD" Type="Double" />
+          <Property Name="ASWPSPRD" Type="Double" />
+          <Property Name="DEALTEXT" Type="String" MaxLength="70" Unicode="true" FixedLength="false" />
+          <Property Name="CUSIP" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PRICE" Type="Double" />
+          <Property Name="DDATE" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Portfolio">
+          <Key>
+            <PropertyRef Name="PortfolioName" />
+          </Key>
+          <Property Name="PortfolioName" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="PortfolioDescription" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="PortfolioType" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="PortfolioClass" Type="String" MaxLength="4" Unicode="true" FixedLength="false" />
+          <Property Name="PortfolioMgrStatus" Type="String" MaxLength="8" Unicode="true" FixedLength="false" />
+          <Property Name="EffectiveDate" Type="DateTime" />
+          <Property Name="ScheduledTermination" Type="DateTime" />
+          <Property Name="Currency" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="Daycount" Type="String" MaxLength="8" Unicode="true" FixedLength="false" />
+          <Property Name="Roll" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="Calendar" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="PortfolioLists" Relationship="CreditPricingModel.FK_PortfolioLists_Portfolio" FromRole="Portfolio" ToRole="PortfolioLists" />
+          <NavigationProperty Name="PortfolioSimulations" Relationship="CreditPricingModel.FK_PortfolioSimulation_Portfolio" FromRole="Portfolio" ToRole="PortfolioSimulation" />
+          <NavigationProperty Name="TrancheTrades" Relationship="CreditPricingModel.FK_TrancheTrade_Portfolio" FromRole="Portfolio" ToRole="TrancheTrade" />
+          <NavigationProperty Name="PortfolioTrades" Relationship="CreditPricingModel.PortfolioTrades_FK00" FromRole="Portfolio" ToRole="PortfolioTrades" />
+        </EntityType>
+        <EntityType Name="CrUniverse">
+          <Key>
+            <PropertyRef Name="CreditUniverseName" />
+          </Key>
+          <Property Name="CreditUniverseName" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="Batchable" Type="Boolean" />
+          <Property Name="BatchDate" Type="DateTime" />
+          <Property Name="IsDefault" Type="Boolean" />
+          <NavigationProperty Name="CreditUniverseLists" Relationship="CreditPricingModel.FK_PortfolioLists_PortfolioList" FromRole="PortfolioList" ToRole="PortfolioLists" />
+        </EntityType>
+        <EntityType Name="CrUniverseList">
+          <Key>
+            <PropertyRef Name="CreditUniverseName" />
+            <PropertyRef Name="PortfolioName" />
+          </Key>
+          <Property Name="CreditUniverseName" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="PortfolioName" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="PortfolioCorrelation" Type="Double" />
+          <Property Name="PortfolioNumDraws" Type="Int32" />
+          <NavigationProperty Name="Portfolio" Relationship="CreditPricingModel.FK_PortfolioLists_Portfolio" FromRole="PortfolioLists" ToRole="Portfolio" />
+          <NavigationProperty Name="CreditUniverse" Relationship="CreditPricingModel.FK_PortfolioLists_PortfolioList" FromRole="PortfolioLists" ToRole="PortfolioList" />
+        </EntityType>
+        <EntityType Name="PortfolioSimulation">
+          <Key>
+            <PropertyRef Name="SimID" />
+          </Key>
+          <Property Name="SimID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PortfolioName" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="RevalDate" Type="DateTime" />
+          <Property Name="SimulationDate" Type="DateTime" />
+          <Property Name="Correlation" Type="Double" />
+          <Property Name="Draws" Type="Int32" />
+          <Property Name="SimType" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Portfolio1" Relationship="CreditPricingModel.FK_PortfolioSimulation_Portfolio" FromRole="PortfolioSimulation" ToRole="Portfolio" />
+          <NavigationProperty Name="PortfolioSimulationBins" Relationship="CreditPricingModel.FK_PortfolioSimulationBins_PortfolioSimulation" FromRole="PortfolioSimulation" ToRole="PortfolioSimulationBins" />
+          <NavigationProperty Name="PortfolioSimulationResults" Relationship="CreditPricingModel.FK_PortfolioSimulationResult_PortfolioSimulation" FromRole="PortfolioSimulation" ToRole="PortfolioSimulationResult" />
+          <NavigationProperty Name="TTPriceHist" Relationship="CreditPricingModel.FK_TTPriceHist_PortfolioSimulation" FromRole="PortfolioSimulation" ToRole="TTPriceHist" />
+        </EntityType>
+        <EntityType Name="PortfolioSimulationBin">
+          <Key>
+            <PropertyRef Name="SimID" />
+            <PropertyRef Name="BinType" />
+            <PropertyRef Name="BinOrdinal" />
+          </Key>
+          <Property Name="SimID" Type="Int32" Nullable="false" />
+          <Property Name="BinType" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="BinOrdinal" Type="Int32" Nullable="false" />
+          <Property Name="BinX" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="BinY" Type="Double" />
+          <NavigationProperty Name="PortfolioSimulation" Relationship="CreditPricingModel.FK_PortfolioSimulationBins_PortfolioSimulation" FromRole="PortfolioSimulationBins" ToRole="PortfolioSimulation" />
+        </EntityType>
+        <EntityType Name="PortfolioSimulationResult">
+          <Key>
+            <PropertyRef Name="SimID" />
+            <PropertyRef Name="SimDate" />
+          </Key>
+          <Property Name="SimID" Type="Int32" Nullable="false" />
+          <Property Name="SimDate" Type="DateTime" Nullable="false" />
+          <Property Name="Correlation" Type="Double" />
+          <Property Name="ExpectedLoss" Type="Double" />
+          <Property Name="StdDev" Type="Double" />
+          <Property Name="TrancheAttach" Type="Double" />
+          <Property Name="TranchZScore" Type="Double" />
+          <Property Name="WAS" Type="Double" />
+          <Property Name="PctWeight" Type="Double" />
+          <Property Name="RECount" Type="Int32" />
+          <Property Name="MaxLoss" Type="Double" />
+          <Property Name="WARR" Type="Double" />
+          <Property Name="WARRMin" Type="Double" />
+          <Property Name="WARRMax" Type="Double" />
+          <Property Name="TrancheWidth" Type="Double" />
+          <Property Name="SimDuration" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Draws" Type="Int32" />
+          <NavigationProperty Name="PortfolioSimulation" Relationship="CreditPricingModel.FK_PortfolioSimulationResult_PortfolioSimulation" FromRole="PortfolioSimulationResult" ToRole="PortfolioSimulation" />
+        </EntityType>
+        <EntityType Name="PortfolioTrade">
+          <Key>
+            <PropertyRef Name="PortfolioName" />
+            <PropertyRef Name="NB" />
+          </Key>
+          <Property Name="PortfolioName" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="NB" Type="Int32" Nullable="false" />
+          <Property Name="TICKER" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="CCY" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="SnrSub" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="CounterParty" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NotionalAmount" Type="Double" />
+          <Property Name="TradeDate" Type="DateTime" />
+          <Property Name="MaturityDate" Type="DateTime" />
+          <Property Name="ExpireDate" Type="DateTime" />
+          <Property Name="DealRate" Type="Double" />
+          <Property Name="PayRecv" Type="String" MaxLength="4" Unicode="true" FixedLength="false" />
+          <Property Name="Trader" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="TradeStatus" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MTMRate" Type="Double" />
+          <Property Name="CreditCurveID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="UpfrontPayment" Type="Double" />
+          <Property Name="Recovery" Type="Double" />
+          <Property Name="IsFixedRR" Type="Boolean" />
+          <NavigationProperty Name="Portfolio1" Relationship="CreditPricingModel.PortfolioTrades_FK00" FromRole="PortfolioTrades" ToRole="Portfolio" />
+        </EntityType>
+        <EntityType Name="RATECODE">
+          <Key>
+            <PropertyRef Name="RATECODE1" />
+          </Key>
+          <Property Name="RATECODE1" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CCY" Type="String" Nullable="false" MaxLength="8" Unicode="true" FixedLength="false" />
+          <Property Name="CCYCALENDAR" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="Basis" Type="String" MaxLength="8" Unicode="true" FixedLength="false" />
+          <Property Name="Period" Type="String" MaxLength="4" Unicode="true" FixedLength="false" />
+          <Property Name="nDay2Start" Type="Int16" />
+          <Property Name="nCompoundPA" Type="Int32" />
+          <Property Name="RateType" Type="Int16" />
+          <Property Name="RIC" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="RATEHISTs" Relationship="CreditPricingModel.FK_RATEHIST_RATECODE" FromRole="RATECODE" ToRole="RATEHIST" />
+          <NavigationProperty Name="ycItemHistories" Relationship="CreditPricingModel.FK_ycItemHistory_RATECODE" FromRole="RATECODE" ToRole="ycItemHistory" />
+          <Property Type="String" Name="CF_Period_Type" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CF_StartDate" />
+          <Property Type="DateTime" Name="CF_EndDate" />
+          <Property Type="DateTime" Name="CF_SensiEndDate" />
+          <Property Type="String" Name="BBTKR" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="RATEHIST">
+          <Key>
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="RATECODE" />
+          </Key>
+          <Property Name="Date" Type="DateTime" Nullable="false" />
+          <Property Name="RATECODE" Type="String" MaxLength="20" Unicode="true" FixedLength="false" Nullable="false" />
+          <Property Name="bid" Type="Double" />
+          <Property Name="ask" Type="Double" />
+          <Property Name="cls" Type="Double" />
+          <NavigationProperty Name="RATECODE1" Relationship="CreditPricingModel.FK_RATEHIST_RATECODE" FromRole="RATEHIST" ToRole="RATECODE" />
+        </EntityType>
+        <EntityType Name="RATETimeStamp">
+          <Key>
+            <PropertyRef Name="SaveDate" />
+            <PropertyRef Name="TimeStamp" />
+          </Key>
+          <Property Name="SaveDate" Type="DateTime" Nullable="false" />
+          <Property Name="TimeStamp" Type="DateTime" Nullable="false" />
+          <Property Type="DateTimeOffset" Name="TimeStampUTC" />
+        </EntityType>
+        <EntityType Name="REDENTITY">
+          <Key>
+            <PropertyRef Name="TICKER" />
+          </Key>
+          <Property Name="TICKER" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="EntityName" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="ShortName" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="REDCODE" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="CUSIP" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TYPE" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="Jurisdiction" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MarkitSector" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PTICKER" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Security_Master">
+          <Key>
+            <PropertyRef Name="CUSIP" />
+          </Key>
+          <Property Name="CUSIP" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Security" Type="String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="false" />
+          <Property Name="ISSUER" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="INTEXDealName" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Underwriter_Agent" Type="String" MaxLength="8" Unicode="true" FixedLength="false" />
+          <Property Name="Listing" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="TrusteeCode" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="CMCode" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="CDOCollTotal" Type="Double" />
+          <Property Name="ReinvPeriod" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="NonCall" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="Settlement" Type="DateTime" />
+          <Property Name="FinalMaturity" Type="DateTime" />
+          <Property Name="WAL" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="Wrap" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="DiscountMargin" Type="Double" />
+          <Property Name="IndexRate" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="StructureNotes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="SecurityRatings" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="SecurityRatingsMoody" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="SecurityRatingsSP" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="SecurityRatingsFitch" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="SecurityHolding" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SecurityNotes" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SecurityAmortStatus" Type="Boolean" />
+          <Property Name="SecurityClass" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CDOType" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="SecurityCollateral" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="SecurityParentStructure" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SecurityQuality" Type="String" MaxLength="4" Unicode="true" FixedLength="false" />
+          <Property Name="SecurityStatus" Type="String" MaxLength="4" Unicode="true" FixedLength="false" />
+          <Property Name="IntexCoverage" Type="Boolean" />
+          <Property Name="IntexPermission" Type="Boolean" />
+          <Property Name="IntexDate" Type="DateTime" />
+          <Property Name="IntexBETRating" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="DataLoc" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MIProvider" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Servicer" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PREPAY_RATE" Type="Int32" />
+          <Property Name="PREPAY_UNITS" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TICKER" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="BBGMTK" Type="String" MaxLength="8" Unicode="true" FixedLength="false" />
+          <Property Name="Dealname" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ABSEvalCurveKey" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="RiskyBond" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="SecurityCPV">
+          <Key>
+            <PropertyRef Name="CUSIP" />
+          </Key>
+          <Property Name="CUSIP" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CPV" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TradeGroup">
+          <Key>
+            <PropertyRef Name="TradeGroupID" />
+          </Key>
+          <Property Name="TradeGroupID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Classificaton" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="TradeGroupTrades" Relationship="CreditPricingModel.FK_NegBasisTrades_NegBasisID" FromRole="TradeGroup" ToRole="TradeGroupTrades" />
+        </EntityType>
+        <EntityType Name="TradeGroupTrade">
+          <Key>
+            <PropertyRef Name="TradeGroupID" />
+            <PropertyRef Name="TradeID" />
+          </Key>
+          <Property Name="TradeGroupID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="TradeID" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="TradeType" Type="String" MaxLength="4" Unicode="true" FixedLength="false" />
+          <Property Name="SecurityName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AMOUNT" Type="Double" />
+          <Property Name="SPREAD" Type="Double" />
+          <Property Name="MATURITY" Type="DateTime" />
+          <NavigationProperty Name="TradeGroup" Relationship="CreditPricingModel.FK_NegBasisTrades_NegBasisID" FromRole="TradeGroupTrades" ToRole="TradeGroup" />
+        </EntityType>
+        <EntityType Name="TrancheTrade">
+          <Key>
+            <PropertyRef Name="TTNo" />
+          </Key>
+          <Property Name="TTNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PortfolioName" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="TrancheName" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Notional" Type="Double" />
+          <Property Name="TradeDate" Type="DateTime" />
+          <Property Name="SettlementDate" Type="DateTime" />
+          <Property Name="Maturity" Type="DateTime" />
+          <Property Name="Attachment" Type="Double" />
+          <Property Name="Width" Type="Double" />
+          <Property Name="Premium" Type="Double" />
+          <Property Name="PremBasis" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="PremPmtPA" Type="Int32" />
+          <Property Name="Ratings" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="Fee" Type="Double" />
+          <Property Name="CCY" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="IsFunded" Type="Boolean" />
+          <Property Name="SecurityID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Orig_Notional" Type="Double" />
+          <Property Name="Orig_Attach" Type="Double" />
+          <Property Name="Orig_Width" Type="Double" />
+          <NavigationProperty Name="Portfolio1" Relationship="CreditPricingModel.FK_TrancheTrade_Portfolio" FromRole="TrancheTrade" ToRole="Portfolio" />
+          <NavigationProperty Name="TTRevalInputs" Relationship="CreditPricingModel.FK_TTRevalInput_TrancheTrade" FromRole="TrancheTrade" ToRole="TTRevalInput" />
+        </EntityType>
+        <EntityType Name="TTList">
+          <Key>
+            <PropertyRef Name="TTListName" />
+          </Key>
+          <Property Name="TTListName" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="IsDefault" Type="Boolean" />
+          <NavigationProperty Name="TTRevalInputs" Relationship="CreditPricingModel.FK_TTRevalInput_TTList" FromRole="TTList" ToRole="TTRevalInput" />
+        </EntityType>
+        <EntityType Name="TTRevalInput">
+          <Key>
+            <PropertyRef Name="TTListName" />
+            <PropertyRef Name="TTNo" />
+            <PropertyRef Name="RevalDate" />
+          </Key>
+          <Property Name="TTListName" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="TTNo" Type="Int32" Nullable="false" />
+          <Property Name="RevalDate" Type="DateTime" Nullable="false" />
+          <Property Name="Correlation" Type="Double" />
+          <Property Name="Draws" Type="Int32" />
+          <NavigationProperty Name="TrancheTrade" Relationship="CreditPricingModel.FK_TTRevalInput_TrancheTrade" FromRole="TTRevalInput" ToRole="TrancheTrade" />
+          <NavigationProperty Name="TTList1" Relationship="CreditPricingModel.FK_TTRevalInput_TTList" FromRole="TTRevalInput" ToRole="TTList" />
+        </EntityType>
+        <EntityType Name="ycHeader">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CCY" Type="String" Nullable="false" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Spread" Type="Int32" />
+          <Property Name="BorrowStructure" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="locCcyDefs" Relationship="CreditPricingModel.FK_locCcyDef_ycHeader" FromRole="ycHeader" ToRole="locCcyDef" />
+          <NavigationProperty Name="ycItemHistories" Relationship="CreditPricingModel.FK_ycItemHistory_ycHeader" FromRole="ycHeader" ToRole="ycItemHistory" />
+          <Property Type="String" Name="HolidayCenter" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="curveType" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="spotDays" />
+        </EntityType>
+        <EntityType Name="ycItemHistory">
+          <Key>
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="CurveName" />
+            <PropertyRef Name="RATECODE" />
+          </Key>
+          <Property Name="Date" Type="DateTime" Nullable="false" />
+          <Property Name="CurveName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="RATECODE" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="BPShift" Type="Double" />
+          <Property Name="SORTORDER" Type="Int32" />
+          <NavigationProperty Name="RATECODE1" Relationship="CreditPricingModel.FK_ycItemHistory_RATECODE" FromRole="ycItemHistory" ToRole="RATECODE" />
+          <NavigationProperty Name="ycHeader" Relationship="CreditPricingModel.FK_ycItemHistory_ycHeader" FromRole="ycItemHistory" ToRole="ycHeader" />
+        </EntityType>
+        <Association Name="FK_locCcyDef_ycHeader">
+          <End Role="ycHeader" Type="CreditPricingModel.ycHeader" Multiplicity="0..1" />
+          <End Role="locCcyDef" Type="CreditPricingModel.locCcyDef" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ycHeader">
+              <PropertyRef Name="Name" />
+            </Principal>
+            <Dependent Role="locCcyDef">
+              <PropertyRef Name="DefaultYCurve" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PortfolioLists_Portfolio">
+          <End Role="Portfolio" Type="CreditPricingModel.Portfolio" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PortfolioLists" Type="CreditPricingModel.CrUniverseList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Portfolio">
+              <PropertyRef Name="PortfolioName" />
+            </Principal>
+            <Dependent Role="PortfolioLists">
+              <PropertyRef Name="PortfolioName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PortfolioSimulation_Portfolio">
+          <End Role="Portfolio" Type="CreditPricingModel.Portfolio" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PortfolioSimulation" Type="CreditPricingModel.PortfolioSimulation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Portfolio">
+              <PropertyRef Name="PortfolioName" />
+            </Principal>
+            <Dependent Role="PortfolioSimulation">
+              <PropertyRef Name="PortfolioName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TrancheTrade_Portfolio">
+          <End Role="Portfolio" Type="CreditPricingModel.Portfolio" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TrancheTrade" Type="CreditPricingModel.TrancheTrade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Portfolio">
+              <PropertyRef Name="PortfolioName" />
+            </Principal>
+            <Dependent Role="TrancheTrade">
+              <PropertyRef Name="PortfolioName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PortfolioTrades_FK00">
+          <End Role="Portfolio" Type="CreditPricingModel.Portfolio" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PortfolioTrades" Type="CreditPricingModel.PortfolioTrade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Portfolio">
+              <PropertyRef Name="PortfolioName" />
+            </Principal>
+            <Dependent Role="PortfolioTrades">
+              <PropertyRef Name="PortfolioName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PortfolioLists_PortfolioList">
+          <End Role="PortfolioList" Type="CreditPricingModel.CrUniverse" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PortfolioLists" Type="CreditPricingModel.CrUniverseList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PortfolioList">
+              <PropertyRef Name="CreditUniverseName" />
+            </Principal>
+            <Dependent Role="PortfolioLists">
+              <PropertyRef Name="CreditUniverseName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PortfolioSimulationBins_PortfolioSimulation">
+          <End Role="PortfolioSimulation" Type="CreditPricingModel.PortfolioSimulation" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PortfolioSimulationBins" Type="CreditPricingModel.PortfolioSimulationBin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PortfolioSimulation">
+              <PropertyRef Name="SimID" />
+            </Principal>
+            <Dependent Role="PortfolioSimulationBins">
+              <PropertyRef Name="SimID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PortfolioSimulationResult_PortfolioSimulation">
+          <End Role="PortfolioSimulation" Type="CreditPricingModel.PortfolioSimulation" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PortfolioSimulationResult" Type="CreditPricingModel.PortfolioSimulationResult" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PortfolioSimulation">
+              <PropertyRef Name="SimID" />
+            </Principal>
+            <Dependent Role="PortfolioSimulationResult">
+              <PropertyRef Name="SimID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RATEHIST_RATECODE">
+          <End Role="RATECODE" Type="CreditPricingModel.RATECODE" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="RATEHIST" Type="CreditPricingModel.RATEHIST" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RATECODE">
+              <PropertyRef Name="RATECODE1" />
+            </Principal>
+            <Dependent Role="RATEHIST">
+              <PropertyRef Name="RATECODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ycItemHistory_RATECODE">
+          <End Role="RATECODE" Type="CreditPricingModel.RATECODE" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ycItemHistory" Type="CreditPricingModel.ycItemHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RATECODE">
+              <PropertyRef Name="RATECODE1" />
+            </Principal>
+            <Dependent Role="ycItemHistory">
+              <PropertyRef Name="RATECODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NegBasisTrades_NegBasisID">
+          <End Role="TradeGroup" Type="CreditPricingModel.TradeGroup" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TradeGroupTrades" Type="CreditPricingModel.TradeGroupTrade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TradeGroup">
+              <PropertyRef Name="TradeGroupID" />
+            </Principal>
+            <Dependent Role="TradeGroupTrades">
+              <PropertyRef Name="TradeGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TTRevalInput_TrancheTrade">
+          <End Role="TrancheTrade" Type="CreditPricingModel.TrancheTrade" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TTRevalInput" Type="CreditPricingModel.TTRevalInput" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TrancheTrade">
+              <PropertyRef Name="TTNo" />
+            </Principal>
+            <Dependent Role="TTRevalInput">
+              <PropertyRef Name="TTNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TTRevalInput_TTList">
+          <End Role="TTList" Type="CreditPricingModel.TTList" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TTRevalInput" Type="CreditPricingModel.TTRevalInput" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TTList">
+              <PropertyRef Name="TTListName" />
+            </Principal>
+            <Dependent Role="TTRevalInput">
+              <PropertyRef Name="TTListName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ycItemHistory_ycHeader">
+          <End Role="ycHeader" Type="CreditPricingModel.ycHeader" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ycItemHistory" Type="CreditPricingModel.ycItemHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ycHeader">
+              <PropertyRef Name="Name" />
+            </Principal>
+            <Dependent Role="ycItemHistory">
+              <PropertyRef Name="CurveName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TTPriceHist">
+          <Key>
+            <PropertyRef Name="SimID" />
+          </Key>
+          <Property Type="Int32" Name="SimID" Nullable="false" />
+          <Property Type="Int32" Name="TTNo" />
+          <Property Type="String" Name="Portfolio" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="Notional" />
+          <Property Type="Double" Name="Attach" />
+          <Property Type="Double" Name="Width" />
+          <Property Type="Double" Name="UpfrontFee" />
+          <Property Type="Double" Name="Premium" />
+          <Property Type="Double" Name="ParPremium" />
+          <Property Type="DateTime" Name="Maturity" />
+          <Property Type="String" Name="CCY" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="pWAS" />
+          <Property Type="Int32" Name="pCredits" />
+          <Property Type="Double" Name="pCorrelation" />
+          <Property Type="Double" Name="TranchePrice" />
+          <Property Type="String" Name="SimElapsed" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PortfolioSimulation" Relationship="CreditPricingModel.FK_TTPriceHist_PortfolioSimulation" FromRole="TTPriceHist" ToRole="PortfolioSimulation" />
+        </EntityType>
+        <Association Name="FK_TTPriceHist_PortfolioSimulation">
+          <End Type="CreditPricingModel.PortfolioSimulation" Role="PortfolioSimulation" Multiplicity="1" />
+          <End Type="CreditPricingModel.TTPriceHist" Role="TTPriceHist" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PortfolioSimulation">
+              <PropertyRef Name="SimID" />
+            </Principal>
+            <Dependent Role="TTPriceHist">
+              <PropertyRef Name="SimID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="BondCashFlow">
+          <Key>
+            <PropertyRef Name="CFStart" />
+          </Key>
+          <Property Type="DateTime" Name="CFStart" Nullable="false" />
+          <Property Type="DateTime" Name="CFEnd" Nullable="false" />
+          <Property Type="String" Name="CCY" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Index" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Basis" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="Principal" Nullable="false" />
+          <Property Type="Double" Name="Factor" Nullable="false" />
+          <Property Type="Double" Name="CPR" Nullable="false" />
+          <Property Type="Double" Name="Amortization" Nullable="false" />
+          <Property Type="Double" Name="IndexRate" Nullable="false" />
+          <Property Type="Double" Name="ResetMargin" Nullable="false" />
+          <Property Type="Double" Name="DM" Nullable="false" />
+          <Property Type="Double" Name="PVFlow" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BondPXSummary">
+          <Key>
+            <PropertyRef Name="DEALID" />
+          </Key>
+          <Property Type="String" Name="DEALID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CUSIP" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PriceInfo" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="OrigSettle" Nullable="false" />
+          <Property Type="String" Name="Security" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Maturity" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Coupon" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="OrigPrice" Nullable="false" />
+          <Property Type="Double" Name="DirtyPrice" Nullable="false" />
+          <Property Type="Double" Name="AccruedInt" Nullable="false" />
+          <Property Type="Double" Name="CleanPrice" Nullable="false" />
+          <Property Type="Double" Name="CreditBPV" Nullable="false" />
+          <Property Type="Double" Name="AmountOutstanding" Nullable="false" />
+          <Property Type="Double" Name="AmountMTM" Nullable="false" />
+          <Property Type="Double" Name="MTMSpread" Nullable="false" />
+          <Property Type="Double" Name="WALA" Nullable="false" />
+          <Property Type="String" Name="CPV" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="hSpeed" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="Factor" Nullable="false" />
+          <Property Type="Double" Name="WAL" Nullable="false" />
+          <Property Type="Double" Name="FRNSpread" Nullable="false" />
+          <Property Type="String" Name="AssetClass" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LegalFinal" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="hpTotalReturn" Nullable="false" />
+          <Property Type="String" Name="AssetSubClass" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="cdsListSummary">
+          <Key>
+            <PropertyRef Name="ListName" />
+          </Key>
+          <Property Type="String" Name="ListName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ListCount" Nullable="false" />
+          <Property Type="Double" Name="TotalUpfront" Nullable="false" />
+          <Property Type="Double" Name="TotalCarry" Nullable="false" />
+          <Property Type="Double" Name="TotalMTM" Nullable="false" />
+          <Property Type="Double" Name="TotalPL" Nullable="false" />
+          <Property Type="Double" Name="TotalReturn" Nullable="false" />
+          <Property Type="Double" Name="TotalCrBPV" Nullable="false" />
+          <Property Type="Double" Name="WASLong" Nullable="false" />
+          <Property Type="Double" Name="WASShort" Nullable="false" />
+          <Property Type="Double" Name="WASMtMLong" Nullable="false" />
+          <Property Type="Double" Name="WASMtMShort" Nullable="false" />
+        </EntityType>
+        <EntityType Name="mxCDSCalc">
+          <Key>
+            <PropertyRef Name="NB" />
+          </Key>
+          <Property Type="Int32" Name="NB" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Ticker" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Ccy" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Tier" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RefEnt" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Sector" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Settle" Nullable="false" />
+          <Property Type="DateTime" Name="Maturity" Nullable="false" />
+          <Property Type="Double" Name="Notional" Nullable="false" />
+          <Property Type="Double" Name="DealSpread" Nullable="false" />
+          <Property Type="Double" Name="MtMSpread" Nullable="false" />
+          <Property Type="Double" Name="SpreadChg" Nullable="false" />
+          <Property Type="Double" Name="CrBPV" Nullable="false" />
+          <Property Type="Double" Name="UpFront" Nullable="false" />
+          <Property Type="Double" Name="Carry" Nullable="false" />
+          <Property Type="Double" Name="PVFlows" Nullable="false" />
+          <Property Type="Double" Name="TotalPL" Nullable="false" />
+          <Property Type="Double" Name="HPDays" Nullable="false" />
+          <Property Type="String" Name="Portfolio" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Instrument" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="EvalDate" Nullable="false" />
+          <Property Type="Double" Name="TotalReturn" Nullable="false" />
+          <Property Type="String" Name="CounterParty" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="mxCDSCashFlowDisplay">
+          <Key>
+            <PropertyRef Name="CFStart" />
+          </Key>
+          <Property Type="DateTime" Name="CFStart" Nullable="false" />
+          <Property Type="DateTime" Name="CFEnd" Nullable="false" />
+          <Property Type="Int32" Name="Days" Nullable="false" />
+          <Property Type="String" Name="CCY" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="Notional" Nullable="false" />
+          <Property Type="Double" Name="CDSSpread" Nullable="false" />
+          <Property Type="Double" Name="MTMSpread" Nullable="false" />
+          <Property Type="Double" Name="Change" Nullable="false" />
+          <Property Type="Double" Name="CDSPrem" Nullable="false" />
+          <Property Type="Double" Name="Discount" Nullable="false" />
+          <Property Type="Double" Name="SurvivalProb" Nullable="false" />
+          <Property Type="Double" Name="RiskyFlow" Nullable="false" />
+        </EntityType>
+        <EntityType Name="mxCDSCloseOut">
+          <Key>
+            <PropertyRef Name="TradeID" />
+          </Key>
+          <Property Type="String" Name="TradeID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Instrument" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Markit" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CounterParty" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="OrigTradeDate" Nullable="false" />
+          <Property Type="DateTime" Name="OrigSettleDate" Nullable="false" />
+          <Property Type="DateTime" Name="MaturityDate" Nullable="false" />
+          <Property Type="DateTime" Name="ValuationDate" Nullable="false" />
+          <Property Type="Double" Name="Notional" Nullable="false" />
+          <Property Type="Double" Name="CDSSpread" Nullable="false" />
+          <Property Type="String" Name="mxPortfolio" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="ValuationSpread" Nullable="false" />
+          <Property Type="Double" Name="UpFront" Nullable="false" />
+          <Property Type="Double" Name="HPCarry" Nullable="false" />
+          <Property Type="Double" Name="MarketValue" Nullable="false" />
+          <Property Type="Double" Name="HP_PL" Nullable="false" />
+          <Property Type="Double" Name="CreditBPV" Nullable="false" />
+          <Property Type="Double" Name="Recovery" Nullable="false" />
+          <Property Type="Double" Name="CloseoutAI" Nullable="false" />
+          <Property Type="Double" Name="CloseOutMV" Nullable="false" />
+          <Property Type="Double" Name="TotalReturn" Nullable="false" />
+        </EntityType>
+        <EntityType Name="mxCDSDisplay">
+          <Key>
+            <PropertyRef Name="TradeID" />
+          </Key>
+          <Property Type="String" Name="TradeID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Instrument" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Markit" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CounterParty" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="SettleDate" Nullable="false" />
+          <Property Type="DateTime" Name="MaturityDate" Nullable="false" />
+          <Property Type="Double" Name="Notional" Nullable="false" />
+          <Property Type="Double" Name="CDSSpread" Nullable="false" />
+          <Property Type="String" Name="mxPortfolio" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="CDSMTMSpread" Nullable="false" />
+          <Property Type="Double" Name="Upfront" Nullable="false" />
+          <Property Type="Double" Name="HPCarry" Nullable="false" />
+          <Property Type="Double" Name="MarketValue" Nullable="false" />
+          <Property Type="Double" Name="HP_PL" Nullable="false" />
+          <Property Type="Double" Name="CreditBPV" Nullable="false" />
+          <Property Type="Double" Name="Recovery" Nullable="false" />
+          <Property Type="Double" Name="AISettlement" Nullable="false" />
+          <Property Type="Double" Name="CloseOutMV" Nullable="false" />
+          <Property Type="Double" Name="TotalReturn" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TrancheLet">
+          <Key>
+            <PropertyRef Name="ForwardDate" />
+          </Key>
+          <Property Type="DateTime" Name="ForwardDate" Nullable="false" />
+          <Property Type="Double" Name="DiscountFactor" Nullable="false" />
+          <Property Type="Double" Name="CumulativeLoss" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TranchePrice2">
+          <Key>
+            <PropertyRef Name="SimID" />
+          </Key>
+          <Property Type="Int32" Name="SimID" Nullable="false" />
+          <Property Type="Int32" Name="TTNo" Nullable="false" />
+          <Property Type="String" Name="Portfolio" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="Notional" Nullable="false" />
+          <Property Type="Double" Name="Attach" Nullable="false" />
+          <Property Type="Double" Name="Width" Nullable="false" />
+          <Property Type="Double" Name="Fee" Nullable="false" />
+          <Property Type="Double" Name="TranchePremium" Nullable="false" />
+          <Property Type="Double" Name="PVLoss" Nullable="false" />
+          <Property Type="Double" Name="PV01" Nullable="false" />
+          <Property Type="Double" Name="ParPremium" Nullable="false" />
+          <Property Type="DateTime" Name="Maturity" Nullable="false" />
+          <Property Type="String" Name="CCY" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="PortWAS" Nullable="false" />
+          <Property Type="Int32" Name="SimDraws" Nullable="false" />
+          <Property Type="Double" Name="Correlation" Nullable="false" />
+          <Property Type="Time" Name="SimElapsed" Nullable="false" />
+          <Property Type="Double" Name="ModelPrice" Nullable="false" />
+          <Property Type="Double" Name="ZeroYTM" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TranchePrice">
+          <Key>
+            <PropertyRef Name="SimID" />
+          </Key>
+          <Property Type="Int32" Name="SimID" Nullable="false" />
+          <Property Type="Int32" Name="TTNo" Nullable="false" />
+          <Property Type="String" Name="Portfolio" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="Notional" Nullable="false" />
+          <Property Type="Double" Name="Attach" Nullable="false" />
+          <Property Type="Double" Name="Width" Nullable="false" />
+          <Property Type="Double" Name="Fee" Nullable="false" />
+          <Property Type="Double" Name="TranchePremium" Nullable="false" />
+          <Property Type="Double" Name="PVLoss" Nullable="false" />
+          <Property Type="Double" Name="PV01" Nullable="false" />
+          <Property Type="Double" Name="ParPremium" Nullable="false" />
+          <Property Type="DateTime" Name="Maturity" Nullable="false" />
+          <Property Type="String" Name="CCY" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="PortWAS" Nullable="false" />
+          <Property Type="Int32" Name="SimDraws" Nullable="false" />
+          <Property Type="Double" Name="Correlation" Nullable="false" />
+          <Property Type="Double" Name="SimElapsed" Nullable="false" />
+          <Property Type="String" Name="DefaultTKR" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="HolidayHDB">
+          <Key>
+            <PropertyRef Name="Holiday" />
+            <PropertyRef Name="country_iso" />
+          </Key>
+          <Property Type="String" Name="City" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Holiday" Nullable="false" />
+          <Property Type="String" Name="country_iso" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="fx_arb">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="symbol" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="description" MaxLength="140" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="holidayList" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="fxswaps" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="curve1" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="curve2" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="basis1" />
+          <Property Type="Int32" Name="basis2" />
+          <Property Type="String" Name="name" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="arbCCY" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="curve3" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="curve4" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SecurityMTMSpread">
+          <Key>
+            <PropertyRef Name="SaveDate" />
+            <PropertyRef Name="CUSIP" />
+          </Key>
+          <Property Type="DateTime" Name="SaveDate" Nullable="false" />
+          <Property Type="String" Name="CUSIP" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="MTMSPREAD" />
+        </EntityType>
+        <EntityType Name="MAP_CC_MXPort">
+          <Key>
+            <PropertyRef Name="COSTCENTER" />
+            <PropertyRef Name="Branch" />
+            <PropertyRef Name="Status" />
+          </Key>
+          <Property Type="String" Name="COSTCENTER" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Branch" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Status" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CCName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MXPortfolio" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Maturity" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="ModelPort_AddOn" />
+        </EntityType>
+        <EntityType Name="SectorMaster">
+          <Key>
+            <PropertyRef Name="Ticker" />
+          </Key>
+          <Property Type="String" Name="Ticker" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IndustrySubDesignations" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CreditPricingModelStoreContainer" CdmEntityContainer="CreditPricingEntities">
+          <EntitySetMapping Name="ABSEvalCurves"><EntityTypeMapping TypeName="CreditPricingModel.ABSEvalCurve"><MappingFragment StoreEntitySet="ABSEvalCurve">
+            <ScalarProperty Name="ABSEvalCurveName" ColumnName="ABSEvalCurve" />
+            <ScalarProperty Name="EvalDate" ColumnName="EvalDate" />
+            <ScalarProperty Name="C1" ColumnName="1" />
+            <ScalarProperty Name="C3" ColumnName="3" />
+            <ScalarProperty Name="C5" ColumnName="5" />
+            <ScalarProperty Name="C7" ColumnName="7" />
+            <ScalarProperty Name="C10" ColumnName="10" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Holidays"><EntityTypeMapping TypeName="CreditPricingModel.Holiday"><MappingFragment StoreEntitySet="Holiday">
+            <ScalarProperty Name="NSCODE" ColumnName="NSCODE" />
+            <ScalarProperty Name="NonSettleDate" ColumnName="NonSettleDate" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="locCcyDefs"><EntityTypeMapping TypeName="CreditPricingModel.locCcyDef"><MappingFragment StoreEntitySet="locCcyDef">
+            <ScalarProperty Name="CCY" ColumnName="CCY" />
+            <ScalarProperty Name="DefaultYCurve" ColumnName="DefaultYCurve" />
+            <ScalarProperty Name="LIBORCalendar" ColumnName="LIBORCalendar" />
+            <ScalarProperty Name="Basis" ColumnName="Basis" />
+            <ScalarProperty Name="DaysSpot" ColumnName="DaysSpot" />
+            <ScalarProperty Name="futPVBP" ColumnName="futPVBP" />
+            <ScalarProperty Name="LIVESTATUS" ColumnName="LIVESTATUS" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MarketProviders"><EntityTypeMapping TypeName="CreditPricingModel.MarketProvider"><MappingFragment StoreEntitySet="MarketProvider">
+            <ScalarProperty Name="ProviderName" ColumnName="ProviderName" />
+            <ScalarProperty Name="FirmName" ColumnName="FirmName" />
+            <ScalarProperty Name="Center" ColumnName="Center" />
+            <ScalarProperty Name="Interface" ColumnName="Interface" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="mpCDSCurves"><EntityTypeMapping TypeName="CreditPricingModel.mpCDSCurve"><MappingFragment StoreEntitySet="mpCDSCurve">
+            <ScalarProperty Name="EvalDate" ColumnName="EvalDate" />
+            <ScalarProperty Name="TICKER" ColumnName="TICKER" />
+            <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+            <ScalarProperty Name="RedCode" ColumnName="RedCode" />
+            <ScalarProperty Name="Tier" ColumnName="Tier" />
+            <ScalarProperty Name="CCY" ColumnName="CCY" />
+            <ScalarProperty Name="DocClause" ColumnName="DocClause" />
+            <ScalarProperty Name="Depth" ColumnName="Depth" />
+            <ScalarProperty Name="Sector" ColumnName="Sector" />
+            <ScalarProperty Name="Region" ColumnName="Region" />
+            <ScalarProperty Name="Country" ColumnName="Country" />
+            <ScalarProperty Name="AvRating" ColumnName="AvRating" />
+            <ScalarProperty Name="C_6m" ColumnName="_6m" />
+            <ScalarProperty Name="C_1Y" ColumnName="_1Y" />
+            <ScalarProperty Name="C_2Y" ColumnName="_2Y" />
+            <ScalarProperty Name="C_3Y" ColumnName="_3Y" />
+            <ScalarProperty Name="C_4Y" ColumnName="_4Y" />
+            <ScalarProperty Name="C_5Y" ColumnName="_5Y" />
+            <ScalarProperty Name="C_7Y" ColumnName="_7Y" />
+            <ScalarProperty Name="C_10Y" ColumnName="_10Y" />
+            <ScalarProperty Name="C_15Y" ColumnName="_15Y" />
+            <ScalarProperty Name="C_20Y" ColumnName="_20Y" />
+            <ScalarProperty Name="C_30Y" ColumnName="_30Y" />
+            <ScalarProperty Name="Recovery" ColumnName="Recovery" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MUREXTKRMAPs"><EntityTypeMapping TypeName="CreditPricingModel.MUREXTKRMAP"><MappingFragment StoreEntitySet="MUREXTKRMAP">
+            <ScalarProperty Name="INSTRUMENT" ColumnName="INSTRUMENT" />
+            <ScalarProperty Name="TKR" ColumnName="TKR" />
+            <ScalarProperty Name="CCY" ColumnName="CCY" />
+            <ScalarProperty Name="TIER" ColumnName="TIER" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="mxCDS"><EntityTypeMapping TypeName="CreditPricingModel.mxCDS"><MappingFragment StoreEntitySet="mxCDS">
+            <ScalarProperty Name="SAVEDATE" ColumnName="SAVEDATE" />
+            <ScalarProperty Name="NB" ColumnName="NB" />
+            <ScalarProperty Name="NBEXT" ColumnName="NBEXT" />
+            <ScalarProperty Name="PL_INSCUR" ColumnName="PL_INSCUR" />
+            <ScalarProperty Name="FAMILY" ColumnName="FAMILY" />
+            <ScalarProperty Name="GROUP" ColumnName="GROUP" />
+            <ScalarProperty Name="TP_STATUS" ColumnName="TP_STATUS" />
+            <ScalarProperty Name="COUNTERPART" ColumnName="COUNTERPART" />
+            <ScalarProperty Name="PORTFOLIO" ColumnName="PORTFOLIO" />
+            <ScalarProperty Name="BRW_NOM1" ColumnName="BRW_NOM1" />
+            <ScalarProperty Name="TRNDATE" ColumnName="TRNDATE" />
+            <ScalarProperty Name="MATURITY" ColumnName="MATURITY" />
+            <ScalarProperty Name="EXPIRY" ColumnName="EXPIRY" />
+            <ScalarProperty Name="VALID" ColumnName="VALID" />
+            <ScalarProperty Name="IE" ColumnName="IE" />
+            <ScalarProperty Name="INSTRUMENT" ColumnName="INSTRUMENT" />
+            <ScalarProperty Name="MARKET_INDEX" ColumnName="MARKET INDEX" />
+            <ScalarProperty Name="RATE_MARG0" ColumnName="RATE_MARG0" />
+            <ScalarProperty Name="B_S" ColumnName="B/S" />
+            <ScalarProperty Name="TRADER" ColumnName="TRADER" />
+            <ScalarProperty Name="MOP_LAST" ColumnName="MOP_LAST" />
+            <ScalarProperty Name="OPT_MOPLST" ColumnName="OPT_MOPLST" />
+            <ScalarProperty Name="PayRecvLeg" ColumnName="PayRecvLeg" />
+            <ScalarProperty Name="STL_FLW" ColumnName="STL_FLW" />
+            <ScalarProperty Name="BRW_SDTE" ColumnName="BRW_SDTE" />
+            <ScalarProperty Name="OPT_FLWFST" ColumnName="OPT_FLWFST" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="OPICSCashFlows"><EntityTypeMapping TypeName="CreditPricingModel.OPICSCashFlow"><MappingFragment StoreEntitySet="OPICSCashFlows">
+            <ScalarProperty Name="DEALID" ColumnName="DEALID" />
+            <ScalarProperty Name="SCHDSEQ" ColumnName="SCHDSEQ" />
+            <ScalarProperty Name="PRODTYPE" ColumnName="PRODTYPE" />
+            <ScalarProperty Name="SCHDTYPE" ColumnName="SCHDTYPE" />
+            <ScalarProperty Name="PRODUCT" ColumnName="PRODUCT" />
+            <ScalarProperty Name="CCY" ColumnName="CCY" />
+            <ScalarProperty Name="PRINAMT" ColumnName="PRINAMT" />
+            <ScalarProperty Name="PPAYAMT" ColumnName="PPAYAMT" />
+            <ScalarProperty Name="INTRATE_8" ColumnName="INTRATE_8" />
+            <ScalarProperty Name="SPREAD_8" ColumnName="SPREAD_8" />
+            <ScalarProperty Name="INTSTRTDTE" ColumnName="INTSTRTDTE" />
+            <ScalarProperty Name="INTENDDTE" ColumnName="INTENDDTE" />
+            <ScalarProperty Name="IPAYDATE" ColumnName="IPAYDATE" />
+            <ScalarProperty Name="AL" ColumnName="AL" />
+            <ScalarProperty Name="RATECODE" ColumnName="RATECODE" />
+            <ScalarProperty Name="BASIS" ColumnName="BASIS" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="OPICSLIVEDEALs"><EntityTypeMapping TypeName="CreditPricingModel.OPICSLIVEDEAL"><MappingFragment StoreEntitySet="OPICSLIVEDEAL">
+            <ScalarProperty Name="DEALID" ColumnName="DEALID" />
+            <ScalarProperty Name="SECURITY" ColumnName="SECURITY" />
+            <ScalarProperty Name="CCY" ColumnName="CCY" />
+            <ScalarProperty Name="VDATE" ColumnName="VDATE" />
+            <ScalarProperty Name="MDATE" ColumnName="MDATE" />
+            <ScalarProperty Name="CURFACE" ColumnName="CURFACE" />
+            <ScalarProperty Name="FACE" ColumnName="FACE" />
+            <ScalarProperty Name="SPREAD" ColumnName="SPREAD" />
+            <ScalarProperty Name="ASWPSPRD" ColumnName="ASWPSPRD" />
+            <ScalarProperty Name="DEALTEXT" ColumnName="DEALTEXT" />
+            <ScalarProperty Name="CUSIP" ColumnName="CUSIP" />
+            <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+            <ScalarProperty Name="DDATE" ColumnName="DDATE" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Portfolios"><EntityTypeMapping TypeName="CreditPricingModel.Portfolio"><MappingFragment StoreEntitySet="Portfolio">
+            <ScalarProperty Name="PortfolioName" ColumnName="Portfolio" />
+            <ScalarProperty Name="PortfolioDescription" ColumnName="PortfolioDescription" />
+            <ScalarProperty Name="PortfolioType" ColumnName="PortfolioType" />
+            <ScalarProperty Name="PortfolioClass" ColumnName="PortfolioClass" />
+            <ScalarProperty Name="PortfolioMgrStatus" ColumnName="PortfolioMgrStatus" />
+            <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+            <ScalarProperty Name="ScheduledTermination" ColumnName="ScheduledTermination" />
+            <ScalarProperty Name="Currency" ColumnName="Currency" />
+            <ScalarProperty Name="Daycount" ColumnName="Daycount" />
+            <ScalarProperty Name="Roll" ColumnName="Roll" />
+            <ScalarProperty Name="Calendar" ColumnName="Calendar" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CrUniverses"><EntityTypeMapping TypeName="CreditPricingModel.CrUniverse"><MappingFragment StoreEntitySet="PortfolioList">
+            <ScalarProperty Name="CreditUniverseName" ColumnName="PortfolioList" />
+            <ScalarProperty Name="Batchable" ColumnName="Batchable" />
+            <ScalarProperty Name="BatchDate" ColumnName="BatchDate" />
+            <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CrUniverseLists"><EntityTypeMapping TypeName="CreditPricingModel.CrUniverseList"><MappingFragment StoreEntitySet="PortfolioLists">
+            <ScalarProperty Name="CreditUniverseName" ColumnName="PortfolioList" />
+            <ScalarProperty Name="PortfolioName" ColumnName="Portfolio" />
+            <ScalarProperty Name="PortfolioCorrelation" ColumnName="PortfolioCorrelation" />
+            <ScalarProperty Name="PortfolioNumDraws" ColumnName="PortfolioNumDraws" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PortfolioSimulations"><EntityTypeMapping TypeName="CreditPricingModel.PortfolioSimulation"><MappingFragment StoreEntitySet="PortfolioSimulation">
+            <ScalarProperty Name="SimID" ColumnName="SimID" />
+            <ScalarProperty Name="PortfolioName" ColumnName="Portfolio" />
+            <ScalarProperty Name="RevalDate" ColumnName="RevalDate" />
+            <ScalarProperty Name="SimulationDate" ColumnName="SimulationDate" />
+            <ScalarProperty Name="Correlation" ColumnName="Correlation" />
+            <ScalarProperty Name="Draws" ColumnName="Draws" />
+            <ScalarProperty Name="SimType" ColumnName="SimType" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PortfolioSimulationBins"><EntityTypeMapping TypeName="CreditPricingModel.PortfolioSimulationBin"><MappingFragment StoreEntitySet="PortfolioSimulationBins">
+            <ScalarProperty Name="SimID" ColumnName="SimID" />
+            <ScalarProperty Name="BinType" ColumnName="BinType" />
+            <ScalarProperty Name="BinOrdinal" ColumnName="BinOrdinal" />
+            <ScalarProperty Name="BinX" ColumnName="BinX" />
+            <ScalarProperty Name="BinY" ColumnName="BinY" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PortfolioSimulationResults"><EntityTypeMapping TypeName="CreditPricingModel.PortfolioSimulationResult"><MappingFragment StoreEntitySet="PortfolioSimulationResult">
+            <ScalarProperty Name="SimID" ColumnName="SimID" />
+            <ScalarProperty Name="SimDate" ColumnName="SimDate" />
+            <ScalarProperty Name="Correlation" ColumnName="Correlation" />
+            <ScalarProperty Name="ExpectedLoss" ColumnName="ExpectedLoss" />
+            <ScalarProperty Name="StdDev" ColumnName="StdDev" />
+            <ScalarProperty Name="TrancheAttach" ColumnName="TrancheAttach" />
+            <ScalarProperty Name="TranchZScore" ColumnName="TranchZScore" />
+            <ScalarProperty Name="WAS" ColumnName="WAS" />
+            <ScalarProperty Name="PctWeight" ColumnName="PctWeight" />
+            <ScalarProperty Name="RECount" ColumnName="RECount" />
+            <ScalarProperty Name="MaxLoss" ColumnName="MaxLoss" />
+            <ScalarProperty Name="WARR" ColumnName="WARR" />
+            <ScalarProperty Name="WARRMin" ColumnName="WARRMin" />
+            <ScalarProperty Name="WARRMax" ColumnName="WARRMax" />
+            <ScalarProperty Name="TrancheWidth" ColumnName="TrancheWidth" />
+            <ScalarProperty Name="SimDuration" ColumnName="SimDuration" />
+            <ScalarProperty Name="Draws" ColumnName="Draws" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PortfolioTrades"><EntityTypeMapping TypeName="CreditPricingModel.PortfolioTrade"><MappingFragment StoreEntitySet="PortfolioTrades">
+            <ScalarProperty Name="PortfolioName" ColumnName="Portfolio" />
+            <ScalarProperty Name="NB" ColumnName="NB" />
+            <ScalarProperty Name="TICKER" ColumnName="TICKER" />
+            <ScalarProperty Name="CCY" ColumnName="CCY" />
+            <ScalarProperty Name="SnrSub" ColumnName="SnrSub" />
+            <ScalarProperty Name="CounterParty" ColumnName="CounterParty" />
+            <ScalarProperty Name="NotionalAmount" ColumnName="NotionalAmount" />
+            <ScalarProperty Name="TradeDate" ColumnName="TradeDate" />
+            <ScalarProperty Name="MaturityDate" ColumnName="MaturityDate" />
+            <ScalarProperty Name="ExpireDate" ColumnName="ExpireDate" />
+            <ScalarProperty Name="DealRate" ColumnName="DealRate" />
+            <ScalarProperty Name="PayRecv" ColumnName="PayRecv" />
+            <ScalarProperty Name="Trader" ColumnName="Trader" />
+            <ScalarProperty Name="TradeStatus" ColumnName="TradeStatus" />
+            <ScalarProperty Name="MTMRate" ColumnName="MTMRate" />
+            <ScalarProperty Name="CreditCurveID" ColumnName="CreditCurveID" />
+            <ScalarProperty Name="UpfrontPayment" ColumnName="UpfrontPayment" />
+            <ScalarProperty Name="Recovery" ColumnName="Recovery" />
+            <ScalarProperty Name="IsFixedRR" ColumnName="IsFixedRR" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="RATECODEs"><EntityTypeMapping TypeName="CreditPricingModel.RATECODE"><MappingFragment StoreEntitySet="RATECODE">
+            <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="BBTKR" ColumnName="BBTKR" />
+                <ScalarProperty Name="CF_SensiEndDate" ColumnName="CF_SensiEndDate" />
+                <ScalarProperty Name="CF_EndDate" ColumnName="CF_EndDate" />
+                <ScalarProperty Name="CF_StartDate" ColumnName="CF_StartDate" />
+                <ScalarProperty Name="CF_Period_Type" ColumnName="CF_Period_Type" />
+                <ScalarProperty Name="RATECODE1" ColumnName="RATECODE" />
+            <ScalarProperty Name="CCY" ColumnName="CCY" />
+            <ScalarProperty Name="CCYCALENDAR" ColumnName="CCYCALENDAR" />
+            <ScalarProperty Name="Basis" ColumnName="Basis" />
+            <ScalarProperty Name="Period" ColumnName="Period" />
+            <ScalarProperty Name="nDay2Start" ColumnName="nDay2Start" />
+            <ScalarProperty Name="nCompoundPA" ColumnName="nCompoundPA" />
+            <ScalarProperty Name="RateType" ColumnName="RateType" />
+            <ScalarProperty Name="RIC" ColumnName="RIC" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="RATEHISTs"><EntityTypeMapping TypeName="CreditPricingModel.RATEHIST"><MappingFragment StoreEntitySet="RATEHIST">
+            <ScalarProperty Name="Date" ColumnName="Date" />
+            <ScalarProperty Name="RATECODE" ColumnName="RATECODE" />
+            <ScalarProperty Name="bid" ColumnName="bid" />
+            <ScalarProperty Name="ask" ColumnName="ask" />
+            <ScalarProperty Name="cls" ColumnName="cls" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="RATETimeStamps"><EntityTypeMapping TypeName="CreditPricingModel.RATETimeStamp"><MappingFragment StoreEntitySet="RATETimeStamp">
+            <ScalarProperty Name="TimeStampUTC" ColumnName="TimeStampUTC" />
+                <ScalarProperty Name="SaveDate" ColumnName="SaveDate" />
+            <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="REDENTITies"><EntityTypeMapping TypeName="CreditPricingModel.REDENTITY"><MappingFragment StoreEntitySet="REDENTITY">
+            <ScalarProperty Name="TICKER" ColumnName="TICKER" />
+            <ScalarProperty Name="EntityName" ColumnName="EntityName" />
+            <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+            <ScalarProperty Name="REDCODE" ColumnName="REDCODE" />
+            <ScalarProperty Name="CUSIP" ColumnName="CUSIP" />
+            <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+            <ScalarProperty Name="Jurisdiction" ColumnName="Jurisdiction" />
+            <ScalarProperty Name="MarkitSector" ColumnName="MarkitSector" />
+            <ScalarProperty Name="PTICKER" ColumnName="PTICKER" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Security_Masters"><EntityTypeMapping TypeName="CreditPricingModel.Security_Master"><MappingFragment StoreEntitySet="Security Master">
+            <ScalarProperty Name="CUSIP" ColumnName="CUSIP" />
+            <ScalarProperty Name="Security" ColumnName="Security" />
+            <ScalarProperty Name="ISSUER" ColumnName="ISSUER" />
+            <ScalarProperty Name="INTEXDealName" ColumnName="INTEXDealName" />
+            <ScalarProperty Name="Underwriter_Agent" ColumnName="Underwriter-Agent" />
+            <ScalarProperty Name="Listing" ColumnName="Listing" />
+            <ScalarProperty Name="TrusteeCode" ColumnName="TrusteeCode" />
+            <ScalarProperty Name="CMCode" ColumnName="CMCode" />
+            <ScalarProperty Name="CDOCollTotal" ColumnName="CDOCollTotal" />
+            <ScalarProperty Name="ReinvPeriod" ColumnName="ReinvPeriod" />
+            <ScalarProperty Name="NonCall" ColumnName="NonCall" />
+            <ScalarProperty Name="Settlement" ColumnName="Settlement" />
+            <ScalarProperty Name="FinalMaturity" ColumnName="FinalMaturity" />
+            <ScalarProperty Name="WAL" ColumnName="WAL" />
+            <ScalarProperty Name="Wrap" ColumnName="Wrap" />
+            <ScalarProperty Name="DiscountMargin" ColumnName="DiscountMargin" />
+            <ScalarProperty Name="IndexRate" ColumnName="IndexRate" />
+            <ScalarProperty Name="StructureNotes" ColumnName="StructureNotes" />
+            <ScalarProperty Name="SecurityRatings" ColumnName="SecurityRatings" />
+            <ScalarProperty Name="SecurityRatingsMoody" ColumnName="SecurityRatingsMoody" />
+            <ScalarProperty Name="SecurityRatingsSP" ColumnName="SecurityRatingsSP" />
+            <ScalarProperty Name="SecurityRatingsFitch" ColumnName="SecurityRatingsFitch" />
+            <ScalarProperty Name="SecurityHolding" ColumnName="SecurityHolding" />
+            <ScalarProperty Name="SecurityNotes" ColumnName="SecurityNotes" />
+            <ScalarProperty Name="SecurityAmortStatus" ColumnName="SecurityAmortStatus" />
+            <ScalarProperty Name="SecurityClass" ColumnName="SecurityClass" />
+            <ScalarProperty Name="CDOType" ColumnName="CDOType" />
+            <ScalarProperty Name="SecurityCollateral" ColumnName="SecurityCollateral" />
+            <ScalarProperty Name="SecurityParentStructure" ColumnName="SecurityParentStructure" />
+            <ScalarProperty Name="SecurityQuality" ColumnName="SecurityQuality" />
+            <ScalarProperty Name="SecurityStatus" ColumnName="SecurityStatus" />
+            <ScalarProperty Name="IntexCoverage" ColumnName="IntexCoverage" />
+            <ScalarProperty Name="IntexPermission" ColumnName="IntexPermission" />
+            <ScalarProperty Name="IntexDate" ColumnName="IntexDate" />
+            <ScalarProperty Name="IntexBETRating" ColumnName="IntexBETRating" />
+            <ScalarProperty Name="DataLoc" ColumnName="DataLoc" />
+            <ScalarProperty Name="MIProvider" ColumnName="MIProvider" />
+            <ScalarProperty Name="Servicer" ColumnName="Servicer" />
+            <ScalarProperty Name="PREPAY_RATE" ColumnName="PREPAY_RATE" />
+            <ScalarProperty Name="PREPAY_UNITS" ColumnName="PREPAY_UNITS" />
+            <ScalarProperty Name="TICKER" ColumnName="TICKER" />
+            <ScalarProperty Name="BBGMTK" ColumnName="BBGMTK" />
+            <ScalarProperty Name="Dealname" ColumnName="Dealname" />
+            <ScalarProperty Name="ABSEvalCurveKey" ColumnName="ABSEvalCurveKey" />
+            <ScalarProperty Name="RiskyBond" ColumnName="RiskyBond" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="SecurityCPVs"><EntityTypeMapping TypeName="CreditPricingModel.SecurityCPV"><MappingFragment StoreEntitySet="SecurityCPV">
+            <ScalarProperty Name="CUSIP" ColumnName="CUSIP" />
+            <ScalarProperty Name="CPV" ColumnName="CPV" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TradeGroups"><EntityTypeMapping TypeName="CreditPricingModel.TradeGroup"><MappingFragment StoreEntitySet="TradeGroup">
+            <ScalarProperty Name="TradeGroupID" ColumnName="TradeGroupID" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="Classificaton" ColumnName="Classificaton" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TradeGroupTrades"><EntityTypeMapping TypeName="CreditPricingModel.TradeGroupTrade"><MappingFragment StoreEntitySet="TradeGroupTrades">
+            <ScalarProperty Name="TradeGroupID" ColumnName="TradeGroupID" />
+            <ScalarProperty Name="TradeID" ColumnName="TradeID" />
+            <ScalarProperty Name="TradeType" ColumnName="TradeType" />
+            <ScalarProperty Name="SecurityName" ColumnName="SecurityName" />
+            <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+            <ScalarProperty Name="SPREAD" ColumnName="SPREAD" />
+            <ScalarProperty Name="MATURITY" ColumnName="MATURITY" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TrancheTrades"><EntityTypeMapping TypeName="CreditPricingModel.TrancheTrade"><MappingFragment StoreEntitySet="TrancheTrade">
+            <ScalarProperty Name="TTNo" ColumnName="TTNo" />
+            <ScalarProperty Name="PortfolioName" ColumnName="Portfolio" />
+            <ScalarProperty Name="TrancheName" ColumnName="TrancheName" />
+            <ScalarProperty Name="Notional" ColumnName="Notional" />
+            <ScalarProperty Name="TradeDate" ColumnName="TradeDate" />
+            <ScalarProperty Name="SettlementDate" ColumnName="SettlementDate" />
+            <ScalarProperty Name="Maturity" ColumnName="Maturity" />
+            <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+            <ScalarProperty Name="Width" ColumnName="Width" />
+            <ScalarProperty Name="Premium" ColumnName="Premium" />
+            <ScalarProperty Name="PremBasis" ColumnName="PremBasis" />
+            <ScalarProperty Name="PremPmtPA" ColumnName="PremPmtPA" />
+            <ScalarProperty Name="Ratings" ColumnName="Ratings" />
+            <ScalarProperty Name="Fee" ColumnName="Fee" />
+            <ScalarProperty Name="CCY" ColumnName="CCY" />
+            <ScalarProperty Name="IsFunded" ColumnName="IsFunded" />
+            <ScalarProperty Name="SecurityID" ColumnName="SecurityID" />
+            <ScalarProperty Name="Orig_Notional" ColumnName="Orig_Notional" />
+            <ScalarProperty Name="Orig_Attach" ColumnName="Orig_Attach" />
+            <ScalarProperty Name="Orig_Width" ColumnName="Orig_Width" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TTLists"><EntityTypeMapping TypeName="CreditPricingModel.TTList"><MappingFragment StoreEntitySet="TTList">
+            <ScalarProperty Name="TTListName" ColumnName="TTList" />
+            <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TTRevalInputs"><EntityTypeMapping TypeName="CreditPricingModel.TTRevalInput"><MappingFragment StoreEntitySet="TTRevalInput">
+            <ScalarProperty Name="TTListName" ColumnName="TTList" />
+            <ScalarProperty Name="TTNo" ColumnName="TTNo" />
+            <ScalarProperty Name="RevalDate" ColumnName="RevalDate" />
+            <ScalarProperty Name="Correlation" ColumnName="Correlation" />
+            <ScalarProperty Name="Draws" ColumnName="Draws" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ycHeaders"><EntityTypeMapping TypeName="CreditPricingModel.ycHeader"><MappingFragment StoreEntitySet="ycHeader">
+            <ScalarProperty Name="spotDays" ColumnName="spotDays" />
+                <ScalarProperty Name="curveType" ColumnName="curveType" />
+                <ScalarProperty Name="HolidayCenter" ColumnName="HolidayCenter" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="CCY" ColumnName="CCY" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="Spread" ColumnName="Spread" />
+            <ScalarProperty Name="BorrowStructure" ColumnName="BorrowStructure" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ycItemHistories"><EntityTypeMapping TypeName="CreditPricingModel.ycItemHistory"><MappingFragment StoreEntitySet="ycItemHistory">
+            <ScalarProperty Name="Date" ColumnName="Date" />
+            <ScalarProperty Name="CurveName" ColumnName="CurveName" />
+            <ScalarProperty Name="RATECODE" ColumnName="RATECODE" />
+            <ScalarProperty Name="BPShift" ColumnName="BPShift" />
+            <ScalarProperty Name="SORTORDER" ColumnName="SORTORDER" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TTPriceHists">
+            <EntityTypeMapping TypeName="CreditPricingModel.TTPriceHist">
+              <MappingFragment StoreEntitySet="TTPriceHist">
+                <ScalarProperty Name="SimElapsed" ColumnName="SimElapsed" />
+                <ScalarProperty Name="TranchePrice" ColumnName="TranchePrice" />
+                <ScalarProperty Name="pCorrelation" ColumnName="pCorrelation" />
+                <ScalarProperty Name="pCredits" ColumnName="pCredits" />
+                <ScalarProperty Name="pWAS" ColumnName="pWAS" />
+                <ScalarProperty Name="CCY" ColumnName="CCY" />
+                <ScalarProperty Name="Maturity" ColumnName="Maturity" />
+                <ScalarProperty Name="ParPremium" ColumnName="ParPremium" />
+                <ScalarProperty Name="Premium" ColumnName="Premium" />
+                <ScalarProperty Name="UpfrontFee" ColumnName="UpfrontFee" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Attach" ColumnName="Attach" />
+                <ScalarProperty Name="Notional" ColumnName="Notional" />
+                <ScalarProperty Name="Portfolio" ColumnName="Portfolio" />
+                <ScalarProperty Name="TTNo" ColumnName="TTNo" />
+                <ScalarProperty Name="SimID" ColumnName="SimID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BondCashFlows">
+            <EntityTypeMapping TypeName="CreditPricingModel.BondCashFlow">
+              <MappingFragment StoreEntitySet="BondCashFlows">
+                <ScalarProperty Name="PVFlow" ColumnName="PVFlow" />
+                <ScalarProperty Name="DM" ColumnName="DM" />
+                <ScalarProperty Name="ResetMargin" ColumnName="ResetMargin" />
+                <ScalarProperty Name="IndexRate" ColumnName="IndexRate" />
+                <ScalarProperty Name="Amortization" ColumnName="Amortization" />
+                <ScalarProperty Name="CPR" ColumnName="CPR" />
+                <ScalarProperty Name="Factor" ColumnName="Factor" />
+                <ScalarProperty Name="Principal" ColumnName="Principal" />
+                <ScalarProperty Name="Basis" ColumnName="Basis" />
+                <ScalarProperty Name="Index" ColumnName="Index" />
+                <ScalarProperty Name="CCY" ColumnName="CCY" />
+                <ScalarProperty Name="CFEnd" ColumnName="CFEnd" />
+                <ScalarProperty Name="CFStart" ColumnName="CFStart" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BondPXSummaries">
+            <EntityTypeMapping TypeName="CreditPricingModel.BondPXSummary">
+              <MappingFragment StoreEntitySet="BondPXSummaries">
+                <ScalarProperty Name="AssetSubClass" ColumnName="AssetSubClass" />
+                <ScalarProperty Name="hpTotalReturn" ColumnName="hpTotalReturn" />
+                <ScalarProperty Name="LegalFinal" ColumnName="LegalFinal" />
+                <ScalarProperty Name="AssetClass" ColumnName="AssetClass" />
+                <ScalarProperty Name="FRNSpread" ColumnName="FRNSpread" />
+                <ScalarProperty Name="WAL" ColumnName="WAL" />
+                <ScalarProperty Name="Factor" ColumnName="Factor" />
+                <ScalarProperty Name="hSpeed" ColumnName="hSpeed" />
+                <ScalarProperty Name="CPV" ColumnName="CPV" />
+                <ScalarProperty Name="WALA" ColumnName="WALA" />
+                <ScalarProperty Name="MTMSpread" ColumnName="MTMSpread" />
+                <ScalarProperty Name="AmountMTM" ColumnName="AmountMTM" />
+                <ScalarProperty Name="AmountOutstanding" ColumnName="AmountOutstanding" />
+                <ScalarProperty Name="CreditBPV" ColumnName="CreditBPV" />
+                <ScalarProperty Name="CleanPrice" ColumnName="CleanPrice" />
+                <ScalarProperty Name="AccruedInt" ColumnName="AccruedInt" />
+                <ScalarProperty Name="DirtyPrice" ColumnName="DirtyPrice" />
+                <ScalarProperty Name="OrigPrice" ColumnName="OrigPrice" />
+                <ScalarProperty Name="Coupon" ColumnName="Coupon" />
+                <ScalarProperty Name="Maturity" ColumnName="Maturity" />
+                <ScalarProperty Name="Security" ColumnName="Security" />
+                <ScalarProperty Name="OrigSettle" ColumnName="OrigSettle" />
+                <ScalarProperty Name="PriceInfo" ColumnName="PriceInfo" />
+                <ScalarProperty Name="CUSIP" ColumnName="CUSIP" />
+                <ScalarProperty Name="DEALID" ColumnName="DEALID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cdsListSummaries">
+            <EntityTypeMapping TypeName="CreditPricingModel.cdsListSummary">
+              <MappingFragment StoreEntitySet="cdsListSummaries">
+                <ScalarProperty Name="WASMtMShort" ColumnName="WASMtMShort" />
+                <ScalarProperty Name="WASMtMLong" ColumnName="WASMtMLong" />
+                <ScalarProperty Name="WASShort" ColumnName="WASShort" />
+                <ScalarProperty Name="WASLong" ColumnName="WASLong" />
+                <ScalarProperty Name="TotalCrBPV" ColumnName="TotalCrBPV" />
+                <ScalarProperty Name="TotalReturn" ColumnName="TotalReturn" />
+                <ScalarProperty Name="TotalPL" ColumnName="TotalPL" />
+                <ScalarProperty Name="TotalMTM" ColumnName="TotalMTM" />
+                <ScalarProperty Name="TotalCarry" ColumnName="TotalCarry" />
+                <ScalarProperty Name="TotalUpfront" ColumnName="TotalUpfront" />
+                <ScalarProperty Name="ListCount" ColumnName="ListCount" />
+                <ScalarProperty Name="ListName" ColumnName="ListName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mxCDSCalcs">
+            <EntityTypeMapping TypeName="CreditPricingModel.mxCDSCalc">
+              <MappingFragment StoreEntitySet="mxCDSCalcs">
+                <ScalarProperty Name="CounterParty" ColumnName="CounterParty" />
+                <ScalarProperty Name="TotalReturn" ColumnName="TotalReturn" />
+                <ScalarProperty Name="EvalDate" ColumnName="EvalDate" />
+                <ScalarProperty Name="Instrument" ColumnName="Instrument" />
+                <ScalarProperty Name="Portfolio" ColumnName="Portfolio" />
+                <ScalarProperty Name="HPDays" ColumnName="HPDays" />
+                <ScalarProperty Name="TotalPL" ColumnName="TotalPL" />
+                <ScalarProperty Name="PVFlows" ColumnName="PVFlows" />
+                <ScalarProperty Name="Carry" ColumnName="Carry" />
+                <ScalarProperty Name="UpFront" ColumnName="UpFront" />
+                <ScalarProperty Name="CrBPV" ColumnName="CrBPV" />
+                <ScalarProperty Name="SpreadChg" ColumnName="SpreadChg" />
+                <ScalarProperty Name="MtMSpread" ColumnName="MtMSpread" />
+                <ScalarProperty Name="DealSpread" ColumnName="DealSpread" />
+                <ScalarProperty Name="Notional" ColumnName="Notional" />
+                <ScalarProperty Name="Maturity" ColumnName="Maturity" />
+                <ScalarProperty Name="Settle" ColumnName="Settle" />
+                <ScalarProperty Name="Sector" ColumnName="Sector" />
+                <ScalarProperty Name="RefEnt" ColumnName="RefEnt" />
+                <ScalarProperty Name="Tier" ColumnName="Tier" />
+                <ScalarProperty Name="Ccy" ColumnName="Ccy" />
+                <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+                <ScalarProperty Name="NB" ColumnName="NB" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mxCDSCashFlowDisplays">
+            <EntityTypeMapping TypeName="CreditPricingModel.mxCDSCashFlowDisplay">
+              <MappingFragment StoreEntitySet="mxCDSCashFlowDisplays">
+                <ScalarProperty Name="RiskyFlow" ColumnName="RiskyFlow" />
+                <ScalarProperty Name="SurvivalProb" ColumnName="SurvivalProb" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="CDSPrem" ColumnName="CDSPrem" />
+                <ScalarProperty Name="Change" ColumnName="Change" />
+                <ScalarProperty Name="MTMSpread" ColumnName="MTMSpread" />
+                <ScalarProperty Name="CDSSpread" ColumnName="CDSSpread" />
+                <ScalarProperty Name="Notional" ColumnName="Notional" />
+                <ScalarProperty Name="CCY" ColumnName="CCY" />
+                <ScalarProperty Name="Days" ColumnName="Days" />
+                <ScalarProperty Name="CFEnd" ColumnName="CFEnd" />
+                <ScalarProperty Name="CFStart" ColumnName="CFStart" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mxCDSCloseOuts">
+            <EntityTypeMapping TypeName="CreditPricingModel.mxCDSCloseOut">
+              <MappingFragment StoreEntitySet="mxCDSCloseOuts">
+                <ScalarProperty Name="TotalReturn" ColumnName="TotalReturn" />
+                <ScalarProperty Name="CloseOutMV" ColumnName="CloseOutMV" />
+                <ScalarProperty Name="CloseoutAI" ColumnName="CloseoutAI" />
+                <ScalarProperty Name="Recovery" ColumnName="Recovery" />
+                <ScalarProperty Name="CreditBPV" ColumnName="CreditBPV" />
+                <ScalarProperty Name="HP_PL" ColumnName="HP_PL" />
+                <ScalarProperty Name="MarketValue" ColumnName="MarketValue" />
+                <ScalarProperty Name="HPCarry" ColumnName="HPCarry" />
+                <ScalarProperty Name="UpFront" ColumnName="UpFront" />
+                <ScalarProperty Name="ValuationSpread" ColumnName="ValuationSpread" />
+                <ScalarProperty Name="mxPortfolio" ColumnName="mxPortfolio" />
+                <ScalarProperty Name="CDSSpread" ColumnName="CDSSpread" />
+                <ScalarProperty Name="Notional" ColumnName="Notional" />
+                <ScalarProperty Name="ValuationDate" ColumnName="ValuationDate" />
+                <ScalarProperty Name="MaturityDate" ColumnName="MaturityDate" />
+                <ScalarProperty Name="OrigSettleDate" ColumnName="OrigSettleDate" />
+                <ScalarProperty Name="OrigTradeDate" ColumnName="OrigTradeDate" />
+                <ScalarProperty Name="CounterParty" ColumnName="CounterParty" />
+                <ScalarProperty Name="Markit" ColumnName="Markit" />
+                <ScalarProperty Name="Instrument" ColumnName="Instrument" />
+                <ScalarProperty Name="TradeID" ColumnName="TradeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mxCDSDisplays">
+            <EntityTypeMapping TypeName="CreditPricingModel.mxCDSDisplay">
+              <MappingFragment StoreEntitySet="mxCDSDisplays">
+                <ScalarProperty Name="TotalReturn" ColumnName="TotalReturn" />
+                <ScalarProperty Name="CloseOutMV" ColumnName="CloseOutMV" />
+                <ScalarProperty Name="AISettlement" ColumnName="AISettlement" />
+                <ScalarProperty Name="Recovery" ColumnName="Recovery" />
+                <ScalarProperty Name="CreditBPV" ColumnName="CreditBPV" />
+                <ScalarProperty Name="HP_PL" ColumnName="HP_PL" />
+                <ScalarProperty Name="MarketValue" ColumnName="MarketValue" />
+                <ScalarProperty Name="HPCarry" ColumnName="HPCarry" />
+                <ScalarProperty Name="Upfront" ColumnName="Upfront" />
+                <ScalarProperty Name="CDSMTMSpread" ColumnName="CDSMTMSpread" />
+                <ScalarProperty Name="mxPortfolio" ColumnName="mxPortfolio" />
+                <ScalarProperty Name="CDSSpread" ColumnName="CDSSpread" />
+                <ScalarProperty Name="Notional" ColumnName="Notional" />
+                <ScalarProperty Name="MaturityDate" ColumnName="MaturityDate" />
+                <ScalarProperty Name="SettleDate" ColumnName="SettleDate" />
+                <ScalarProperty Name="CounterParty" ColumnName="CounterParty" />
+                <ScalarProperty Name="Markit" ColumnName="Markit" />
+                <ScalarProperty Name="Instrument" ColumnName="Instrument" />
+                <ScalarProperty Name="TradeID" ColumnName="TradeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TrancheLets">
+            <EntityTypeMapping TypeName="CreditPricingModel.TrancheLet">
+              <MappingFragment StoreEntitySet="TrancheLets">
+                <ScalarProperty Name="CumulativeLoss" ColumnName="CumulativeLoss" />
+                <ScalarProperty Name="DiscountFactor" ColumnName="DiscountFactor" />
+                <ScalarProperty Name="ForwardDate" ColumnName="ForwardDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TranchePrice2">
+            <EntityTypeMapping TypeName="CreditPricingModel.TranchePrice2">
+              <MappingFragment StoreEntitySet="TranchePrice2">
+                <ScalarProperty Name="ZeroYTM" ColumnName="ZeroYTM" />
+                <ScalarProperty Name="ModelPrice" ColumnName="ModelPrice" />
+                <ScalarProperty Name="SimElapsed" ColumnName="SimElapsed" />
+                <ScalarProperty Name="Correlation" ColumnName="Correlation" />
+                <ScalarProperty Name="SimDraws" ColumnName="SimDraws" />
+                <ScalarProperty Name="PortWAS" ColumnName="PortWAS" />
+                <ScalarProperty Name="CCY" ColumnName="CCY" />
+                <ScalarProperty Name="Maturity" ColumnName="Maturity" />
+                <ScalarProperty Name="ParPremium" ColumnName="ParPremium" />
+                <ScalarProperty Name="PV01" ColumnName="PV01" />
+                <ScalarProperty Name="PVLoss" ColumnName="PVLoss" />
+                <ScalarProperty Name="TranchePremium" ColumnName="TranchePremium" />
+                <ScalarProperty Name="Fee" ColumnName="Fee" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Attach" ColumnName="Attach" />
+                <ScalarProperty Name="Notional" ColumnName="Notional" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Portfolio" ColumnName="Portfolio" />
+                <ScalarProperty Name="TTNo" ColumnName="TTNo" />
+                <ScalarProperty Name="SimID" ColumnName="SimID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TranchePrices">
+            <EntityTypeMapping TypeName="CreditPricingModel.TranchePrice">
+              <MappingFragment StoreEntitySet="TranchePrices">
+                <ScalarProperty Name="DefaultTKR" ColumnName="DefaultTKR" />
+                <ScalarProperty Name="SimElapsed" ColumnName="SimElapsed" />
+                <ScalarProperty Name="Correlation" ColumnName="Correlation" />
+                <ScalarProperty Name="SimDraws" ColumnName="SimDraws" />
+                <ScalarProperty Name="PortWAS" ColumnName="PortWAS" />
+                <ScalarProperty Name="CCY" ColumnName="CCY" />
+                <ScalarProperty Name="Maturity" ColumnName="Maturity" />
+                <ScalarProperty Name="ParPremium" ColumnName="ParPremium" />
+                <ScalarProperty Name="PV01" ColumnName="PV01" />
+                <ScalarProperty Name="PVLoss" ColumnName="PVLoss" />
+                <ScalarProperty Name="TranchePremium" ColumnName="TranchePremium" />
+                <ScalarProperty Name="Fee" ColumnName="Fee" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Attach" ColumnName="Attach" />
+                <ScalarProperty Name="Notional" ColumnName="Notional" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Portfolio" ColumnName="Portfolio" />
+                <ScalarProperty Name="TTNo" ColumnName="TTNo" />
+                <ScalarProperty Name="SimID" ColumnName="SimID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HolidayHDBs">
+            <EntityTypeMapping TypeName="CreditPricingModel.HolidayHDB">
+              <MappingFragment StoreEntitySet="Holidays">
+                <ScalarProperty Name="country_iso" ColumnName="country_iso" />
+                <ScalarProperty Name="Holiday" ColumnName="Holiday" />
+                <ScalarProperty Name="City" ColumnName="City" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fx_arbs">
+            <EntityTypeMapping TypeName="CreditPricingModel.fx_arb">
+              <MappingFragment StoreEntitySet="fx_arb">
+                <ScalarProperty Name="curve4" ColumnName="curve4" />
+                <ScalarProperty Name="curve3" ColumnName="curve3" />
+                <ScalarProperty Name="arbCCY" ColumnName="arbCCY" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="basis2" ColumnName="basis2" />
+                <ScalarProperty Name="basis1" ColumnName="basis1" />
+                <ScalarProperty Name="curve2" ColumnName="curve2" />
+                <ScalarProperty Name="curve1" ColumnName="curve1" />
+                <ScalarProperty Name="fxswaps" ColumnName="fxswaps" />
+                <ScalarProperty Name="holidayList" ColumnName="holidayList" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="symbol" ColumnName="symbol" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SecurityMTMSpreads">
+            <EntityTypeMapping TypeName="CreditPricingModel.SecurityMTMSpread">
+              <MappingFragment StoreEntitySet="SecurityMTMSpread">
+                <ScalarProperty Name="MTMSPREAD" ColumnName="MTMSPREAD" />
+                <ScalarProperty Name="CUSIP" ColumnName="CUSIP" />
+                <ScalarProperty Name="SaveDate" ColumnName="SaveDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MAP_CC_MXPort">
+            <EntityTypeMapping TypeName="CreditPricingModel.MAP_CC_MXPort">
+              <MappingFragment StoreEntitySet="MAP_CC_MXPort">
+                <ScalarProperty Name="ModelPort_AddOn" ColumnName="ModelPort_AddOn" />
+                <ScalarProperty Name="Maturity" ColumnName="Maturity" />
+                <ScalarProperty Name="MXPortfolio" ColumnName="MXPortfolio" />
+                <ScalarProperty Name="CCName" ColumnName="CCName" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Branch" ColumnName="Branch" />
+                <ScalarProperty Name="COSTCENTER" ColumnName="COSTCENTER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SectorMasters">
+            <EntityTypeMapping TypeName="CreditPricingModel.SectorMaster">
+              <MappingFragment StoreEntitySet="SectorMaster">
+                <ScalarProperty Name="IndustrySubDesignations" ColumnName="IndustrySubDesignations" />
+                <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="CreditPricingModel" DisplayType="true" ZoomLevel="106">
+        <EntityTypeShape EntityType="CreditPricingModel.ABSEvalCurve" Width="1.5" PointX="0.75" PointY="6.125" Height="2.0853483072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.Holiday" Width="1.5" PointX="7.75" PointY="11.125" Height="1.4279589843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.locCcyDef" Width="1.5" PointX="10" PointY="7.5" Height="2.2496956380208326" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.MarketProvider" Width="1.5" PointX="9.75" PointY="11.125" Height="1.5923063151041674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.mpCDSCurve" Width="1.5" PointX="11.75" PointY="11.125" Height="4.8792529296875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.MUREXTKRMAP" Width="1.5" PointX="12.75" PointY="2.125" Height="1.5923063151041665" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.mxCDS" Width="1.5" PointX="12.75" PointY="5.125" Height="5.2079475911458317" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.OPICSCashFlow" Width="1.5" PointX="8.75" PointY="14.125" Height="3.5644742838541674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.OPICSLIVEDEAL" Width="1.5" PointX="13.75" PointY="11" Height="3.0714322916666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.Portfolio" Width="1.5" PointX="0.75" PointY="11.25" Height="3.4001269531250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.CrUniverse" Width="1.875" PointX="3.75" PointY="25" Height="1.7566536458333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.CrUniverseList" Width="2" PointX="6" PointY="15" Height="1.9210009765625031" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.PortfolioSimulation" Width="1.5" PointX="3" PointY="9.125" Height="2.5783902994791674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.PortfolioSimulationBin" Width="1.5" PointX="5.25" PointY="7.125" Height="1.9210009765625031" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.PortfolioSimulationResult" Width="1.875" PointX="5.25" PointY="9.875" Height="3.8931689453125031" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.PortfolioTrade" Width="1.5" PointX="3" PointY="14.5" Height="4.2218636067708388" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.RATECODE" Width="1.875" PointX="7.25" PointY="0.5" Height="3.4001269531249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.RATEHIST" Width="1.875" PointX="7.25" PointY="5" Height="1.9210009765625031" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.RATETimeStamp" Width="1.875" PointX="13.75" PointY="15.125" Height="1.2636116536458388" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.REDENTITY" Width="1.5" PointX="14.75" PointY="2.125" Height="2.4140429687500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.Security_Master" Width="1.5" PointX="15.75" PointY="6.125" Height="8.3305468750000067" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.SecurityCPV" Width="1.5" PointX="10.75" PointY="17.125" Height="1.2636116536458246" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.TradeGroup" Width="1.5" PointX="0.75" PointY="2.625" Height="1.5923063151041674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.TradeGroupTrade" Width="1.5" PointX="3.125" PointY="2.25" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.TrancheTrade" Width="1.875" PointX="3" PointY="19.5" Height="4.5505582682291674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.TTList" Width="1.5" PointX="3" PointY="28" Height="1.427958984374996" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.TTRevalInput" Width="1.5" PointX="5.25" PointY="20.625" Height="2.0853483072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.ycHeader" Width="1.5" PointX="7.625" PointY="8.125" Height="2.4140429687499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreditPricingModel.ycItemHistory" Width="1.5" PointX="10" PointY="0.75" Height="2.0853483072916674" IsExpanded="true" />
+        <AssociationConnector Association="CreditPricingModel.FK_locCcyDef_ycHeader" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.125" PointY="8.9373478190104159" />
+          <ConnectorPoint PointX="10" PointY="8.9373478190104159" />
+        </AssociationConnector>
+        <AssociationConnector Association="CreditPricingModel.FK_PortfolioLists_Portfolio" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="14.134084472656252" />
+          <ConnectorPoint PointX="7.4375" PointY="14.134084472656252" />
+          <ConnectorPoint PointX="7.4375" PointY="15" />
+        </AssociationConnector>
+        <AssociationConnector Association="CreditPricingModel.FK_PortfolioSimulation_Portfolio" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="11.558868815104166" />
+          <ConnectorPoint PointX="3" PointY="11.558868815104166" />
+        </AssociationConnector>
+        <AssociationConnector Association="CreditPricingModel.FK_TrancheTrade_Portfolio" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.29687375" PointY="14.650126953125003" />
+          <ConnectorPoint PointX="1.29687375" PointY="21.775279134114584" />
+          <ConnectorPoint PointX="3" PointY="21.775279134114584" />
+        </AssociationConnector>
+        <AssociationConnector Association="CreditPricingModel.PortfolioTrades_FK00" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.9062525" PointY="14.650126953125003" />
+          <ConnectorPoint PointX="1.9062525" PointY="16.717247779947922" />
+          <ConnectorPoint PointX="3" PointY="16.717247779947922" />
+        </AssociationConnector>
+        <AssociationConnector Association="CreditPricingModel.FK_PortfolioLists_PortfolioList" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.625" PointY="25.878326822916666" />
+          <ConnectorPoint PointX="6.135416666666667" PointY="25.878326822916666" />
+          <ConnectorPoint PointX="6.302083333333333" PointY="25.878326822916666" />
+          <ConnectorPoint PointX="7.0625" PointY="25.878326822916666" />
+          <ConnectorPoint PointX="7.0625" PointY="16.921000976562503" />
+        </AssociationConnector>
+        <AssociationConnector Association="CreditPricingModel.FK_PortfolioSimulationBins_PortfolioSimulation" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.7187475" PointY="9.125" />
+          <ConnectorPoint PointX="3.7187475" PointY="7.9555219678798448" />
+          <ConnectorPoint PointX="5.25" PointY="7.9555219678798448" />
+        </AssociationConnector>
+        <AssociationConnector Association="CreditPricingModel.FK_PortfolioSimulationResult_PortfolioSimulation" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="10.871368815104166" />
+          <ConnectorPoint PointX="5.25" PointY="10.871368815104166" />
+        </AssociationConnector>
+        <AssociationConnector Association="CreditPricingModel.FK_RATEHIST_RATECODE" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.1875" PointY="3.9001269531249996" />
+          <ConnectorPoint PointX="8.1875" PointY="5" />
+        </AssociationConnector>
+        <AssociationConnector Association="CreditPricingModel.FK_ycItemHistory_RATECODE" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.125" PointY="1.7926741536458337" />
+          <ConnectorPoint PointX="10" PointY="1.7926741536458337" />
+        </AssociationConnector>
+        <AssociationConnector Association="CreditPricingModel.FK_NegBasisTrades_NegBasisID" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="3.5189925130208333" />
+          <ConnectorPoint PointX="3.125" PointY="3.5189925130208333" />
+        </AssociationConnector>
+        <AssociationConnector Association="CreditPricingModel.FK_TTRevalInput_TrancheTrade" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.875" PointY="21.667674153645834" />
+          <ConnectorPoint PointX="5.25" PointY="21.667674153645834" />
+        </AssociationConnector>
+        <AssociationConnector Association="CreditPricingModel.FK_TTRevalInput_TTList" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="28.713979492187498" />
+          <ConnectorPoint PointX="6.21875" PointY="28.713979492187498" />
+          <ConnectorPoint PointX="6.21875" PointY="22.710348307291667" />
+        </AssociationConnector>
+        <AssociationConnector Association="CreditPricingModel.FK_ycItemHistory_ycHeader" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.125" PointY="8.125" />
+          <ConnectorPoint PointX="9.5" PointY="7.75" />
+          <ConnectorPoint PointX="9.5" PointY="2.3452632304687442" />
+          <ConnectorPoint PointX="10" PointY="2.3452632304687442" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="CreditPricingModel.TTPriceHist" Width="1.5" PointX="5.25" PointY="2.625" Height="3.7288216145833246" />
+        <AssociationConnector Association="CreditPricingModel.FK_TTPriceHist_PortfolioSimulation" >
+          <ConnectorPoint PointX="3.03125" PointY="9.125" />
+          <ConnectorPoint PointX="3.03125" PointY="5.8912972005208317" />
+          <ConnectorPoint PointX="5.25" PointY="5.8912972005208317" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="CreditPricingModel.BondCashFlow" Width="1.5" PointX="16.375" PointY="15.75" Height="3.0714322916666674" />
+        <EntityTypeShape EntityType="CreditPricingModel.BondPXSummary" Width="1.5" PointX="13.375" PointY="17.75" Height="5.0436002604166674" />
+        <EntityTypeShape EntityType="CreditPricingModel.cdsListSummary" Width="1.5" PointX="17.375" PointY="0.75" Height="2.9070849609375031" />
+        <EntityTypeShape EntityType="CreditPricingModel.mxCDSCalc" Width="1.5" PointX="18.375" PointY="4.75" Height="4.7149055989583388" />
+        <EntityTypeShape EntityType="CreditPricingModel.mxCDSCashFlowDisplay" Width="1.5" PointX="7.375" PointY="18.75" Height="2.9070849609375031" />
+        <EntityTypeShape EntityType="CreditPricingModel.mxCDSCloseOut" Width="1.5" PointX="18.375" PointY="10.75" Height="4.3862109375000031" />
+        <EntityTypeShape EntityType="CreditPricingModel.mxCDSDisplay" Width="1.5" PointX="18.375" PointY="16.75" Height="4.0575162760416674" />
+        <EntityTypeShape EntityType="CreditPricingModel.TrancheLet" Width="1.5" PointX="19.375" PointY="0.75" Height="1.4279589843750031" />
+        <EntityTypeShape EntityType="CreditPricingModel.TranchePrice2" Width="1.5" PointX="9.375" PointY="19.75" Height="4.2218636067708388" />
+        <EntityTypeShape EntityType="CreditPricingModel.TranchePrice" Width="2.375" PointX="15.375" PointY="19.75" Height="4.0575162760416674" />
+        <EntityTypeShape EntityType="CreditPricingModel.HolidayHDB" Width="1.5" PointX="20.375" PointY="3.75" Height="1.4279589843750102" />
+        <EntityTypeShape EntityType="CreditPricingModel.fx_arb" Width="1.5" PointX="20.375" PointY="5.625" Height="2.9070849609374996" />
+        <EntityTypeShape EntityType="CreditPricingModel.SecurityMTMSpread" Width="1.5" PointX="20.375" PointY="9.75" Height="1.427958984374996" />
+        <EntityTypeShape EntityType="CreditPricingModel.MAP_CC_MXPort" Width="1.5" PointX="20.375" PointY="12.75" Height="2.0853483072916674" />
+        <EntityTypeShape EntityType="CreditPricingModel.SectorMaster" Width="1.5" PointX="20.375" PointY="15.75" Height="1.2636116536458246" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

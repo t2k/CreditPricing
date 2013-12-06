@@ -1,0 +1,828 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="hdbModel.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="11.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="hdbModelStoreContainer">
+          <EntitySet Name="BOND_ABS" EntityType="hdbModel.Store.BOND_ABS" store:Type="Tables" Schema="HDB" />
+          <EntitySet Name="BSS" EntityType="hdbModel.Store.BSS" store:Type="Tables" Schema="HDB" />
+          <EntitySet Name="BSS_ST" EntityType="hdbModel.Store.BSS_ST" store:Type="Tables" Schema="HDB" />
+          <EntitySet Name="BUCKETS" EntityType="hdbModel.Store.BUCKETS" store:Type="Tables" Schema="HDB" />
+          <EntitySet Name="FX" EntityType="hdbModel.Store.FX" store:Type="Tables" Schema="HDB" />
+          <EntitySet Name="FX_FWD_ST" EntityType="hdbModel.Store.FX_FWD_ST" store:Type="Tables" Schema="HDB" />
+          <EntitySet Name="IMPORT_MARKIT_ABS_CURVE_MAP" EntityType="hdbModel.Store.IMPORT_MARKIT_ABS_CURVE_MAP" store:Type="Tables" Schema="HDB" />
+          <EntitySet Name="IMPORT_MARKIT_CDS" EntityType="hdbModel.Store.IMPORT_MARKIT_CDS" store:Type="Tables" store:Schema="HDB" store:Name="IMPORT_MARKIT_CDS">
+            <DefiningQuery>SELECT 
+      "IMPORT_MARKIT_CDS"."TRADE_DATE" AS "TRADE_DATE", 
+      "IMPORT_MARKIT_CDS"."TICKER" AS "TICKER", 
+      "IMPORT_MARKIT_CDS"."NAME" AS "NAME", 
+      "IMPORT_MARKIT_CDS"."REDCODE" AS "REDCODE", 
+      "IMPORT_MARKIT_CDS"."TIER" AS "TIER", 
+      "IMPORT_MARKIT_CDS"."CURRENCY" AS "CURRENCY", 
+      "IMPORT_MARKIT_CDS"."DOC_CLAUSE" AS "DOC_CLAUSE", 
+      "IMPORT_MARKIT_CDS"."CONTRIBUTOR" AS "CONTRIBUTOR", 
+      "IMPORT_MARKIT_CDS"."SPREAD6M" AS "SPREAD6M", 
+      "IMPORT_MARKIT_CDS"."SPREAD1Y" AS "SPREAD1Y", 
+      "IMPORT_MARKIT_CDS"."SPREAD2Y" AS "SPREAD2Y", 
+      "IMPORT_MARKIT_CDS"."SPREAD3Y" AS "SPREAD3Y", 
+      "IMPORT_MARKIT_CDS"."SPREAD4Y" AS "SPREAD4Y", 
+      "IMPORT_MARKIT_CDS"."SPREAD5Y" AS "SPREAD5Y", 
+      "IMPORT_MARKIT_CDS"."SPREAD7Y" AS "SPREAD7Y", 
+      "IMPORT_MARKIT_CDS"."SPREAD10Y" AS "SPREAD10Y", 
+      "IMPORT_MARKIT_CDS"."SPREAD15Y" AS "SPREAD15Y", 
+      "IMPORT_MARKIT_CDS"."SPREAD20Y" AS "SPREAD20Y", 
+      "IMPORT_MARKIT_CDS"."SPREAD30Y" AS "SPREAD30Y", 
+      "IMPORT_MARKIT_CDS"."RECOVERY" AS "RECOVERY", 
+      "IMPORT_MARKIT_CDS"."RTG6M" AS "RTG6M", 
+      "IMPORT_MARKIT_CDS"."RTG1Y" AS "RTG1Y", 
+      "IMPORT_MARKIT_CDS"."RTG2Y" AS "RTG2Y", 
+      "IMPORT_MARKIT_CDS"."RTG3Y" AS "RTG3Y", 
+      "IMPORT_MARKIT_CDS"."RTG4Y" AS "RTG4Y", 
+      "IMPORT_MARKIT_CDS"."RTG5Y" AS "RTG5Y", 
+      "IMPORT_MARKIT_CDS"."RTG7Y" AS "RTG7Y", 
+      "IMPORT_MARKIT_CDS"."RTG10Y" AS "RTG10Y", 
+      "IMPORT_MARKIT_CDS"."RTG15Y" AS "RTG15Y", 
+      "IMPORT_MARKIT_CDS"."RTG20Y" AS "RTG20Y", 
+      "IMPORT_MARKIT_CDS"."RTG30Y" AS "RTG30Y", 
+      "IMPORT_MARKIT_CDS"."COMP_CURVE_RTG" AS "COMP_CURVE_RTG", 
+      "IMPORT_MARKIT_CDS"."COMP_DEPTH5Y" AS "COMP_DEPTH5Y", 
+      "IMPORT_MARKIT_CDS"."SECTOR" AS "SECTOR", 
+      "IMPORT_MARKIT_CDS"."REGION" AS "REGION", 
+      "IMPORT_MARKIT_CDS"."COUNTRY" AS "COUNTRY", 
+      "IMPORT_MARKIT_CDS"."AV_RTG" AS "AV_RTG", 
+      "IMPORT_MARKIT_CDS"."IMPL_RTG" AS "IMPL_RTG", 
+      "IMPORT_MARKIT_CDS"."COMP_LEVEL6M" AS "COMP_LEVEL6M", 
+      "IMPORT_MARKIT_CDS"."COMP_LEVEL1Y" AS "COMP_LEVEL1Y", 
+      "IMPORT_MARKIT_CDS"."COMP_LEVEL2Y" AS "COMP_LEVEL2Y", 
+      "IMPORT_MARKIT_CDS"."COMP_LEVEL3Y" AS "COMP_LEVEL3Y", 
+      "IMPORT_MARKIT_CDS"."COMP_LEVEL4Y" AS "COMP_LEVEL4Y", 
+      "IMPORT_MARKIT_CDS"."COMP_LEVEL5Y" AS "COMP_LEVEL5Y", 
+      "IMPORT_MARKIT_CDS"."COMP_LEVEL7Y" AS "COMP_LEVEL7Y", 
+      "IMPORT_MARKIT_CDS"."COMP_LEVEL10Y" AS "COMP_LEVEL10Y", 
+      "IMPORT_MARKIT_CDS"."COMP_LEVEL15Y" AS "COMP_LEVEL15Y", 
+      "IMPORT_MARKIT_CDS"."COMP_LEVEL20Y" AS "COMP_LEVEL20Y", 
+      "IMPORT_MARKIT_CDS"."COMP_LEVEL30Y" AS "COMP_LEVEL30Y", 
+      "IMPORT_MARKIT_CDS"."COMP_LEVEL_RECOV" AS "COMP_LEVEL_RECOV"
+      FROM "HDB"."IMPORT_MARKIT_CDS" "IMPORT_MARKIT_CDS"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="IMPORT_MARKIT_LOANX" EntityType="hdbModel.Store.IMPORT_MARKIT_LOANX" store:Type="Tables" store:Schema="HDB" store:Name="IMPORT_MARKIT_LOANX">
+            <DefiningQuery>SELECT 
+      "IMPORT_MARKIT_LOANX"."TRADE_DATE" AS "TRADE_DATE", 
+      "IMPORT_MARKIT_LOANX"."LOANX_ID" AS "LOANX_ID", 
+      "IMPORT_MARKIT_LOANX"."LCD_ID" AS "LCD_ID", 
+      "IMPORT_MARKIT_LOANX"."ISSUER" AS "ISSUER", 
+      "IMPORT_MARKIT_LOANX"."DEAL_NAME" AS "DEAL_NAME", 
+      "IMPORT_MARKIT_LOANX"."FACILITY" AS "FACILITY", 
+      "IMPORT_MARKIT_LOANX"."INDUSTRY" AS "INDUSTRY", 
+      "IMPORT_MARKIT_LOANX"."CURRENT_RATING" AS "CURRENT_RATING", 
+      "IMPORT_MARKIT_LOANX"."INITIAL_AMOUNT" AS "INITIAL_AMOUNT", 
+      "IMPORT_MARKIT_LOANX"."FINAL_MATURITY" AS "FINAL_MATURITY", 
+      "IMPORT_MARKIT_LOANX"."INITIAL_SPREAD" AS "INITIAL_SPREAD", 
+      "IMPORT_MARKIT_LOANX"."BID" AS "BID", 
+      "IMPORT_MARKIT_LOANX"."OFFER" AS "OFFER", 
+      "IMPORT_MARKIT_LOANX"."DEPTH" AS "DEPTH", 
+      "IMPORT_MARKIT_LOANX"."SPREAD_TO_MATURITY" AS "SPREAD_TO_MATURITY", 
+      "IMPORT_MARKIT_LOANX"."CURRENCY" AS "CURRENCY", 
+      "IMPORT_MARKIT_LOANX"."TIER" AS "TIER"
+      FROM "HDB"."IMPORT_MARKIT_LOANX" "IMPORT_MARKIT_LOANX"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="IMPORT_MX_RLOAN" EntityType="hdbModel.Store.IMPORT_MX_RLOAN" store:Type="Tables" store:Schema="HDB" store:Name="IMPORT_MX_RLOAN">
+            <DefiningQuery>SELECT 
+      "IMPORT_MX_RLOAN"."DEAL_ID" AS "DEAL_ID", 
+      "IMPORT_MX_RLOAN"."TYPE" AS "TYPE", 
+      "IMPORT_MX_RLOAN"."PORTFOLIO" AS "PORTFOLIO", 
+      "IMPORT_MX_RLOAN"."COUNTERPART" AS "COUNTERPART", 
+      "IMPORT_MX_RLOAN"."PAY_REC" AS "PAY_REC", 
+      "IMPORT_MX_RLOAN"."ISSUER" AS "ISSUER", 
+      "IMPORT_MX_RLOAN"."SAP_ID" AS "SAP_ID", 
+      "IMPORT_MX_RLOAN"."MATURITY" AS "MATURITY", 
+      "IMPORT_MX_RLOAN"."CURRENCY" AS "CURRENCY", 
+      "IMPORT_MX_RLOAN"."SENIORITY" AS "SENIORITY"
+      FROM "HDB"."IMPORT_MX_RLOAN" "IMPORT_MX_RLOAN"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="IMPORT_SAPBP" EntityType="hdbModel.Store.IMPORT_SAPBP" store:Type="Tables" Schema="HDB" />
+          <AssociationSet Name="FK_BSS_BSSST" Association="hdbModel.Store.FK_BSS_BSSST">
+            <End Role="BSS_ST" EntitySet="BSS_ST" />
+            <End Role="BSS" EntitySet="BSS" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="BOND_ABS">
+          <Key>
+            <PropertyRef Name="SYMBOL" />
+            <PropertyRef Name="TRADE_DATE" />
+          </Key>
+          <Property Name="SYMBOL" Type="varchar2" Nullable="false" MaxLength="32" />
+          <Property Name="TRADE_DATE" Type="date" Nullable="false" />
+          <Property Name="WAL" Type="date" />
+          <Property Name="MTG_FACTOR" Type="float" Precision="126" />
+          <Property Name="PRICE" Type="float" Precision="126" />
+          <Property Name="SPREAD" Type="float" Precision="126" />
+          <Property Name="MX_CURVE" Type="varchar2" MaxLength="20" />
+          <Property Name="CALL_DATE" Type="date" />
+          <Property Name="CALL_TRIGGER" Type="number" Precision="5" />
+          <Property Name="SECTOR_CURVE" Type="varchar2" MaxLength="32" />
+          <Property Name="MARKIT_RATING" Type="varchar2" MaxLength="10" />
+          <Property Name="MARKIT_WAL" Type="float" Precision="126" />
+        </EntityType>
+        <EntityType Name="BSS">
+          <Key>
+            <PropertyRef Name="SYMBOL" />
+            <PropertyRef Name="TRADE_DATE" />
+          </Key>
+          <Property Name="SYMBOL" Type="varchar2" Nullable="false" MaxLength="32" />
+          <Property Name="TRADE_DATE" Type="date" Nullable="false" />
+          <Property Name="PRICE" Type="float" Nullable="false" Precision="126" />
+        </EntityType>
+        <EntityType Name="BSS_ST">
+          <Key>
+            <PropertyRef Name="SYMBOL" />
+          </Key>
+          <Property Name="SYMBOL" Type="varchar2" Nullable="false" MaxLength="32" />
+          <Property Name="CURRENCY" Type="varchar2" Nullable="false" MaxLength="3" />
+          <Property Name="UNDERL_CURVE" Type="varchar2" Nullable="false" MaxLength="32" />
+          <Property Name="PERIOD" Type="varchar2" Nullable="false" MaxLength="3" />
+          <Property Name="FLOAT_BASIS" Type="varchar2" Nullable="false" MaxLength="32" />
+          <Property Name="FLOAT_NORM" Type="varchar2" Nullable="false" MaxLength="32" />
+          <Property Name="CALC_TYPE" Type="varchar2" MaxLength="3" />
+        </EntityType>
+        <EntityType Name="BUCKETS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="number" Nullable="false" Precision="12" />
+          <Property Name="BUCKET" Type="varchar2" Nullable="false" MaxLength="3" />
+          <Property Name="DAYS" Type="number" Precision="12" />
+          <Property Name="PER_NUM" Type="number" Precision="12" />
+          <Property Name="PER" Type="varchar2" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="FX">
+          <Key>
+            <PropertyRef Name="SYMBOL" />
+            <PropertyRef Name="TRADE_DATE" />
+          </Key>
+          <Property Name="SYMBOL" Type="varchar2" Nullable="false" MaxLength="32" />
+          <Property Name="TRADE_DATE" Type="date" Nullable="false" />
+          <Property Name="PRICE" Type="float" Precision="126" />
+          <Property Name="HIGH" Type="float" Precision="126" />
+          <Property Name="LOW" Type="float" Precision="126" />
+        </EntityType>
+        <EntityType Name="FX_FWD_ST">
+          <Key>
+            <PropertyRef Name="SYMBOL" />
+          </Key>
+          <Property Name="SYMBOL" Type="varchar2" Nullable="false" MaxLength="32" />
+          <Property Name="CURRENCY_BASE" Type="varchar2" MaxLength="3" />
+          <Property Name="CURRENCY_UNIT" Type="varchar2" MaxLength="3" />
+          <Property Name="PERIOD" Type="varchar2" Nullable="false" MaxLength="3" />
+          <Property Name="SP_MULT" Type="float" Precision="126" />
+          <Property Name="MX_MULT" Type="float" Precision="126" />
+        </EntityType>
+        <EntityType Name="IMPORT_MARKIT_ABS_CURVE_MAP">
+          <Key>
+            <PropertyRef Name="SYMBOL" />
+          </Key>
+          <Property Name="SYMBOL" Type="varchar2" Nullable="false" MaxLength="32" />
+          <Property Name="CALC_TYPE" Type="varchar2" MaxLength="64" />
+          <Property Name="CALC_CURVE" Type="varchar2" MaxLength="32" />
+          <Property Name="SET_CURVE" Type="varchar2" MaxLength="32" />
+          <Property Name="SHIFT" Type="float" Precision="126" />
+          <Property Name="AVG_WAL" Type="float" Precision="126" />
+          <Property Name="MIN_WAL" Type="float" Precision="126" />
+          <Property Name="MAX_WAL" Type="float" Precision="126" />
+          <Property Name="CALC_ORDER" Type="number" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'HDB.IMPORT_MARKIT_CDS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="IMPORT_MARKIT_CDS">
+          <Key>
+            <PropertyRef Name="TRADE_DATE" />
+          </Key>
+          <Property Name="TRADE_DATE" Type="date" Nullable="false" />
+          <Property Name="TICKER" Type="varchar2" MaxLength="20" />
+          <Property Name="NAME" Type="varchar2" MaxLength="80" />
+          <Property Name="REDCODE" Type="varchar2" MaxLength="8" />
+          <Property Name="TIER" Type="varchar2" MaxLength="16" />
+          <Property Name="CURRENCY" Type="varchar2" MaxLength="3" />
+          <Property Name="DOC_CLAUSE" Type="varchar2" MaxLength="2" />
+          <Property Name="CONTRIBUTOR" Type="varchar2" MaxLength="16" />
+          <Property Name="SPREAD6M" Type="float" Precision="126" />
+          <Property Name="SPREAD1Y" Type="float" Precision="126" />
+          <Property Name="SPREAD2Y" Type="float" Precision="126" />
+          <Property Name="SPREAD3Y" Type="float" Precision="126" />
+          <Property Name="SPREAD4Y" Type="float" Precision="126" />
+          <Property Name="SPREAD5Y" Type="float" Precision="126" />
+          <Property Name="SPREAD7Y" Type="float" Precision="126" />
+          <Property Name="SPREAD10Y" Type="float" Precision="126" />
+          <Property Name="SPREAD15Y" Type="float" Precision="126" />
+          <Property Name="SPREAD20Y" Type="float" Precision="126" />
+          <Property Name="SPREAD30Y" Type="float" Precision="126" />
+          <Property Name="RECOVERY" Type="float" Precision="126" />
+          <Property Name="RTG6M" Type="varchar2" MaxLength="4" />
+          <Property Name="RTG1Y" Type="varchar2" MaxLength="4" />
+          <Property Name="RTG2Y" Type="varchar2" MaxLength="4" />
+          <Property Name="RTG3Y" Type="varchar2" MaxLength="4" />
+          <Property Name="RTG4Y" Type="varchar2" MaxLength="4" />
+          <Property Name="RTG5Y" Type="varchar2" MaxLength="4" />
+          <Property Name="RTG7Y" Type="varchar2" MaxLength="4" />
+          <Property Name="RTG10Y" Type="varchar2" MaxLength="4" />
+          <Property Name="RTG15Y" Type="varchar2" MaxLength="4" />
+          <Property Name="RTG20Y" Type="varchar2" MaxLength="4" />
+          <Property Name="RTG30Y" Type="varchar2" MaxLength="4" />
+          <Property Name="COMP_CURVE_RTG" Type="varchar2" MaxLength="4" />
+          <Property Name="COMP_DEPTH5Y" Type="number" Precision="12" />
+          <Property Name="SECTOR" Type="varchar2" MaxLength="32" />
+          <Property Name="REGION" Type="varchar2" MaxLength="10" />
+          <Property Name="COUNTRY" Type="varchar2" MaxLength="64" />
+          <Property Name="AV_RTG" Type="varchar2" MaxLength="4" />
+          <Property Name="IMPL_RTG" Type="varchar2" MaxLength="4" />
+          <Property Name="COMP_LEVEL6M" Type="varchar2" MaxLength="16" />
+          <Property Name="COMP_LEVEL1Y" Type="varchar2" MaxLength="16" />
+          <Property Name="COMP_LEVEL2Y" Type="varchar2" MaxLength="16" />
+          <Property Name="COMP_LEVEL3Y" Type="varchar2" MaxLength="16" />
+          <Property Name="COMP_LEVEL4Y" Type="varchar2" MaxLength="16" />
+          <Property Name="COMP_LEVEL5Y" Type="varchar2" MaxLength="16" />
+          <Property Name="COMP_LEVEL7Y" Type="varchar2" MaxLength="16" />
+          <Property Name="COMP_LEVEL10Y" Type="varchar2" MaxLength="16" />
+          <Property Name="COMP_LEVEL15Y" Type="varchar2" MaxLength="16" />
+          <Property Name="COMP_LEVEL20Y" Type="varchar2" MaxLength="16" />
+          <Property Name="COMP_LEVEL30Y" Type="varchar2" MaxLength="16" />
+          <Property Name="COMP_LEVEL_RECOV" Type="varchar2" MaxLength="16" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'HDB.IMPORT_MARKIT_LOANX' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="IMPORT_MARKIT_LOANX">
+          <Key>
+            <PropertyRef Name="TRADE_DATE" />
+            <PropertyRef Name="LOANX_ID" />
+            <PropertyRef Name="ISSUER" />
+            <PropertyRef Name="DEAL_NAME" />
+            <PropertyRef Name="FACILITY" />
+            <PropertyRef Name="INDUSTRY" />
+            <PropertyRef Name="BID" />
+            <PropertyRef Name="OFFER" />
+            <PropertyRef Name="DEPTH" />
+          </Key>
+          <Property Name="TRADE_DATE" Type="date" Nullable="false" />
+          <Property Name="LOANX_ID" Type="varchar2" Nullable="false" MaxLength="10" />
+          <Property Name="LCD_ID" Type="number" />
+          <Property Name="ISSUER" Type="varchar2" Nullable="false" MaxLength="128" />
+          <Property Name="DEAL_NAME" Type="varchar2" Nullable="false" MaxLength="128" />
+          <Property Name="FACILITY" Type="varchar2" Nullable="false" MaxLength="40" />
+          <Property Name="INDUSTRY" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="CURRENT_RATING" Type="varchar2" MaxLength="8" />
+          <Property Name="INITIAL_AMOUNT" Type="float" Precision="126" />
+          <Property Name="FINAL_MATURITY" Type="date" />
+          <Property Name="INITIAL_SPREAD" Type="float" Precision="126" />
+          <Property Name="BID" Type="float" Nullable="false" Precision="126" />
+          <Property Name="OFFER" Type="float" Nullable="false" Precision="126" />
+          <Property Name="DEPTH" Type="varchar2" Nullable="false" MaxLength="12" />
+          <Property Name="SPREAD_TO_MATURITY" Type="float" Precision="126" />
+          <Property Name="CURRENCY" Type="varchar2" MaxLength="3" />
+          <Property Name="TIER" Type="varchar2" MaxLength="32" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'HDB.IMPORT_MX_RLOAN' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="IMPORT_MX_RLOAN">
+          <Key>
+            <PropertyRef Name="DEAL_ID" />
+            <PropertyRef Name="ISSUER" />
+          </Key>
+          <Property Name="DEAL_ID" Type="varchar2" Nullable="false" MaxLength="13" />
+          <Property Name="TYPE" Type="varchar2" MaxLength="1" />
+          <Property Name="PORTFOLIO" Type="varchar2" MaxLength="15" />
+          <Property Name="COUNTERPART" Type="varchar2" MaxLength="17" />
+          <Property Name="PAY_REC" Type="varchar2" MaxLength="11" />
+          <Property Name="ISSUER" Type="varchar2" Nullable="false" MaxLength="20" />
+          <Property Name="SAP_ID" Type="varchar2" MaxLength="15" />
+          <Property Name="MATURITY" Type="date" />
+          <Property Name="CURRENCY" Type="varchar2" MaxLength="8" />
+          <Property Name="SENIORITY" Type="varchar2" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="IMPORT_SAPBP">
+          <Key>
+            <PropertyRef Name="SAP_ID" />
+          </Key>
+          <Property Name="SAP_ID" Type="varchar2" Nullable="false" MaxLength="10" />
+          <Property Name="NAME" Type="varchar2" MaxLength="64" />
+          <Property Name="BVR1" Type="number" Precision="12" />
+          <Property Name="SEGMENT" Type="varchar2" MaxLength="4" />
+          <Property Name="RATING_DATE" Type="date" />
+          <Property Name="CUSTOMER_GROUP" Type="varchar2" MaxLength="6" />
+          <Property Name="COLLAT_RATE" Type="number" Precision="12" />
+          <Property Name="COUNTRY" Type="varchar2" MaxLength="3" />
+          <Property Name="VR_RATING" Type="varchar2" MaxLength="3" />
+          <Property Name="OVERRIDE" Type="varchar2" MaxLength="1" />
+          <Property Name="SEGMENT_LONG" Type="varchar2" MaxLength="32" />
+          <Property Name="KNE_SAP_ID" Type="varchar2" MaxLength="10" />
+          <Property Name="IS_HEADQUARTER" Type="varchar2" MaxLength="1" />
+          <Property Name="IS_BRANCH" Type="varchar2" MaxLength="1" />
+          <Property Name="ANALYST" Type="varchar2" MaxLength="8" />
+          <Property Name="BONI_SAP_ID" Type="varchar2" MaxLength="10" />
+        </EntityType>
+        <Association Name="FK_BSS_BSSST">
+          <End Role="BSS_ST" Type="hdbModel.Store.BSS_ST" Multiplicity="1" />
+          <End Role="BSS" Type="hdbModel.Store.BSS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BSS_ST">
+              <PropertyRef Name="SYMBOL" />
+            </Principal>
+            <Dependent Role="BSS">
+              <PropertyRef Name="SYMBOL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="hdbModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="hdbOracleEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BSS_ST" EntityType="hdbModel.BSS_ST" />
+          <EntitySet Name="BOND_ABS" EntityType="hdbModel.BOND_ABS" />
+          <EntitySet Name="FX_FWD_ST" EntityType="hdbModel.FX_FWD_ST" />
+          <EntitySet Name="IMPORT_MARKIT_ABS_CURVE_MAP" EntityType="hdbModel.IMPORT_MARKIT_ABS_CURVE_MAP" />
+          <EntitySet Name="IMPORT_MARKIT_CDS" EntityType="hdbModel.IMPORT_MARKIT_CDS" />
+          <EntitySet Name="IMPORT_MARKIT_LOANX" EntityType="hdbModel.IMPORT_MARKIT_LOANX" />
+          <EntitySet Name="IMPORT_MX_RLOAN" EntityType="hdbModel.IMPORT_MX_RLOAN" />
+          <EntitySet Name="IMPORT_SAPBP" EntityType="hdbModel.IMPORT_SAPBP" />
+          <EntitySet Name="BUCKETS" EntityType="hdbModel.BUCKET" />
+          <EntitySet Name="FXes" EntityType="hdbModel.FX" />
+          <EntitySet Name="BSSes" EntityType="hdbModel.BSS" />
+          <AssociationSet Name="FK_BSS_BSSST" Association="hdbModel.FK_BSS_BSSST">
+            <End Role="BSS_ST" EntitySet="BSS_ST" />
+            <End Role="BSS" EntitySet="BSSes" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="BSS_ST">
+          <Key>
+            <PropertyRef Name="SYMBOL" />
+          </Key>
+          <Property Name="SYMBOL" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+          <Property Name="CURRENCY" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="UNDERL_CURVE" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+          <Property Name="PERIOD" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="FLOAT_BASIS" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+          <Property Name="FLOAT_NORM" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+          <Property Name="CALC_TYPE" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="BSSes" Relationship="hdbModel.FK_BSS_BSSST" FromRole="BSS_ST" ToRole="BSS" />
+        </EntityType>
+        <EntityType Name="BOND_ABS">
+          <Key>
+            <PropertyRef Name="SYMBOL" />
+            <PropertyRef Name="TRADE_DATE" />
+          </Key>
+          <Property Type="String" Name="SYMBOL" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="TRADE_DATE" Nullable="false" />
+          <Property Type="DateTime" Name="WAL" />
+          <Property Type="Decimal" Name="MTG_FACTOR" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="PRICE" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="SPREAD" Precision="38" Scale="0" />
+          <Property Type="String" Name="MX_CURVE" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CALL_DATE" />
+          <Property Type="Int16" Name="CALL_TRIGGER" />
+          <Property Type="String" Name="SECTOR_CURVE" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MARKIT_RATING" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="MARKIT_WAL" Precision="38" Scale="0" />
+        </EntityType>
+        <EntityType Name="FX_FWD_ST">
+          <Key>
+            <PropertyRef Name="SYMBOL" />
+          </Key>
+          <Property Type="String" Name="SYMBOL" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CURRENCY_BASE" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CURRENCY_UNIT" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PERIOD" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="SP_MULT" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="MX_MULT" Precision="38" Scale="0" />
+        </EntityType>
+        <EntityType Name="IMPORT_MARKIT_ABS_CURVE_MAP">
+          <Key>
+            <PropertyRef Name="SYMBOL" />
+          </Key>
+          <Property Type="String" Name="SYMBOL" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CALC_TYPE" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CALC_CURVE" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SET_CURVE" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="SHIFT" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="AVG_WAL" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="MIN_WAL" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="MAX_WAL" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="CALC_ORDER" Precision="38" Scale="0" />
+        </EntityType>
+        <EntityType Name="IMPORT_MARKIT_CDS">
+          <Key>
+            <PropertyRef Name="TRADE_DATE" />
+          </Key>
+          <Property Type="DateTime" Name="TRADE_DATE" Nullable="false" />
+          <Property Type="String" Name="TICKER" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NAME" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REDCODE" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TIER" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CURRENCY" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DOC_CLAUSE" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CONTRIBUTOR" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="SPREAD6M" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="SPREAD1Y" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="SPREAD2Y" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="SPREAD3Y" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="SPREAD4Y" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="SPREAD5Y" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="SPREAD7Y" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="SPREAD10Y" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="SPREAD15Y" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="SPREAD20Y" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="SPREAD30Y" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="RECOVERY" Precision="38" Scale="0" />
+          <Property Type="String" Name="RTG6M" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RTG1Y" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RTG2Y" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RTG3Y" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RTG4Y" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RTG5Y" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RTG7Y" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RTG10Y" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RTG15Y" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RTG20Y" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RTG30Y" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMP_CURVE_RTG" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="COMP_DEPTH5Y" />
+          <Property Type="String" Name="SECTOR" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REGION" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COUNTRY" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AV_RTG" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IMPL_RTG" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMP_LEVEL6M" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMP_LEVEL1Y" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMP_LEVEL2Y" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMP_LEVEL3Y" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMP_LEVEL4Y" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMP_LEVEL5Y" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMP_LEVEL7Y" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMP_LEVEL10Y" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMP_LEVEL15Y" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMP_LEVEL20Y" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMP_LEVEL30Y" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMP_LEVEL_RECOV" MaxLength="16" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="IMPORT_MARKIT_LOANX">
+          <Key>
+            <PropertyRef Name="TRADE_DATE" />
+            <PropertyRef Name="LOANX_ID" />
+            <PropertyRef Name="ISSUER" />
+            <PropertyRef Name="DEAL_NAME" />
+            <PropertyRef Name="FACILITY" />
+            <PropertyRef Name="INDUSTRY" />
+            <PropertyRef Name="BID" />
+            <PropertyRef Name="OFFER" />
+            <PropertyRef Name="DEPTH" />
+          </Key>
+          <Property Type="DateTime" Name="TRADE_DATE" Nullable="false" />
+          <Property Type="String" Name="LOANX_ID" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="LCD_ID" Precision="38" Scale="0" />
+          <Property Type="String" Name="ISSUER" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DEAL_NAME" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FACILITY" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="INDUSTRY" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CURRENT_RATING" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="INITIAL_AMOUNT" Precision="38" Scale="0" />
+          <Property Type="DateTime" Name="FINAL_MATURITY" />
+          <Property Type="Decimal" Name="INITIAL_SPREAD" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="BID" Nullable="false" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="OFFER" Nullable="false" Precision="38" Scale="0" />
+          <Property Type="String" Name="DEPTH" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="SPREAD_TO_MATURITY" Precision="38" Scale="0" />
+          <Property Type="String" Name="CURRENCY" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TIER" MaxLength="32" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="IMPORT_MX_RLOAN">
+          <Key>
+            <PropertyRef Name="DEAL_ID" />
+            <PropertyRef Name="ISSUER" />
+          </Key>
+          <Property Type="String" Name="DEAL_ID" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TYPE" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PORTFOLIO" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COUNTERPART" MaxLength="17" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PAY_REC" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ISSUER" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SAP_ID" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="MATURITY" />
+          <Property Type="String" Name="CURRENCY" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SENIORITY" MaxLength="25" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="IMPORT_SAPBP">
+          <Key>
+            <PropertyRef Name="SAP_ID" />
+          </Key>
+          <Property Type="String" Name="SAP_ID" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NAME" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="BVR1" />
+          <Property Type="String" Name="SEGMENT" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="RATING_DATE" />
+          <Property Type="String" Name="CUSTOMER_GROUP" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="COLLAT_RATE" />
+          <Property Type="String" Name="COUNTRY" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VR_RATING" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OVERRIDE" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SEGMENT_LONG" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="KNE_SAP_ID" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IS_HEADQUARTER" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IS_BRANCH" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ANALYST" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BONI_SAP_ID" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="BUCKET">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="String" Name="BUCKET1" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="DAYS" />
+          <Property Type="Int64" Name="PER_NUM" />
+          <Property Type="String" Name="PER" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="FX">
+          <Key>
+            <PropertyRef Name="SYMBOL" />
+            <PropertyRef Name="TRADE_DATE" />
+          </Key>
+          <Property Type="String" Name="SYMBOL" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="TRADE_DATE" Nullable="false" />
+          <Property Type="Decimal" Name="PRICE" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="HIGH" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="LOW" Precision="38" Scale="0" />
+        </EntityType>
+        <EntityType Name="BSS">
+          <Key>
+            <PropertyRef Name="SYMBOL" />
+            <PropertyRef Name="TRADE_DATE" />
+          </Key>
+          <Property Type="String" Name="SYMBOL" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="TRADE_DATE" Nullable="false" />
+          <Property Type="Decimal" Name="PRICE" Nullable="false" Precision="38" Scale="0" />
+          <NavigationProperty Name="BSS_ST" Relationship="hdbModel.FK_BSS_BSSST" FromRole="BSS" ToRole="BSS_ST" />
+        </EntityType>
+        <Association Name="FK_BSS_BSSST">
+          <End Type="hdbModel.BSS_ST" Role="BSS_ST" Multiplicity="1" />
+          <End Type="hdbModel.BSS" Role="BSS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BSS_ST">
+              <PropertyRef Name="SYMBOL" />
+            </Principal>
+            <Dependent Role="BSS">
+              <PropertyRef Name="SYMBOL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="hdbModelStoreContainer" CdmEntityContainer="hdbOracleEntities">
+          <EntitySetMapping Name="BSS_ST"><EntityTypeMapping TypeName="hdbModel.BSS_ST"><MappingFragment StoreEntitySet="BSS_ST">
+            <ScalarProperty Name="SYMBOL" ColumnName="SYMBOL" />
+            <ScalarProperty Name="CURRENCY" ColumnName="CURRENCY" />
+            <ScalarProperty Name="UNDERL_CURVE" ColumnName="UNDERL_CURVE" />
+            <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+            <ScalarProperty Name="FLOAT_BASIS" ColumnName="FLOAT_BASIS" />
+            <ScalarProperty Name="FLOAT_NORM" ColumnName="FLOAT_NORM" />
+            <ScalarProperty Name="CALC_TYPE" ColumnName="CALC_TYPE" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BOND_ABS">
+            <EntityTypeMapping TypeName="hdbModel.BOND_ABS">
+              <MappingFragment StoreEntitySet="BOND_ABS">
+                <ScalarProperty Name="MARKIT_WAL" ColumnName="MARKIT_WAL" />
+                <ScalarProperty Name="MARKIT_RATING" ColumnName="MARKIT_RATING" />
+                <ScalarProperty Name="SECTOR_CURVE" ColumnName="SECTOR_CURVE" />
+                <ScalarProperty Name="CALL_TRIGGER" ColumnName="CALL_TRIGGER" />
+                <ScalarProperty Name="CALL_DATE" ColumnName="CALL_DATE" />
+                <ScalarProperty Name="MX_CURVE" ColumnName="MX_CURVE" />
+                <ScalarProperty Name="SPREAD" ColumnName="SPREAD" />
+                <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+                <ScalarProperty Name="MTG_FACTOR" ColumnName="MTG_FACTOR" />
+                <ScalarProperty Name="WAL" ColumnName="WAL" />
+                <ScalarProperty Name="TRADE_DATE" ColumnName="TRADE_DATE" />
+                <ScalarProperty Name="SYMBOL" ColumnName="SYMBOL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FX_FWD_ST">
+            <EntityTypeMapping TypeName="hdbModel.FX_FWD_ST">
+              <MappingFragment StoreEntitySet="FX_FWD_ST">
+                <ScalarProperty Name="MX_MULT" ColumnName="MX_MULT" />
+                <ScalarProperty Name="SP_MULT" ColumnName="SP_MULT" />
+                <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+                <ScalarProperty Name="CURRENCY_UNIT" ColumnName="CURRENCY_UNIT" />
+                <ScalarProperty Name="CURRENCY_BASE" ColumnName="CURRENCY_BASE" />
+                <ScalarProperty Name="SYMBOL" ColumnName="SYMBOL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IMPORT_MARKIT_ABS_CURVE_MAP">
+            <EntityTypeMapping TypeName="hdbModel.IMPORT_MARKIT_ABS_CURVE_MAP">
+              <MappingFragment StoreEntitySet="IMPORT_MARKIT_ABS_CURVE_MAP">
+                <ScalarProperty Name="CALC_ORDER" ColumnName="CALC_ORDER" />
+                <ScalarProperty Name="MAX_WAL" ColumnName="MAX_WAL" />
+                <ScalarProperty Name="MIN_WAL" ColumnName="MIN_WAL" />
+                <ScalarProperty Name="AVG_WAL" ColumnName="AVG_WAL" />
+                <ScalarProperty Name="SHIFT" ColumnName="SHIFT" />
+                <ScalarProperty Name="SET_CURVE" ColumnName="SET_CURVE" />
+                <ScalarProperty Name="CALC_CURVE" ColumnName="CALC_CURVE" />
+                <ScalarProperty Name="CALC_TYPE" ColumnName="CALC_TYPE" />
+                <ScalarProperty Name="SYMBOL" ColumnName="SYMBOL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IMPORT_MARKIT_CDS">
+            <EntityTypeMapping TypeName="hdbModel.IMPORT_MARKIT_CDS">
+              <MappingFragment StoreEntitySet="IMPORT_MARKIT_CDS">
+                <ScalarProperty Name="COMP_LEVEL_RECOV" ColumnName="COMP_LEVEL_RECOV" />
+                <ScalarProperty Name="COMP_LEVEL30Y" ColumnName="COMP_LEVEL30Y" />
+                <ScalarProperty Name="COMP_LEVEL20Y" ColumnName="COMP_LEVEL20Y" />
+                <ScalarProperty Name="COMP_LEVEL15Y" ColumnName="COMP_LEVEL15Y" />
+                <ScalarProperty Name="COMP_LEVEL10Y" ColumnName="COMP_LEVEL10Y" />
+                <ScalarProperty Name="COMP_LEVEL7Y" ColumnName="COMP_LEVEL7Y" />
+                <ScalarProperty Name="COMP_LEVEL5Y" ColumnName="COMP_LEVEL5Y" />
+                <ScalarProperty Name="COMP_LEVEL4Y" ColumnName="COMP_LEVEL4Y" />
+                <ScalarProperty Name="COMP_LEVEL3Y" ColumnName="COMP_LEVEL3Y" />
+                <ScalarProperty Name="COMP_LEVEL2Y" ColumnName="COMP_LEVEL2Y" />
+                <ScalarProperty Name="COMP_LEVEL1Y" ColumnName="COMP_LEVEL1Y" />
+                <ScalarProperty Name="COMP_LEVEL6M" ColumnName="COMP_LEVEL6M" />
+                <ScalarProperty Name="IMPL_RTG" ColumnName="IMPL_RTG" />
+                <ScalarProperty Name="AV_RTG" ColumnName="AV_RTG" />
+                <ScalarProperty Name="COUNTRY" ColumnName="COUNTRY" />
+                <ScalarProperty Name="REGION" ColumnName="REGION" />
+                <ScalarProperty Name="SECTOR" ColumnName="SECTOR" />
+                <ScalarProperty Name="COMP_DEPTH5Y" ColumnName="COMP_DEPTH5Y" />
+                <ScalarProperty Name="COMP_CURVE_RTG" ColumnName="COMP_CURVE_RTG" />
+                <ScalarProperty Name="RTG30Y" ColumnName="RTG30Y" />
+                <ScalarProperty Name="RTG20Y" ColumnName="RTG20Y" />
+                <ScalarProperty Name="RTG15Y" ColumnName="RTG15Y" />
+                <ScalarProperty Name="RTG10Y" ColumnName="RTG10Y" />
+                <ScalarProperty Name="RTG7Y" ColumnName="RTG7Y" />
+                <ScalarProperty Name="RTG5Y" ColumnName="RTG5Y" />
+                <ScalarProperty Name="RTG4Y" ColumnName="RTG4Y" />
+                <ScalarProperty Name="RTG3Y" ColumnName="RTG3Y" />
+                <ScalarProperty Name="RTG2Y" ColumnName="RTG2Y" />
+                <ScalarProperty Name="RTG1Y" ColumnName="RTG1Y" />
+                <ScalarProperty Name="RTG6M" ColumnName="RTG6M" />
+                <ScalarProperty Name="RECOVERY" ColumnName="RECOVERY" />
+                <ScalarProperty Name="SPREAD30Y" ColumnName="SPREAD30Y" />
+                <ScalarProperty Name="SPREAD20Y" ColumnName="SPREAD20Y" />
+                <ScalarProperty Name="SPREAD15Y" ColumnName="SPREAD15Y" />
+                <ScalarProperty Name="SPREAD10Y" ColumnName="SPREAD10Y" />
+                <ScalarProperty Name="SPREAD7Y" ColumnName="SPREAD7Y" />
+                <ScalarProperty Name="SPREAD5Y" ColumnName="SPREAD5Y" />
+                <ScalarProperty Name="SPREAD4Y" ColumnName="SPREAD4Y" />
+                <ScalarProperty Name="SPREAD3Y" ColumnName="SPREAD3Y" />
+                <ScalarProperty Name="SPREAD2Y" ColumnName="SPREAD2Y" />
+                <ScalarProperty Name="SPREAD1Y" ColumnName="SPREAD1Y" />
+                <ScalarProperty Name="SPREAD6M" ColumnName="SPREAD6M" />
+                <ScalarProperty Name="CONTRIBUTOR" ColumnName="CONTRIBUTOR" />
+                <ScalarProperty Name="DOC_CLAUSE" ColumnName="DOC_CLAUSE" />
+                <ScalarProperty Name="CURRENCY" ColumnName="CURRENCY" />
+                <ScalarProperty Name="TIER" ColumnName="TIER" />
+                <ScalarProperty Name="REDCODE" ColumnName="REDCODE" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="TICKER" ColumnName="TICKER" />
+                <ScalarProperty Name="TRADE_DATE" ColumnName="TRADE_DATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IMPORT_MARKIT_LOANX">
+            <EntityTypeMapping TypeName="hdbModel.IMPORT_MARKIT_LOANX">
+              <MappingFragment StoreEntitySet="IMPORT_MARKIT_LOANX">
+                <ScalarProperty Name="TIER" ColumnName="TIER" />
+                <ScalarProperty Name="CURRENCY" ColumnName="CURRENCY" />
+                <ScalarProperty Name="SPREAD_TO_MATURITY" ColumnName="SPREAD_TO_MATURITY" />
+                <ScalarProperty Name="DEPTH" ColumnName="DEPTH" />
+                <ScalarProperty Name="OFFER" ColumnName="OFFER" />
+                <ScalarProperty Name="BID" ColumnName="BID" />
+                <ScalarProperty Name="INITIAL_SPREAD" ColumnName="INITIAL_SPREAD" />
+                <ScalarProperty Name="FINAL_MATURITY" ColumnName="FINAL_MATURITY" />
+                <ScalarProperty Name="INITIAL_AMOUNT" ColumnName="INITIAL_AMOUNT" />
+                <ScalarProperty Name="CURRENT_RATING" ColumnName="CURRENT_RATING" />
+                <ScalarProperty Name="INDUSTRY" ColumnName="INDUSTRY" />
+                <ScalarProperty Name="FACILITY" ColumnName="FACILITY" />
+                <ScalarProperty Name="DEAL_NAME" ColumnName="DEAL_NAME" />
+                <ScalarProperty Name="ISSUER" ColumnName="ISSUER" />
+                <ScalarProperty Name="LCD_ID" ColumnName="LCD_ID" />
+                <ScalarProperty Name="LOANX_ID" ColumnName="LOANX_ID" />
+                <ScalarProperty Name="TRADE_DATE" ColumnName="TRADE_DATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IMPORT_MX_RLOAN">
+            <EntityTypeMapping TypeName="hdbModel.IMPORT_MX_RLOAN">
+              <MappingFragment StoreEntitySet="IMPORT_MX_RLOAN">
+                <ScalarProperty Name="SENIORITY" ColumnName="SENIORITY" />
+                <ScalarProperty Name="CURRENCY" ColumnName="CURRENCY" />
+                <ScalarProperty Name="MATURITY" ColumnName="MATURITY" />
+                <ScalarProperty Name="SAP_ID" ColumnName="SAP_ID" />
+                <ScalarProperty Name="ISSUER" ColumnName="ISSUER" />
+                <ScalarProperty Name="PAY_REC" ColumnName="PAY_REC" />
+                <ScalarProperty Name="COUNTERPART" ColumnName="COUNTERPART" />
+                <ScalarProperty Name="PORTFOLIO" ColumnName="PORTFOLIO" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="DEAL_ID" ColumnName="DEAL_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IMPORT_SAPBP">
+            <EntityTypeMapping TypeName="hdbModel.IMPORT_SAPBP">
+              <MappingFragment StoreEntitySet="IMPORT_SAPBP">
+                <ScalarProperty Name="BONI_SAP_ID" ColumnName="BONI_SAP_ID" />
+                <ScalarProperty Name="ANALYST" ColumnName="ANALYST" />
+                <ScalarProperty Name="IS_BRANCH" ColumnName="IS_BRANCH" />
+                <ScalarProperty Name="IS_HEADQUARTER" ColumnName="IS_HEADQUARTER" />
+                <ScalarProperty Name="KNE_SAP_ID" ColumnName="KNE_SAP_ID" />
+                <ScalarProperty Name="SEGMENT_LONG" ColumnName="SEGMENT_LONG" />
+                <ScalarProperty Name="OVERRIDE" ColumnName="OVERRIDE" />
+                <ScalarProperty Name="VR_RATING" ColumnName="VR_RATING" />
+                <ScalarProperty Name="COUNTRY" ColumnName="COUNTRY" />
+                <ScalarProperty Name="COLLAT_RATE" ColumnName="COLLAT_RATE" />
+                <ScalarProperty Name="CUSTOMER_GROUP" ColumnName="CUSTOMER_GROUP" />
+                <ScalarProperty Name="RATING_DATE" ColumnName="RATING_DATE" />
+                <ScalarProperty Name="SEGMENT" ColumnName="SEGMENT" />
+                <ScalarProperty Name="BVR1" ColumnName="BVR1" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="SAP_ID" ColumnName="SAP_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BUCKETS">
+            <EntityTypeMapping TypeName="hdbModel.BUCKET">
+              <MappingFragment StoreEntitySet="BUCKETS">
+                <ScalarProperty Name="PER" ColumnName="PER" />
+                <ScalarProperty Name="PER_NUM" ColumnName="PER_NUM" />
+                <ScalarProperty Name="DAYS" ColumnName="DAYS" />
+                <ScalarProperty Name="BUCKET1" ColumnName="BUCKET" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FXes">
+            <EntityTypeMapping TypeName="hdbModel.FX">
+              <MappingFragment StoreEntitySet="FX">
+                <ScalarProperty Name="LOW" ColumnName="LOW" />
+                <ScalarProperty Name="HIGH" ColumnName="HIGH" />
+                <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+                <ScalarProperty Name="TRADE_DATE" ColumnName="TRADE_DATE" />
+                <ScalarProperty Name="SYMBOL" ColumnName="SYMBOL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BSSes">
+            <EntityTypeMapping TypeName="hdbModel.BSS">
+              <MappingFragment StoreEntitySet="BSS">
+                <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+                <ScalarProperty Name="TRADE_DATE" ColumnName="TRADE_DATE" />
+                <ScalarProperty Name="SYMBOL" ColumnName="SYMBOL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="hdbModel">
+        <EntityTypeShape EntityType="hdbModel.BSS_ST" Width="1.75" PointX="0.75" PointY="0.625" Height="2.2496956380208339" IsExpanded="true" />
+        <EntityTypeShape EntityType="hdbModel.BOND_ABS" Width="2.375" PointX="3.5" PointY="3.75" Height="2.9070849609374996" />
+        <EntityTypeShape EntityType="hdbModel.FX_FWD_ST" Width="2.375" PointX="0.5" PointY="4.75" Height="1.9210009765624996" />
+        <EntityTypeShape EntityType="hdbModel.IMPORT_MARKIT_ABS_CURVE_MAP" Width="2.625" PointX="5.5" PointY="0.75" Height="2.4140429687499996" />
+        <EntityTypeShape EntityType="hdbModel.IMPORT_MARKIT_CDS" Width="2.375" PointX="6.625" PointY="4.75" Height="9.1522835286458317" />
+        <EntityTypeShape EntityType="hdbModel.IMPORT_MARKIT_LOANX" Width="2.375" PointX="8.625" PointY="0.75" Height="3.7288216145833317" />
+        <EntityTypeShape EntityType="hdbModel.IMPORT_MX_RLOAN" Width="2.375" PointX="0.5" PointY="7.75" Height="2.5783902994791674" />
+        <EntityTypeShape EntityType="hdbModel.IMPORT_SAPBP" Width="2.375" PointX="3.25" PointY="7.75" Height="3.5644742838541674" />
+        <EntityTypeShape EntityType="hdbModel.BUCKET" Width="1.5" PointX="10.375" PointY="5.75" Height="1.7566536458333317" />
+        <EntityTypeShape EntityType="hdbModel.FX" Width="1.5" PointX="10.375" PointY="8.75" Height="1.7566536458333353" />
+        <EntityTypeShape EntityType="hdbModel.BSS" Width="1.75" PointX="3.125" PointY="0.75" Height="1.787985026041667" />
+        <AssociationConnector Association="hdbModel.FK_BSS_BSSST" >
+          <ConnectorPoint PointX="2.5" PointY="1.6439925130208335" />
+          <ConnectorPoint PointX="3.125" PointY="1.6439925130208335" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
